@@ -34,10 +34,11 @@ public class NMEprojectile : MonoBehaviour
         {
             hitplayer();
         }
-        if (collision.tag == "Wall")
+        if (collision.tag == "wall")
         {
             DestroyProjectile();
         }
+        
     }
 
     private void hitplayer()
@@ -49,4 +50,9 @@ public class NMEprojectile : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    public void explode()
+    {
+        rb.velocity = -rb.velocity;
+    }
+
 }

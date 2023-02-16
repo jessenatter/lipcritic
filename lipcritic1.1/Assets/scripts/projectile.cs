@@ -13,7 +13,7 @@ public class projectile : MonoBehaviour
     public float verticalMove = 0f;
     public GameObject player;
     private float offset;
-
+    public GameObject explodeO;
 
     // Start is called before the first frame update
     void Start()
@@ -76,6 +76,7 @@ public class projectile : MonoBehaviour
 
     public void explode()
     {
+        Instantiate(explodeO, transform.position, Quaternion.identity);
         Deactivate();
     }
     private void Deactivate()

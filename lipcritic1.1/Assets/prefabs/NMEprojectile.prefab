@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5608574088076283099}
   m_Layer: 0
   m_Name: NMEprojectile
-  m_TagString: Untagged
+  m_TagString: NMEproj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cf6b5c313f499e4ba42abd6db14a016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 5
+  force: 10
 --- !u!58 &1174339547223114884
 CircleCollider2D:
   m_ObjectHideFlags: 0
