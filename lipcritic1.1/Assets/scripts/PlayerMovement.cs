@@ -13,6 +13,11 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
 
+    private int health = 5;
+
+    public GameObject deathscreen;
+    public GameObject deadbody;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,5 +56,22 @@ public class PlayerMovement : MonoBehaviour
         {
             controller.Move(0f, false, false);
         }
+    }
+    public void takehit()
+    {
+        health--;
+        if (health == 0)
+            die();
+    }
+    private void die()
+    {
+        deathscreen.SetActive(true);
+        shooting.playercontrol = false;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "NMEproj")
+            takehit();
+
     }
 }

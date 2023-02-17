@@ -43,6 +43,7 @@ public class NMEprojectile : MonoBehaviour
 
     private void hitplayer()
     {
+        
         DestroyProjectile();
     }
     
