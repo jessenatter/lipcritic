@@ -388,6 +388,7 @@ GameObject:
   - component: {fileID: 627749855}
   - component: {fileID: 627749861}
   - component: {fileID: 627749862}
+  - component: {fileID: 627749863}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -452,7 +453,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 5
+  m_GravityScale: 3
   m_Material: {fileID: 6200000, guid: 7a4c5c818c2bb254d88650a564b04284, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -470,7 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d5c3914ff5e514598015ae7d905a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 1000
+  m_JumpForce: 500
   m_CrouchSpeed: 0.367
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -567,7 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 627749858}
-  runspeed: 60
+  runspeed: 30
   deathscreen: {fileID: 1917419648}
   deadbody: {fileID: 2250313182412971108, guid: 7a8d22e57d53d4777bb32c9e503a11ce, type: 3}
 --- !u!114 &627749862
@@ -586,6 +587,25 @@ MonoBehaviour:
   playercontrol: 1
   balls: {fileID: 1032447900}
   projectileV: {fileID: 0}
+--- !u!95 &627749863
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627749854}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 56b7f7ec73a73084a940fbd248a6645a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &770788682
 GameObject:
   m_ObjectHideFlags: 0
