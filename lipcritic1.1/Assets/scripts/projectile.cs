@@ -46,10 +46,10 @@ public class projectile : MonoBehaviour
 
      public void OnTriggerEnter2D(Collider2D hitinfo)
     {
-        enemy enemy = hitinfo.GetComponent<enemy>();
-        if (enemy != null)
+        enemyAI enemyAI = hitinfo.GetComponent<enemyAI>();
+        if (enemyAI != null)
         {
-            enemy.TakeDamage(1);
+            enemyAI.TakeDamage(1);
             hitenemy();
         }
         if(hitinfo.tag == "wall")
@@ -76,6 +76,7 @@ public class projectile : MonoBehaviour
 
     public void explode()
     {
+        Instantiate(explodeO, transform.position, Quaternion.identity);
         Instantiate(explodeO, transform.position, Quaternion.identity);
         Deactivate();
     }
