@@ -38,7 +38,11 @@ public class enemyAI : MonoBehaviour
     public Transform player;
     public Transform warningpos;
 
-  
+    private float firex;
+    private bool flipped;
+    private float x;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +54,38 @@ public class enemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (state)
+        x = transform.position.x;
+        firex = playerDetection.position.x;
+
+        if (firex > x)
+            flipped = true;
+        if (firex < x)
+            flipped = false;
+
+        int layer_mask = LayerMask.GetMask("Player");
+
+        if (flipped)
+        {
+            RaycastHit2D playercast = Physics2D.Raycast(playerDetection.position, Vector2.right, layer_mask);
+            if (playercast == true)
+                canSeeThePlayer = true;
+            else
+                canSeeThePlayer = false;
+        }
+        else
+        {
+            RaycastHit2D playercast = Physics2D.Raycast(playerDetection.position, Vector2.left, layer_mask);
+            if (playercast == true)
+                canSeeThePlayer = true;
+            else
+                canSeeThePlayer = false;
+
+        }
+
+        Debug.Log(canSeeThePlayer);
+
+
+            switch (state)
         {
             default:
             case State.patrol:
@@ -78,10 +113,7 @@ public class enemyAI : MonoBehaviour
                     }
                 }
 
-                int layer_mask = LayerMask.GetMask("Player");
-                RaycastHit2D playercast = Physics2D.Raycast(playerDetection.position, Vector2.right, 10000f,layer_mask);
-
-                if (playercast == true)
+                if (canSeeThePlayer)
                     state = State.attack;
 
                 break;
@@ -106,10 +138,7 @@ public class enemyAI : MonoBehaviour
                     transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
                 }
 
-                int layer_mask2 = LayerMask.GetMask("Player");
-                RaycastHit2D playercast2 = Physics2D.Raycast(playerDetection.position, Vector2.right, 10000f,layer_mask2);
-
-                if (playercast2 == false)
+                if (!canSeeThePlayer)
                     state = State.patrol;
 
                 break;
