@@ -22,7 +22,7 @@ public class enemyAI : MonoBehaviour
 
     public GameObject healed;
     //patrol stuff
-    public bool canSeeThePlayer;
+    public bool canSeeThePlayer = false;
 
     public float speed;
     private bool movingRight = true;
@@ -62,28 +62,27 @@ public class enemyAI : MonoBehaviour
         if (firex < x)
             flipped = false;
 
-        int layer_mask = LayerMask.GetMask("Player");
-
         if (flipped)
         {
-            RaycastHit2D playercast = Physics2D.Raycast(playerDetection.position, Vector2.right, layer_mask);
+            int layer_mask = LayerMask.GetMask("Player");
+            RaycastHit2D playercast = Physics2D.Raycast(playerDetection.position, Vector2.right, 10000f, layer_mask);
             if (playercast == true)
                 canSeeThePlayer = true;
             else
                 canSeeThePlayer = false;
+
+
         }
         else
         {
-            RaycastHit2D playercast = Physics2D.Raycast(playerDetection.position, Vector2.left, layer_mask);
+            int layer_mask = LayerMask.GetMask("Player");
+            RaycastHit2D playercast = Physics2D.Raycast(playerDetection.position, Vector2.left, 10000f, layer_mask);
             if (playercast == true)
                 canSeeThePlayer = true;
             else
                 canSeeThePlayer = false;
 
         }
-
-        Debug.Log(canSeeThePlayer);
-
 
             switch (state)
         {
@@ -138,8 +137,8 @@ public class enemyAI : MonoBehaviour
                     transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
                 }
 
-                if (!canSeeThePlayer)
-                    state = State.patrol;
+                //find reason to switch back to patrol state, maybe timer for cant see player for certian ammount of time?
+                   // state = State.patrol;
 
                 break;
         }
