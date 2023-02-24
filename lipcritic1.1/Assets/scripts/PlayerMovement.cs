@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
+    public Animator animator;
 
     public float runspeed = 40f;
 
@@ -27,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetFloat("speed", Mathf.Abs(horizontalMove));
+
         if (shooting.playercontrol)
         {
             horizontalMove = Input.GetAxisRaw("Horizontal") * runspeed;
@@ -34,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 jump = true;
+                animator.SetBool("isJumping", true);
                 
             }
         }
@@ -73,5 +77,9 @@ public class PlayerMovement : MonoBehaviour
         if (collision.tag == "NMEproj")
             takehit();
 
+    }
+    public void OnLanding()
+    {
+        animator.SetBool("isJumping", false);
     }
 }
