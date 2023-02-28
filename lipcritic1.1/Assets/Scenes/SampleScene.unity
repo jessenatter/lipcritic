@@ -581,6 +581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 627749858}
   animator: {fileID: 627749863}
+  spriteR: {fileID: 627749859}
   runspeed: 30
   deathscreen: {fileID: 1917419648}
   deadbody: {fileID: 2250313182412971108, guid: 7a8d22e57d53d4777bb32c9e503a11ce, type: 3}
