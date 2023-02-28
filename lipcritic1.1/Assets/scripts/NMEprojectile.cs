@@ -17,9 +17,11 @@ public class NMEprojectile : MonoBehaviour
         targetpos = target.transform.position;
         Vector3 direction = targetpos - transform.position;
         Vector3 rotation = transform.position - targetpos;
-        rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
+        rb.velocity = new Vector2(direction.x, direction.y + 1f).normalized * force;
         float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rot + 90);
+        transform.rotation = Quaternion.Euler(0, 0, rot);
+
+
     }
 
     // Update is called once per frame
