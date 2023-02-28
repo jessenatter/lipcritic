@@ -19,13 +19,17 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject deathscreen;
     public GameObject deadbody;
+    public GameObject logic;
 
+    private LogicScript Lscript;
 
     private float colortimer;
 
     // Start is called before the first frame update
     void Start()
     {
+        logic = GameObject.FindGameObjectWithTag("Logic");
+        Lscript = logic.GetComponent<LogicScript>();
         shooting = GetComponent<shooting>();
     }
 
@@ -98,5 +102,10 @@ public class PlayerMovement : MonoBehaviour
     public void OnLanding()
     {
         animator.SetBool("isJumping", false);
+    }
+
+    private void hitstop()
+    {
+        Lscript.hitstop();
     }
 }
