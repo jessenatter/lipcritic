@@ -76,8 +76,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void die()
     {
-        deathscreen.SetActive(true);
-        shooting.playercontrol = false;
+        // deathscreen.SetActive(true);
+        // shooting.playercontrol = false;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void hitstop()
     {
-        Lscript.hitstop();
+        Lscript.hitstop(.3f);
     }
 
     public void resumecolor()

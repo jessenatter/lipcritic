@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class LogicScript : MonoBehaviour
 {
-    [Range(0f,1.5f)]
 
-    public float duration = 1f;
+    private float _duration = 1f;
     bool _isfrozen = false;
     float _pendindgfreeze = 0f;
     private GameObject player;
@@ -27,9 +26,10 @@ public class LogicScript : MonoBehaviour
         }
     }
 
-    public void hitstop()
+    public void hitstop(float duration)
     {
         _pendindgfreeze = duration;
+        _duration = duration;
     }
 
     IEnumerator DOhitstop()
@@ -38,7 +38,7 @@ public class LogicScript : MonoBehaviour
         var original = Time.timeScale;
         Time.timeScale = 0f;
 
-        yield return new WaitForSecondsRealtime(duration);
+        yield return new WaitForSecondsRealtime(_duration);
 
         Time.timeScale = original;
         Pscript.resumecolor();

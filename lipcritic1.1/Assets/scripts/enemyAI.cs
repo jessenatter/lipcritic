@@ -179,7 +179,7 @@ public class enemyAI : MonoBehaviour
     private void AttackStart()
     {
         Instantiate(warning, warningpos.position, Quaternion.identity);
-        Lscript.hitstop();
+        Lscript.hitstop(.1f);
 
         patrolStarted = false;
         aim.SetActive(true);
@@ -188,6 +188,6 @@ public class enemyAI : MonoBehaviour
 
     private void hitstop()
     {
-        Lscript.hitstop();
+        Lscript.hitstop(.3f);
     }
 }

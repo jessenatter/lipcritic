@@ -55,6 +55,7 @@ public class NMEprojectile : MonoBehaviour
     }
     public void explode()
     {
+        Debug.Log("works");
         rb.velocity = -rb.velocity;
     }
 
