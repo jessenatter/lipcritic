@@ -9,6 +9,7 @@ TagManager:
   - wall
   - explode!
   - NMEproj
+  - Logic
   layers:
   - Default
   - TransparentFX

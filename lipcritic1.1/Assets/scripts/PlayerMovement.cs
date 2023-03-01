@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float runspeed = 40f;
 
-    private shooting shooting;
+    public shooting shooting;
 
     float horizontalMove = 0f;
     bool jump = false;
@@ -22,8 +22,6 @@ public class PlayerMovement : MonoBehaviour
     public GameObject logic;
 
     private LogicScript Lscript;
-
-    private float colortimer;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 jump = true;
                 animator.SetBool("isJumping", true);
+
+                Debug.Log("works");
                 
             }
         }
@@ -53,15 +53,6 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = false;
             horizontalMove = 0;
-        }
-
-        if (colortimer > 0)
-        {
-            colortimer--;
-        }
-        else if (colortimer == 0)
-        {
-            spriteR.color = new Color(1, 1, 1, 1);
         }
     }
 
@@ -82,11 +73,9 @@ public class PlayerMovement : MonoBehaviour
     {
         spriteR.color = new Color(1,0,0,1);
         health--;
+        hitstop();
         if (health == 0)
             die();
-
-        colortimer = 30;
-
     }
     private void die()
     {
@@ -107,5 +96,10 @@ public class PlayerMovement : MonoBehaviour
     private void hitstop()
     {
         Lscript.hitstop();
+    }
+
+    public void resumecolor()
+    {
+        spriteR.color = new Color(1, 1, 1, 1);
     }
 }

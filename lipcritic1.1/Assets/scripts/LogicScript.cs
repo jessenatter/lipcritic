@@ -9,6 +9,15 @@ public class LogicScript : MonoBehaviour
     public float duration = 1f;
     bool _isfrozen = false;
     float _pendindgfreeze = 0f;
+    private GameObject player;
+    private PlayerMovement Pscript;
+
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        Pscript = player.GetComponent<PlayerMovement>();
+    }
 
     private void Update()
     {
@@ -32,6 +41,7 @@ public class LogicScript : MonoBehaviour
         yield return new WaitForSecondsRealtime(duration);
 
         Time.timeScale = original;
+        Pscript.resumecolor();
         _pendindgfreeze = 0f;
         _isfrozen = false;
     }

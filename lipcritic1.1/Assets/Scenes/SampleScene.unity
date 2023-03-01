@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 415163173}
   m_Layer: 0
   m_Name: Logic
-  m_TagString: Untagged
+  m_TagString: Logic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee269ecda141749139d4a7661b4e8100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.527
+  duration: 0.243
 --- !u!4 &415163174
 Transform:
   m_ObjectHideFlags: 0
@@ -627,9 +627,10 @@ MonoBehaviour:
   animator: {fileID: 627749863}
   spriteR: {fileID: 627749859}
   runspeed: 30
+  shooting: {fileID: 627749862}
   deathscreen: {fileID: 1917419648}
   deadbody: {fileID: 2250313182412971108, guid: 7a8d22e57d53d4777bb32c9e503a11ce, type: 3}
-  logic: {fileID: 0}
+  logic: {fileID: 415163172}
 --- !u!114 &627749862
 MonoBehaviour:
   m_ObjectHideFlags: 0
