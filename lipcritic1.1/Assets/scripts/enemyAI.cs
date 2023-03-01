@@ -42,6 +42,9 @@ public class enemyAI : MonoBehaviour
     private bool flipped;
     private float x;
 
+    public GameObject logic;
+
+    private LogicScript Lscript;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +52,9 @@ public class enemyAI : MonoBehaviour
         aim.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player").transform;
         state = State.patrol;
+
+        logic = GameObject.FindGameObjectWithTag("Logic");
+        Lscript = logic.GetComponent<LogicScript>();
     }
 
     // Update is called once per frame
@@ -147,6 +153,8 @@ public class enemyAI : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        hitstop();
+
         health -= damage;
 
         if (health <= 0)
@@ -171,9 +179,15 @@ public class enemyAI : MonoBehaviour
     private void AttackStart()
     {
         Instantiate(warning, warningpos.position, Quaternion.identity);
+        Lscript.hitstop();
 
         patrolStarted = false;
         aim.SetActive(true);
         attackStarted = true;
+    }
+
+    private void hitstop()
+    {
+        Lscript.hitstop();
     }
 }

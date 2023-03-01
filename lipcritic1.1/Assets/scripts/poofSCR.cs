@@ -16,7 +16,7 @@ public class poofSCR : MonoBehaviour
     void Update()
     {
         destroy++;
-        if (destroy == 5)
+        if (destroy == 15)
             Destroy(gameObject);
     }
 }

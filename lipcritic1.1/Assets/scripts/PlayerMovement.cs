@@ -44,9 +44,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 jump = true;
                 animator.SetBool("isJumping", true);
-
-                Debug.Log("works");
-                
             }
         }
         else

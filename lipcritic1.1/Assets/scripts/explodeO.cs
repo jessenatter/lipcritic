@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class explodeO : MonoBehaviour
 {
-    public float timer;
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +14,7 @@ public class explodeO : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer = timer + 1f;
-        if (timer == 20f)
-            Destroy(gameObject);
+       
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -27,5 +25,9 @@ public class explodeO : MonoBehaviour
             NMEprojectile.explode();
         }
     }
-
+    
+    public void destroyvoid()
+    {
+        Destroy(gameObject);
+    }
 }
