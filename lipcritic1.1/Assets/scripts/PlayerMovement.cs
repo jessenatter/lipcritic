@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
     public Animator animator;
+    public SpriteRenderer spriteR;
 
     public float runspeed = 40f;
 
@@ -18,10 +19,17 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject deathscreen;
     public GameObject deadbody;
+    public GameObject logic;
+
+    private LogicScript Lscript;
+
+    private float colortimer;
 
     // Start is called before the first frame update
     void Start()
     {
+        logic = GameObject.FindGameObjectWithTag("Logic");
+        Lscript = logic.GetComponent<LogicScript>();
         shooting = GetComponent<shooting>();
     }
 
@@ -47,7 +55,16 @@ public class PlayerMovement : MonoBehaviour
             horizontalMove = 0;
         }
 
+        if (colortimer > 0)
+        {
+            colortimer--;
+        }
+        else if (colortimer == 0)
+        {
+            spriteR.color = new Color(1, 1, 1, 1);
+        }
     }
+
     private void FixedUpdate()
     {
         if (shooting.playercontrol)
@@ -63,9 +80,13 @@ public class PlayerMovement : MonoBehaviour
     }
     public void takehit()
     {
+        spriteR.color = new Color(1,0,0,1);
         health--;
         if (health == 0)
             die();
+
+        colortimer = 30;
+
     }
     private void die()
     {
@@ -81,5 +102,10 @@ public class PlayerMovement : MonoBehaviour
     public void OnLanding()
     {
         animator.SetBool("isJumping", false);
+    }
+
+    private void hitstop()
+    {
+        Lscript.hitstop();
     }
 }

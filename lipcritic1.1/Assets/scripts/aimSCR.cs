@@ -34,6 +34,7 @@ public class aimSCR : MonoBehaviour
         {
             Instantiate(bullet, bullettrans.position, Quaternion.identity);
             timeBTW = startTimeBTW;
+            Debug.Log(rotZ);
         }
         else
         {
