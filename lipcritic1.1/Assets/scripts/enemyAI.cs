@@ -59,7 +59,8 @@ public class enemyAI : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { 
+
         x = transform.position.x;
         firex = playerDetection.position.x;
 

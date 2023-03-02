@@ -40,7 +40,6 @@ public class NMEprojectile : MonoBehaviour
         {
             DestroyProjectile();
         }
-        
     }
 
     private void hitplayer()
@@ -54,9 +53,8 @@ public class NMEprojectile : MonoBehaviour
         Destroy(gameObject);
     }
     public void explode()
-    {
-        Debug.Log("works");
-        rb.velocity = -rb.velocity;
+    { 
+        rb.velocity = -1 * rb.velocity;
     }
 
 }

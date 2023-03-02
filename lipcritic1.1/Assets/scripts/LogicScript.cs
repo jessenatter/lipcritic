@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class LogicScript : MonoBehaviour
 {
+    //screnshake stuff
 
+    //histop stuff
     private float _duration = 1f;
     bool _isfrozen = false;
     float _pendindgfreeze = 0f;
@@ -14,13 +16,18 @@ public class LogicScript : MonoBehaviour
 
     private void Start()
     {
+        //screenshake stuff
+
+
+        //histop stuff
         player = GameObject.FindGameObjectWithTag("Player");
         Pscript = player.GetComponent<PlayerMovement>();
+
     }
 
     private void Update()
     {
-        if(_pendindgfreeze > 0 && !_isfrozen)
+        if (_pendindgfreeze > 0 && !_isfrozen)
         {
             StartCoroutine(DOhitstop());
         }
@@ -44,5 +51,10 @@ public class LogicScript : MonoBehaviour
         Pscript.resumecolor();
         _pendindgfreeze = 0f;
         _isfrozen = false;
+    }
+
+    public void screenshake()
+    {
+
     }
 }
