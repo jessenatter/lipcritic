@@ -29,8 +29,7 @@ public class LogicScript : MonoBehaviour
     {
         if (_pendindgfreeze > 0 && !_isfrozen)
         {
-            StartCoroutine(DOhitstop());
-        }
+            StartCoroutine(DOhitstop());        }
     }
 
     public void hitstop(float duration)
