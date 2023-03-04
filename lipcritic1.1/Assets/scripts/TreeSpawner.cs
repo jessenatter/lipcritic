@@ -24,7 +24,7 @@ public class TreeSpawner : MonoBehaviour
 
         //number of trees will be deternimed by the distance between the map start and end, devided by 4, because distance bewteen each tree is between 3 and 4 
 
-        TreeNumb = (Mathf.Abs(Mend) + Mathf.Abs(Mstart)) / 4;
+        TreeNumb = (Mathf.Abs(Mend) + Mathf.Abs(Mstart)) / 3;
 
         //i being x cord
         for (float i = 1; i < TreeNumb; i++)
