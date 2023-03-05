@@ -537,8 +537,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AssetsPPU: 32
-  m_RefResolutionX: 320
-  m_RefResolutionY: 180
+  m_RefResolutionX: 1920
+  m_RefResolutionY: 1080
   m_UpscaleRT: 1
   m_PixelSnapping: 1
   m_CropFrameX: 0
@@ -32072,6 +32072,24 @@ CompositeCollider2D:
       - X: 37812600
         Y: 217500041
       - X: 37812541
+        Y: 217500100
+      - X: -239999900
+        Y: 217500100
+      - X: -239999900
+        Y: 217500041
+      - X: -239999959
+        Y: 217500100
+      - X: -249999900
+        Y: 217500100
+      - X: -249999900
+        Y: 217500041
+      - X: -249999959
+        Y: 217500100
+      - X: -260000041
+        Y: 217500100
+      - X: -260000100
+        Y: 217500041
+      - X: -260000100
         Y: 217500100
       - X: -477812553
         Y: 217500100
