@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
     {
         spriteR.color = new Color(1,0,0,1);
         health--;
-        //hitstop();
+        hitstop();
         if (health == 0)
             die();
     }
@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void hitstop()
     {
-        Lscript.hitstop(.3f);
+        Lscript.hitstop(.2f);
     }
 
     public void resumecolor()

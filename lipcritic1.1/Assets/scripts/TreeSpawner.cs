@@ -24,12 +24,12 @@ public class TreeSpawner : MonoBehaviour
 
         //number of trees will be deternimed by the distance between the map start and end, devided by 4, because distance bewteen each tree is between 3 and 4 
 
-        TreeNumb = (Mathf.Abs(Mend) + Mathf.Abs(Mstart)) / 3;
+        TreeNumb = (Mathf.Abs(Mend) + Mathf.Abs(Mstart)) / 2;
 
         //i being x cord
         for (float i = 1; i < TreeNumb; i++)
         {
-            xpos = Mstart + i * Random.Range(2f, 3f);
+            xpos = Mstart + i * Random.Range(1f, 2f);
             //instantiate tree with z rotation between 22 and -22, x pos that is between 3 and 4 units away, and y pos between 2 and 3.5
            Location = new Vector3(xpos, 2f, Random.Range(5f,10f));
            Rotation = Quaternion.Euler(0, 0, Random.Range(-22, 22));
