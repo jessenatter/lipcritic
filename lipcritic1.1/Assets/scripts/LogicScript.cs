@@ -50,6 +50,7 @@ public class LogicScript : MonoBehaviour
         Pscript.resumecolor();
         _pendindgfreeze = 0f;
         _isfrozen = false;
+        
     }
 
     public void screenshake()
