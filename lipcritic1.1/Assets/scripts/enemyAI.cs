@@ -180,8 +180,6 @@ public class enemyAI : MonoBehaviour
     private void AttackStart()
     {
         Instantiate(warning, warningpos.position, Quaternion.identity);
-        Lscript.hitstop(.1f);
-
         patrolStarted = false;
         aim.SetActive(true);
         attackStarted = true;
