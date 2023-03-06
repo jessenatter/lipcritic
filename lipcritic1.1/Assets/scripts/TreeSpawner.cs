@@ -41,7 +41,7 @@ public class TreeSpawner : MonoBehaviour
                 zposget = Random.Range(5f, 15f);
            }
 
-           zposget = zposfinal;
+           zposfinal = zposget;
 
            Location = new Vector3(xpos, 2f, zposfinal);
            Rotation = Quaternion.Euler(0, 0, Random.Range(-22, 22));
