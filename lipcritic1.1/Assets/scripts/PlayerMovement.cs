@@ -20,8 +20,11 @@ public class PlayerMovement : MonoBehaviour
     public GameObject deathscreen;
     public GameObject deadbody;
     public GameObject logic;
+    public GameObject grassController;
 
     private LogicScript Lscript;
+
+    private grassController grass;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
         logic = GameObject.FindGameObjectWithTag("Logic");
         Lscript = logic.GetComponent<LogicScript>();
         shooting = GetComponent<shooting>();
+        grassController = GameObject.FindGameObjectWithTag("grass");
+        grass = grassController.GetComponent<grassController>();
     }
 
     // Update is called once per frame
@@ -44,12 +49,30 @@ public class PlayerMovement : MonoBehaviour
             {
                 jump = true;
                 animator.SetBool("isJumping", true);
+                grass.grassup();
+
             }
         }
         else
         {
             jump = false;
             horizontalMove = 0;
+        }
+        if (horizontalMove > 0)
+        {
+            grass.grassright();
+            grass.grassleftstop();
+        }
+
+        if (horizontalMove < 0)
+        {
+            grass.grassleft();
+            grass.grassrightstop();
+        }
+        if (horizontalMove == 0)
+        {
+            grass.grassrightstop();
+            grass.grassleftstop();
         }
     }
 
@@ -88,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
     public void OnLanding()
     {
         animator.SetBool("isJumping", false);
+        grass.grassjumpstop();
     }
 
     private void hitstop()

@@ -10,6 +10,7 @@ TagManager:
   - explode!
   - NMEproj
   - Logic
+  - grass
   layers:
   - Default
   - TransparentFX
