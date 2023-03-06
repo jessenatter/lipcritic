@@ -16,25 +16,37 @@ public class TreeSpawner : MonoBehaviour
     private float TreeNumb;
 
     private float xpos;
+    private float zposget;
+    private float zposfinal;
+
+    List<float> zPosGotten = new List<float>();
+
     // Start is called before the first frame update
     void Start()
     {
         Mstart = MapStart.transform.position.x;
         Mend = MapEnd.transform.position.x;
 
-        //number of trees will be deternimed by the distance between the map start and end, devided by 4, because distance bewteen each tree is between 3 and 4 
-
         TreeNumb = (Mathf.Abs(Mend) + Mathf.Abs(Mstart)) / 2;
 
         //i being x cord
         for (float i = 1; i < TreeNumb; i++)
         {
-            xpos = Mstart + i * Random.Range(1f, 2f);
-            //instantiate tree with z rotation between 22 and -22, x pos that is between 3 and 4 units away, and y pos between 2 and 3.5
-           Location = new Vector3(xpos, 2f, Random.Range(5f,10f));
+
+           zposget = Random.Range(5f, 15f);
+           xpos = Mstart + i * Random.Range(1f, 2f);
+
+           while(zPosGotten.Contains(zposget))
+           {
+                zposget = Random.Range(5f, 15f);
+           }
+
+           zposget = zposfinal;
+
+           Location = new Vector3(xpos, 2f, zposfinal);
            Rotation = Quaternion.Euler(0, 0, Random.Range(-22, 22));
            Instantiate(tree, Location, Rotation);
-            
+           zPosGotten.Add(zposfinal);
         }
     }
 
