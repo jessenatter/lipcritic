@@ -34,8 +34,8 @@ public class LogicScript : MonoBehaviour
 
     public void hitstop(float duration)
     {
-        _pendindgfreeze = duration;
-        _duration = duration;
+        //_pendindgfreeze = duration;
+        //_duration = duration;
     }
 
     IEnumerator DOhitstop()

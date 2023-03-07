@@ -117,6 +117,7 @@ public class PlayerMovement : MonoBehaviour
     private void hitstop()
     {
         Lscript.hitstop(.2f);
+        resumecolor();
     }
 
     public void resumecolor()
