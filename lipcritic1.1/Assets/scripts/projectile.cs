@@ -40,7 +40,7 @@ public class projectile : MonoBehaviour
         if (!shooting.playercontrol)
         {
             //movement
-            myrigidbody.velocity = new Vector2(15f * direction, (verticalMove * 7.5f) + offset);
+            myrigidbody.velocity = new Vector2( direction * speed, (verticalMove * 7.5f) + offset);
         }
     }
 

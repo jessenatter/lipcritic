@@ -167,7 +167,7 @@ public class enemyAI : MonoBehaviour
 
     void Die()
     {
-        Instantiate(healed, transform.position, Quaternion.identity);
+        //Instantiate(healed, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
