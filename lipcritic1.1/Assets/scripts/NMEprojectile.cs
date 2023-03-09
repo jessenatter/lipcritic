@@ -21,7 +21,6 @@ public class NMEprojectile : MonoBehaviour
         float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot);
 
-
     }
 
     // Update is called once per frame
@@ -33,18 +32,15 @@ public class NMEprojectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
-        {
             hitplayer();
-        }
         if (collision.tag == "wall")
-        {
             DestroyProjectile();
-        }
+        if (collision.tag == "explode!")
+            explode();
     }
 
     private void hitplayer()
-    {
-        
+    { 
         DestroyProjectile();
     }
     
@@ -55,6 +51,7 @@ public class NMEprojectile : MonoBehaviour
 
     public void explode()
     {
+        Debug.Log("poop");
         rb.velocity = -rb.velocity;
 
     }
