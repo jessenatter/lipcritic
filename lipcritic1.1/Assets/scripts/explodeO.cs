@@ -16,15 +16,6 @@ public class explodeO : MonoBehaviour
     {
        
     }
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "NMEproj")
-        {
-            NMEprojectile NMEprojectile = collision.GetComponent<NMEprojectile>();
-            NMEprojectile.explode();
-        }
-    }
     
     public void destroyvoid()
     {
