@@ -7,41 +7,50 @@ public class projectile : MonoBehaviour
     public float speed = 10f;
     public CircleCollider2D Ccollider;
     private float direction;
-    private shooting shooting;
+    private PlayerMovement PlayerMovement;
     public Rigidbody2D myrigidbody;
     public float horizontalMove = 10f;
     public float verticalMove = 0f;
     public GameObject player;
-    private float offset;
     public GameObject explodeO;
+
+    private enum State
+    {
+        normal,
+        speed,
+    }
+
+    private State state;
 
     // Start is called before the first frame update
     void Start()
     {
         Ccollider = GetComponent<CircleCollider2D>();
-        shooting = player.GetComponent<shooting>();
+        PlayerMovement = player.GetComponent<PlayerMovement>();
+        state = State.normal;
     }
 
     // Update is called once per frame
     void Update()
     {
+        verticalMove = Input.GetAxisRaw("Vertical");
 
-        if (!shooting.playercontrol)
+        switch (state)
         {
-            //setting var values buyt not movment bc u have to use fixed update ig
-            verticalMove = Input.GetAxisRaw("Vertical");
-            offset = 0f;
+            default: 
+            case State.normal:
 
-        }
-    }
+            myrigidbody.velocity = new Vector2(direction * speed, (verticalMove * 7.5f));
 
-    private void FixedUpdate()
-    {
-        if (!shooting.playercontrol)
-        {
-            //movement
-            myrigidbody.velocity = new Vector2( direction * speed, (verticalMove * 7.5f) + offset);
+            break;
+
+            case State.speed:
+
+            myrigidbody.velocity = new Vector2(direction * speed * 2, (verticalMove * 9f));
+
+            break;
         }
+
     }
 
      public void OnTriggerEnter2D(Collider2D hitinfo)
@@ -52,7 +61,15 @@ public class projectile : MonoBehaviour
             enemyAI.TakeDamage(1);
             hitenemy();
         }
-        if(hitinfo.tag == "wall")
+        NMEprojectile NMEprojectile = hitinfo.GetComponent<NMEprojectile>();
+        if (NMEprojectile != null)
+        {
+            if(state == State.speed)
+            {
+                NMEprojectile.explode();
+            }
+        }
+        if (hitinfo.tag == "wall")
         {
             hitwall();
         }
@@ -77,14 +94,14 @@ public class projectile : MonoBehaviour
     public void explode()
     {
         Instantiate(explodeO, transform.position, Quaternion.identity);
-        Instantiate(explodeO, transform.position, Quaternion.identity);
         Deactivate();
     }
     private void Deactivate()
     {
         Ccollider.enabled = false;
         gameObject.SetActive(false);
-        shooting.playercontrol = true;
+        PlayerMovement.playerControl();
+        state = State.normal;
     }
     private void hitwall()
     {
@@ -95,5 +112,10 @@ public class projectile : MonoBehaviour
     {
 
         Deactivate();
+    }
+
+    public void speedSwitch()
+    {
+        state = State.speed;
     }
 }

@@ -10,8 +10,6 @@ public class PlayerMovement : MonoBehaviour
 
     public float runspeed = 40f;
 
-    public shooting shooting;
-
     float horizontalMove = 0f;
     bool jump = false;
 
@@ -22,76 +20,100 @@ public class PlayerMovement : MonoBehaviour
     public GameObject logic;
     public GameObject grassController;
 
+    public Transform firepoint;
+    public GameObject balls;
+    public projectile projectileV;
+    private float x;
+    private float firex;
+    private int flipped;
+
     private LogicScript Lscript;
 
     private grassController grass;
+
+    public enum State
+    {
+        player,
+        ray,
+    }
+
+    public State state;
 
     // Start is called before the first frame update
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic");
         Lscript = logic.GetComponent<LogicScript>();
-        shooting = GetComponent<shooting>();
         grassController = GameObject.FindGameObjectWithTag("grass");
         grass = grassController.GetComponent<grassController>();
+        projectileV = balls.GetComponent<projectile>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        animator.SetFloat("speed", Mathf.Abs(horizontalMove));
+        if (Input.GetButtonDown("Fire1"))
+            Shoot();
 
-        if (shooting.playercontrol)
+        switch (state)
         {
-            horizontalMove = Input.GetAxisRaw("Horizontal") * runspeed;
+            default:
+            case State.player:
 
-            if (Input.GetButtonDown("Jump"))
-            {
-                jump = true;
-                animator.SetBool("isJumping", true);
-                grass.grassup();
+                //nonsense to see if flipping
+                x = transform.position.x;
+                firex = firepoint.position.x;
 
-            }
-        }
-        else
-        {
-            jump = false;
-            horizontalMove = 0;
-        }
-        if (horizontalMove > 0)
-        {
-            grass.grassright();
-            grass.grassleftstop();
+                if (firex > x)
+                    flipped = 1;
+                if (firex < x)
+                    flipped = -1;
+
+                horizontalMove = Input.GetAxisRaw("Horizontal") * runspeed;
+                animator.SetFloat("speed", Mathf.Abs(horizontalMove));
+
+                if (Input.GetButtonDown("Jump"))
+                {
+                    jump = true;
+                    animator.SetBool("isJumping", true);
+                    //grass.grassup();
+
+                }
+
+                controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+                jump = false;
+
+                //if (horizontalMove > 0)
+                //{
+                //    grass.grassright();
+                //    grass.grassleftstop();
+                //}
+
+                //if (horizontalMove < 0)
+                //{
+                //    grass.grassleft();
+                //    grass.grassrightstop();
+                //}
+                //if (horizontalMove == 0)
+                //{
+                //    grass.grassrightstop();
+                //    grass.grassleftstop();
+                //}
+
+                break;
+
+            case State.ray:
+
+                controller.Move(0f, false, false);
+
+                break;
         }
 
-        if (horizontalMove < 0)
-        {
-            grass.grassleft();
-            grass.grassrightstop();
-        }
-        if (horizontalMove == 0)
-        {
-            grass.grassrightstop();
-            grass.grassleftstop();
-        }
     }
 
-    private void FixedUpdate()
-    {
-        if (shooting.playercontrol)
-        {
-            //Move Chr
-            controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
-            jump = false;
-        }
-        else
-        {
-            controller.Move(0f, false, false);
-        }
-    }
     public void takehit()
     {
-        spriteR.color = new Color(1,0,0,1);
+        spriteR.color = new Color(1, 0, 0, 1);
         health--;
         hitstop();
         if (health == 0)
@@ -123,5 +145,26 @@ public class PlayerMovement : MonoBehaviour
     public void resumecolor()
     {
         spriteR.color = new Color(1, 1, 1, 1);
+    }
+
+    void Shoot()
+    {
+        if (state == State.player)
+        {
+            balls.transform.position = firepoint.position;
+            projectileV.SetDirection(flipped);
+            state = State.ray;
+
+
+        }
+        else
+        {
+            projectileV.speedSwitch();
+        }
+    }
+
+    public void playerControl()
+    {
+        state = State.player;
     }
 }
