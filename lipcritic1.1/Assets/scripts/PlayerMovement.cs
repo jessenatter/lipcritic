@@ -132,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnLanding()
     {
+        Debug.Log("WW");
         animator.SetBool("isJumping", false);
         grass.grassjumpstop();
     }
