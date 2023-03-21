@@ -13,11 +13,15 @@ public class projectile : MonoBehaviour
     public float verticalMove = 0f;
     public GameObject player;
     public GameObject explodeO;
+    private int next;
 
     private enum State
     {
         normal,
         speed,
+        speed2,
+        speed3,
+        speed4,
     }
 
     private State state;
@@ -49,6 +53,24 @@ public class projectile : MonoBehaviour
             myrigidbody.velocity = new Vector2(direction * speed * 2, (verticalMove * 9f));
 
             break;
+
+            case State.speed2:
+
+            myrigidbody.velocity = new Vector2(direction * speed * 3, (verticalMove * 11f));
+
+            break;
+
+            case State.speed3:
+
+            myrigidbody.velocity = new Vector2(direction * speed * 4, (verticalMove * 13f));
+
+            break;
+
+            case State.speed4:
+
+            myrigidbody.velocity = new Vector2(direction * speed * 5, (verticalMove * 17f));
+
+            break;
         }
 
     }
@@ -73,7 +95,7 @@ public class projectile : MonoBehaviour
         {
             hitwall();
         }
-      
+
     }
 
    
@@ -116,6 +138,19 @@ public class projectile : MonoBehaviour
 
     public void speedSwitch()
     {
-        state = State.speed;
+        if (state == State.normal)
+            state = State.speed;
+
+        else if (state == State.speed)
+            state = State.speed2;
+
+        else if (state == State.speed2)
+            state = State.speed3;
+
+        else if (state == State.speed3)
+            state = State.speed4;
+
+        else if (state == State.speed4)
+            explode();
     }
 }
