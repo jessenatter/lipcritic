@@ -13,7 +13,8 @@ public class projectile : MonoBehaviour
     public float verticalMove = 0f;
     public GameObject player;
     public GameObject explodeO;
-    private int next;
+    private int NMEmax;
+    private int NMEcurrent;
 
     private enum State
     {
@@ -32,6 +33,7 @@ public class projectile : MonoBehaviour
         Ccollider = GetComponent<CircleCollider2D>();
         PlayerMovement = player.GetComponent<PlayerMovement>();
         state = State.normal;
+        NMEmax = 1;
     }
 
     // Update is called once per frame
@@ -45,32 +47,32 @@ public class projectile : MonoBehaviour
             case State.normal:
 
             myrigidbody.velocity = new Vector2(direction * speed, (verticalMove * 7.5f));
-
-            break;
+                NMEmax = 1;
+                break;
 
             case State.speed:
 
             myrigidbody.velocity = new Vector2(direction * speed * 2, (verticalMove * 9f));
-
-            break;
+                NMEmax = 2;
+                break;
 
             case State.speed2:
 
             myrigidbody.velocity = new Vector2(direction * speed * 3, (verticalMove * 11f));
-
-            break;
+                NMEmax = 3;
+                break;
 
             case State.speed3:
 
             myrigidbody.velocity = new Vector2(direction * speed * 4, (verticalMove * 13f));
-
-            break;
+                NMEmax = 4;
+                break;
 
             case State.speed4:
 
             myrigidbody.velocity = new Vector2(direction * speed * 5, (verticalMove * 17f));
-
-            break;
+                NMEmax = 5;
+                break;
         }
 
     }
@@ -132,8 +134,11 @@ public class projectile : MonoBehaviour
     }
     private void hitenemy()
     {
+        NMEcurrent++;
 
-        Deactivate();
+        if (NMEcurrent >= NMEmax)
+            Deactivate();
+
     }
 
     public void speedSwitch()
