@@ -13,11 +13,17 @@ public class projectile : MonoBehaviour
     public float verticalMove = 0f;
     public GameObject player;
     public GameObject explodeO;
+    private int NMEmax;
+    private int NMEcurrent;
+
 
     private enum State
     {
         normal,
         speed,
+        speed2,
+        speed3,
+        speed4,
     }
 
     private State state;
@@ -28,6 +34,7 @@ public class projectile : MonoBehaviour
         Ccollider = GetComponent<CircleCollider2D>();
         PlayerMovement = player.GetComponent<PlayerMovement>();
         state = State.normal;
+        NMEmax = 1;
     }
 
     // Update is called once per frame
@@ -41,14 +48,37 @@ public class projectile : MonoBehaviour
             case State.normal:
 
             myrigidbody.velocity = new Vector2(direction * speed, (verticalMove * 7.5f));
-
+            NMEmax = 1;
+                transform.localScale = new Vector3(1, 1, 1);
             break;
 
             case State.speed:
 
             myrigidbody.velocity = new Vector2(direction * speed * 2, (verticalMove * 9f));
+                NMEmax = 2;
+                transform.localScale = new Vector3(1.2f, 1.2f, 1);
+                break;
 
-            break;
+            case State.speed2:
+
+            myrigidbody.velocity = new Vector2(direction * speed * 3, (verticalMove * 11f));
+                NMEmax = 3;
+                transform.localScale = new Vector3(1.4f, 1.4f, 1);
+                break;
+
+            case State.speed3:
+
+            myrigidbody.velocity = new Vector2(direction * speed * 4, (verticalMove * 13f));
+                NMEmax = 4;
+                transform.localScale = new Vector3(1.7f, 1.7f, 1);
+                break;
+
+            case State.speed4:
+
+            myrigidbody.velocity = new Vector2(direction * speed * 5, (verticalMove * 17f));
+                NMEmax = 5;
+                transform.localScale = new Vector3(2f, 2f, 1);
+                break;
         }
 
     }
@@ -73,7 +103,7 @@ public class projectile : MonoBehaviour
         {
             hitwall();
         }
-      
+
     }
 
    
@@ -110,12 +140,28 @@ public class projectile : MonoBehaviour
     }
     private void hitenemy()
     {
+        NMEcurrent++;
 
-        Deactivate();
+        if (NMEcurrent >= NMEmax)
+            Deactivate();
+
     }
 
     public void speedSwitch()
     {
-        state = State.speed;
+        if (state == State.normal)
+            state = State.speed;
+
+        else if (state == State.speed)
+            state = State.speed2;
+
+        else if (state == State.speed2)
+            state = State.speed3;
+
+        else if (state == State.speed3)
+            state = State.speed4;
+
+        else if (state == State.speed4)
+            explode();
     }
 }
