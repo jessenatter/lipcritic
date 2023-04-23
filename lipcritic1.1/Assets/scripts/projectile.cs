@@ -13,10 +13,8 @@ public class projectile : MonoBehaviour
     public float verticalMove = 0f;
     public GameObject player;
     public GameObject explodeO;
-    private int NMEmax;
-    private int NMEcurrent;
-
-
+    public GameObject timer;
+    private TimerScr TimerScr;
     private enum State
     {
         normal,
@@ -30,8 +28,9 @@ public class projectile : MonoBehaviour
     {
         Ccollider = GetComponent<CircleCollider2D>();
         PlayerMovement = player.GetComponent<PlayerMovement>();
+        TimerScr = timer.GetComponent<TimerScr>();
         state = State.normal;
-        NMEmax = 1;
+        TimerScr.startTimer();
     }
 
     // Update is called once per frame
@@ -45,14 +44,12 @@ public class projectile : MonoBehaviour
             case State.normal:
 
             myrigidbody.velocity = new Vector2(direction * speed, (verticalMove * 7.5f));
-            NMEmax = 1;
                 transform.localScale = new Vector3(1, 1, 1);
             break;
 
             case State.speed:
 
             myrigidbody.velocity = new Vector2(direction * speed * 2, (verticalMove * 11f));
-                NMEmax = 2;
                 transform.localScale = new Vector3(1.2f, 1.2f, 1);
                 break;
         }
@@ -64,8 +61,17 @@ public class projectile : MonoBehaviour
         enemyAI enemyAI = hitinfo.GetComponent<enemyAI>();
         if (enemyAI != null)
         {
-            enemyAI.TakeDamage(1);
-            hitenemy();
+
+            if (state == State.speed)
+            {
+                enemyAI.TakeDamage(1);
+                hitenemy();
+            }
+            else
+            {
+                Deactivate();
+            }
+         
         }
         NMEprojectile NMEprojectile = hitinfo.GetComponent<NMEprojectile>();
         if (NMEprojectile != null)
@@ -115,19 +121,26 @@ public class projectile : MonoBehaviour
     private void hitenemy()
     {
         PlayerMovement.teleport();
-        NMEcurrent++;
-
-        if (NMEcurrent >= NMEmax)
-            Deactivate();
-
+        Deactivate();
+    }
+    public void timedone()
+    {
+        PlayerMovement.teleport();
+        Deactivate();
     }
 
     public void speedSwitch()
     {
         if (state == State.normal)
+        {
             state = State.speed;
+            TimerScr.SpeedTimer();
+        }
 
         else if (state == State.speed)
+        {
             explode();
+            TimerScr.TimerReset();
+        }
     }
 }

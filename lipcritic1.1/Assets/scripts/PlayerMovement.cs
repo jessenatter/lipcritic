@@ -18,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
     public GameObject deathscreen;
     public GameObject deadbody;
     public GameObject logic;
-    public GameObject grassController;
 
     public Transform firepoint;
     public GameObject balls;
@@ -28,8 +27,6 @@ public class PlayerMovement : MonoBehaviour
     private int flipped;
 
     private LogicScript Lscript;
-
-    private grassController grass;
 
     public GameObject top;
     public GameObject bottom;
@@ -44,6 +41,9 @@ public class PlayerMovement : MonoBehaviour
     private float V = 0;
     private float H = 0;
 
+    public GameObject timer;
+    private TimerScr TimerScr;
+
     public enum State
     {
         player,
@@ -57,13 +57,12 @@ public class PlayerMovement : MonoBehaviour
     {
         logic = GameObject.FindGameObjectWithTag("Logic");
         Lscript = logic.GetComponent<LogicScript>();
-        grassController = GameObject.FindGameObjectWithTag("grass");
-        grass = grassController.GetComponent<grassController>();
         projectileV = balls.GetComponent<projectile>();
         T = top.GetComponent<collidingSCR>();
         B = bottom.GetComponent<collidingSCR>();
         L = left.GetComponent<collidingSCR>();
         R = right.GetComponent<collidingSCR>();
+        TimerScr = timer.GetComponent<TimerScr>();
     }
 
     // Update is called once per frame
@@ -93,29 +92,10 @@ public class PlayerMovement : MonoBehaviour
                 {
                     jump = true;
                     animator.SetBool("isJumping", true);
-                    //grass.grassup();
-
                 }
 
                 controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
                 jump = false;
-
-                //if (horizontalMove > 0)
-                //{
-                //    grass.grassright();
-                //    grass.grassleftstop();
-                //}
-
-                //if (horizontalMove < 0)
-                //{
-                //    grass.grassleft();
-                //    grass.grassrightstop();
-                //}
-                //if (horizontalMove == 0)
-                //{
-                //    grass.grassrightstop();
-                //    grass.grassleftstop();
-                //}
 
                 break;
 
@@ -150,7 +130,6 @@ public class PlayerMovement : MonoBehaviour
     public void OnLanding()
     {
         animator.SetBool("isJumping", false);
-        grass.grassjumpstop();
     }
 
     private void hitstop()
@@ -171,8 +150,7 @@ public class PlayerMovement : MonoBehaviour
             balls.transform.position = firepoint.position;
             projectileV.SetDirection(flipped);
             state = State.ray;
-
-
+            TimerScr.startTimer();
         }
         else
         {
@@ -187,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void teleport()
     {
-        transform.position = new Vector2(balls.transform.position.x, balls.transform.position.y + 1.1f);
+        transform.position = new Vector2(balls.transform.position.x, balls.transform.position.y);
 
         if (T.hit == true)
             V = V - 1.1f;
