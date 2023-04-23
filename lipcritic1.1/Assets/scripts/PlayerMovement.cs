@@ -31,6 +31,19 @@ public class PlayerMovement : MonoBehaviour
 
     private grassController grass;
 
+    public GameObject top;
+    public GameObject bottom;
+    public GameObject left;
+    public GameObject right;
+
+    private collidingSCR T;
+    private collidingSCR B;
+    private collidingSCR L;
+    private collidingSCR R;
+
+    private float V = 0;
+    private float H = 0;
+
     public enum State
     {
         player,
@@ -47,6 +60,10 @@ public class PlayerMovement : MonoBehaviour
         grassController = GameObject.FindGameObjectWithTag("grass");
         grass = grassController.GetComponent<grassController>();
         projectileV = balls.GetComponent<projectile>();
+        T = top.GetComponent<collidingSCR>();
+        B = bottom.GetComponent<collidingSCR>();
+        L = left.GetComponent<collidingSCR>();
+        R = right.GetComponent<collidingSCR>();
     }
 
     // Update is called once per frame
@@ -166,5 +183,19 @@ public class PlayerMovement : MonoBehaviour
     public void playerControl()
     {
         state = State.player;
+    }
+
+    public void teleport()
+    {
+        transform.position = new Vector2(balls.transform.position.x, balls.transform.position.y + 1.1f);
+
+        if (T.hit == true)
+            V = V - 1.1f;
+        if (B.hit == true)
+            V = V + 1.1f;
+        if (L.hit == true)
+            H = H + 1.1f;
+        if (R.hit == true)
+            H = H - 1.1f;
     }
 }

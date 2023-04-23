@@ -21,9 +21,6 @@ public class projectile : MonoBehaviour
     {
         normal,
         speed,
-        speed2,
-        speed3,
-        speed4,
     }
 
     private State state;
@@ -54,30 +51,9 @@ public class projectile : MonoBehaviour
 
             case State.speed:
 
-            myrigidbody.velocity = new Vector2(direction * speed * 2, (verticalMove * 9f));
+            myrigidbody.velocity = new Vector2(direction * speed * 2, (verticalMove * 11f));
                 NMEmax = 2;
                 transform.localScale = new Vector3(1.2f, 1.2f, 1);
-                break;
-
-            case State.speed2:
-
-            myrigidbody.velocity = new Vector2(direction * speed * 3, (verticalMove * 11f));
-                NMEmax = 3;
-                transform.localScale = new Vector3(1.4f, 1.4f, 1);
-                break;
-
-            case State.speed3:
-
-            myrigidbody.velocity = new Vector2(direction * speed * 4, (verticalMove * 13f));
-                NMEmax = 4;
-                transform.localScale = new Vector3(1.7f, 1.7f, 1);
-                break;
-
-            case State.speed4:
-
-            myrigidbody.velocity = new Vector2(direction * speed * 5, (verticalMove * 17f));
-                NMEmax = 5;
-                transform.localScale = new Vector3(2f, 2f, 1);
                 break;
         }
 
@@ -106,8 +82,6 @@ public class projectile : MonoBehaviour
 
     }
 
-   
-
     public void SetDirection(float _direction)
     {
         direction = _direction;
@@ -135,11 +109,12 @@ public class projectile : MonoBehaviour
     }
     private void hitwall()
     {
-
+        PlayerMovement.teleport();
         Deactivate();
     }
     private void hitenemy()
     {
+        PlayerMovement.teleport();
         NMEcurrent++;
 
         if (NMEcurrent >= NMEmax)
@@ -153,15 +128,6 @@ public class projectile : MonoBehaviour
             state = State.speed;
 
         else if (state == State.speed)
-            state = State.speed2;
-
-        else if (state == State.speed2)
-            state = State.speed3;
-
-        else if (state == State.speed3)
-            state = State.speed4;
-
-        else if (state == State.speed4)
             explode();
     }
 }
