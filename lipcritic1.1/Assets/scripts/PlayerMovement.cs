@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
 
-    private int health = 5;
+    private int health = 3;
 
     public GameObject deathscreen;
     public GameObject deadbody;
@@ -44,6 +45,9 @@ public class PlayerMovement : MonoBehaviour
     public GameObject timer;
     private TimerScr TimerScr;
 
+    public GameObject heart;
+    private Image HEART;
+
     public enum State
     {
         player,
@@ -63,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         L = left.GetComponent<collidingSCR>();
         R = right.GetComponent<collidingSCR>();
         TimerScr = timer.GetComponent<TimerScr>();
+        HEART = heart.GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -115,6 +120,9 @@ public class PlayerMovement : MonoBehaviour
         hitstop();
         if (health == 0)
             die();
+
+        Debug.Log(health);
+        HEART.fillAmount = health / 3;
     }
     private void die()
     {
@@ -145,17 +153,21 @@ public class PlayerMovement : MonoBehaviour
 
     void Shoot()
     {
-        if (state == State.player)
-        {
-            balls.transform.position = firepoint.position;
-            projectileV.SetDirection(flipped);
-            state = State.ray;
-            TimerScr.startTimer();
-        }
-        else
-        {
-            projectileV.speedSwitch();
-        }
+        
+            if (state == State.player)
+            {
+                if (TimerScr.canshoot == true)
+                {
+                    balls.transform.position = firepoint.position;
+                    projectileV.SetDirection(flipped);
+                    state = State.ray;
+                    TimerScr.startTimer();
+                }
+                else
+                cantshoot();
+            }
+            else
+                projectileV.speedSwitch();
     }
 
     public void playerControl()
@@ -175,5 +187,10 @@ public class PlayerMovement : MonoBehaviour
             H = H + 1.1f;
         if (R.hit == true)
             H = H - 1.1f;
+    }
+
+    private void cantshoot()
+    {
+        //cant shoot stuff
     }
 }

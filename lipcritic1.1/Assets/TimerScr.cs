@@ -47,10 +47,12 @@ public class TimerScr : MonoBehaviour
 
             case State.countdown:
 
+                canshoot = false;
+
                 if (timeLeft > 0)
                 {
-                    timeLeft -= Time.deltaTime;
-                    ARMtimer.fillAmount = timeLeft / maxTime * speed;
+                    timeLeft -= Time.deltaTime * speed;
+                    ARMtimer.fillAmount = timeLeft / maxTime ;
                 }
                 else
                 {
@@ -61,7 +63,9 @@ public class TimerScr : MonoBehaviour
 
             case State.countup:
 
-                ARMtimer.fillAmount = timecountup / 1000f;
+                canshoot = false;
+
+                ARMtimer.fillAmount = timecountup / 3000f;
 
                 timecountup = timecountup + 1;
 
@@ -70,8 +74,6 @@ public class TimerScr : MonoBehaviour
 
                 break;
         }
-
-        Debug.Log(state);
     }
 
     private void timerend()
@@ -87,7 +89,7 @@ public class TimerScr : MonoBehaviour
     }
     public void SpeedTimer()
     {
-        speed = 0.5f;
+        speed = 2f;
     }
     public void TimerReset()
     {
