@@ -15,6 +15,10 @@ public class projectile : MonoBehaviour
     public GameObject explodeO;
     public GameObject timer;
     private TimerScr TimerScr;
+
+    public bool groundHit;
+    public bool topHit;
+
     private enum State
     {
         normal,
@@ -35,6 +39,24 @@ public class projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //close to ground
+
+        int layer_mask = LayerMask.GetMask("Obsticle");
+        RaycastHit2D groundcast = Physics2D.Raycast(transform.position, Vector2.down, 1.6f, layer_mask);
+        if (groundcast == true)
+            groundHit = true;
+        else
+            groundHit = false;
+
+        //close to ceiling
+
+        RaycastHit2D topcast = Physics2D.Raycast(transform.position, Vector2.up, 1.6f, layer_mask);
+        if (topcast == true)
+            topHit = true;
+        else
+            topHit = false;
+
+
         verticalMove = Input.GetAxisRaw("Vertical");
 
         switch (state)

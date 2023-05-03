@@ -32,12 +32,6 @@ public class PlayerMovement : MonoBehaviour
     public GameObject heart;
     private Image HEART;
 
-    public GameObject top;
-    public GameObject bottom;
-
-    private collidingSCR T;
-    private collidingSCR B;
-
     public enum State
     {
         player,
@@ -52,8 +46,6 @@ public class PlayerMovement : MonoBehaviour
         projectileV = balls.GetComponent<projectile>();
         TimerScr = timer.GetComponent<TimerScr>();
         HEART = heart.GetComponent<Image>();
-        T = top.GetComponent<collidingSCR>();
-        B = bottom.GetComponent<collidingSCR>();
     }
 
     // Update is called once per frame
@@ -153,9 +145,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void teleport()
     {
-        if (B.hit == true)
+        if (projectileV.groundHit == true)
             transform.position = new Vector2(balls.transform.position.x, balls.transform.position.y + 2f);
-        else if (T.hit == true)
+        else if (projectileV.topHit == true)
             transform.position = new Vector2(balls.transform.position.x, balls.transform.position.y - 2f);
         else
             transform.position = new Vector2(balls.transform.position.x, balls.transform.position.y);
