@@ -115,8 +115,9 @@ public class PlayerMovement : MonoBehaviour
     }
     private void die()
     {
-        // deathscreen.SetActive(true);
-        // shooting.playercontrol = false;
+        deathscreen.SetActive(true);
+        Instantiate(deadbody, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
