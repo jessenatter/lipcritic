@@ -18,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject deathscreen;
     public GameObject deadbody;
-    public GameObject logic;
 
     public Transform firepoint;
     public GameObject balls;
