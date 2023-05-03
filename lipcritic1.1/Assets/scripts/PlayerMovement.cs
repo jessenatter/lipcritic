@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
         player,
         ray,
+        dead,
     }
 
     public State state;
@@ -87,6 +88,12 @@ public class PlayerMovement : MonoBehaviour
                 controller.Move(0f, false, false);
 
                 break;
+
+            case State.dead:
+
+                controller.Move(0f, false, false);
+                
+                break;
         }
 
     }
@@ -102,8 +109,8 @@ public class PlayerMovement : MonoBehaviour
     private void die()
     {
         deathscreen.SetActive(true);
-        Instantiate(deadbody, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        state = State.dead;
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
