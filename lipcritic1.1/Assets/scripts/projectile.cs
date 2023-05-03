@@ -30,7 +30,6 @@ public class projectile : MonoBehaviour
         PlayerMovement = player.GetComponent<PlayerMovement>();
         TimerScr = timer.GetComponent<TimerScr>();
         state = State.normal;
-        TimerScr.startTimer();
     }
 
     // Update is called once per frame
@@ -73,6 +72,7 @@ public class projectile : MonoBehaviour
             }
          
         }
+
         NMEprojectile NMEprojectile = hitinfo.GetComponent<NMEprojectile>();
         if (NMEprojectile != null)
         {
@@ -83,6 +83,7 @@ public class projectile : MonoBehaviour
         }
         if (hitinfo.tag == "wall")
         {
+            Debug.Log("wall");
             hitwall();
         }
 

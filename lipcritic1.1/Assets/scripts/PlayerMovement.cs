@@ -28,25 +28,17 @@ public class PlayerMovement : MonoBehaviour
     private int flipped;
 
     private LogicScript Lscript;
-
-    public GameObject top;
-    public GameObject bottom;
-    public GameObject left;
-    public GameObject right;
-
-    private collidingSCR T;
-    private collidingSCR B;
-    private collidingSCR L;
-    private collidingSCR R;
-
-    private float V = 0;
-    private float H = 0;
-
     public GameObject timer;
     private TimerScr TimerScr;
 
     public GameObject heart;
     private Image HEART;
+
+    public GameObject top;
+    public GameObject bottom;
+
+    private collidingSCR T;
+    private collidingSCR B;
 
     public enum State
     {
@@ -62,12 +54,10 @@ public class PlayerMovement : MonoBehaviour
         logic = GameObject.FindGameObjectWithTag("Logic");
         Lscript = logic.GetComponent<LogicScript>();
         projectileV = balls.GetComponent<projectile>();
-        T = top.GetComponent<collidingSCR>();
-        B = bottom.GetComponent<collidingSCR>();
-        L = left.GetComponent<collidingSCR>();
-        R = right.GetComponent<collidingSCR>();
         TimerScr = timer.GetComponent<TimerScr>();
         HEART = heart.GetComponent<Image>();
+        T = top.GetComponent<collidingSCR>();
+        B = bottom.GetComponent<collidingSCR>();
     }
 
     // Update is called once per frame
@@ -116,13 +106,12 @@ public class PlayerMovement : MonoBehaviour
     public void takehit()
     {
         spriteR.color = new Color(1, 0, 0, 1);
-        health--;
+        health = health - 1;
         hitstop();
         if (health == 0)
             die();
 
-        Debug.Log(health);
-        HEART.fillAmount = health / 3;
+        HEART.fillAmount = health * 0.33f;
     }
     private void die()
     {
@@ -132,7 +121,11 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "NMEproj")
+        {
+            Destroy(collision.gameObject);
             takehit();
+        }
+            
 
     }
     public void OnLanding()
@@ -177,16 +170,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void teleport()
     {
-        transform.position = new Vector2(balls.transform.position.x, balls.transform.position.y);
-
-        if (T.hit == true)
-            V = V - 1.1f;
         if (B.hit == true)
-            V = V + 1.1f;
-        if (L.hit == true)
-            H = H + 1.1f;
-        if (R.hit == true)
-            H = H - 1.1f;
+            transform.position = new Vector2(balls.transform.position.x, balls.transform.position.y + 2f);
+        else if (T.hit == true)
+            transform.position = new Vector2(balls.transform.position.x, balls.transform.position.y - 2f);
+        else
+            transform.position = new Vector2(balls.transform.position.x, balls.transform.position.y);
+
     }
 
     private void cantshoot()
