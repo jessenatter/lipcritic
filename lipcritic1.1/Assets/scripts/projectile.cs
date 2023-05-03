@@ -143,8 +143,7 @@ public class projectile : MonoBehaviour
     }
     private void hitenemy()
     {
-        PlayerMovement.teleport();
-        Deactivate();
+      
     }
     public void timedone()
     {
