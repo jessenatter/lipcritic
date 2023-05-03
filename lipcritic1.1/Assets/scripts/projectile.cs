@@ -83,7 +83,6 @@ public class projectile : MonoBehaviour
         }
         if (hitinfo.tag == "wall")
         {
-            Debug.Log("wall");
             hitwall();
         }
 
