@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     private float firex;
     private int flipped;
 
-    private LogicScript Lscript;
     public GameObject timer;
     private TimerScr TimerScr;
 
@@ -51,8 +50,6 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        logic = GameObject.FindGameObjectWithTag("Logic");
-        Lscript = logic.GetComponent<LogicScript>();
         projectileV = balls.GetComponent<projectile>();
         TimerScr = timer.GetComponent<TimerScr>();
         HEART = heart.GetComponent<Image>();
@@ -105,9 +102,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void takehit()
     {
-        spriteR.color = new Color(1, 0, 0, 1);
         health = health - 1;
-        hitstop();
         if (health == 0)
             die();
 
@@ -134,20 +129,8 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isJumping", false);
     }
 
-    private void hitstop()
-    {
-        Lscript.hitstop(.2f);
-        resumecolor();
-    }
-
-    public void resumecolor()
-    {
-        spriteR.color = new Color(1, 1, 1, 1);
-    }
-
     void Shoot()
     {
-        
             if (state == State.player)
             {
                 if (TimerScr.canshoot == true)
