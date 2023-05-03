@@ -91,8 +91,8 @@ public class TimerScr : MonoBehaviour
     {
         speed = 2f;
     }
-    public void TimerReset()
+    public void TimerDoneByWall()
     {
-
+        state = State.countup;
     }
 }

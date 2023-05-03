@@ -138,6 +138,7 @@ public class projectile : MonoBehaviour
     private void hitwall()
     {
         PlayerMovement.teleport();
+        TimerScr.TimerDoneByWall();
         Deactivate();
     }
     private void hitenemy()
@@ -162,7 +163,7 @@ public class projectile : MonoBehaviour
         else if (state == State.speed)
         {
             explode();
-            TimerScr.TimerReset();
+            TimerScr.TimerDoneByWall();
         }
     }
 }
