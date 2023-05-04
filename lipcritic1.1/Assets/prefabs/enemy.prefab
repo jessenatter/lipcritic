@@ -164,7 +164,6 @@ MonoBehaviour:
   retreatdistance: 5
   player: {fileID: 0}
   warningpos: {fileID: 8575929020748290584}
-  logic: {fileID: 0}
 --- !u!70 &-8879376698814793309
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -360,7 +359,7 @@ MonoBehaviour:
   target: {fileID: 0}
   bullet: {fileID: 9060100259099436696, guid: 1e05ffa52ee7252468eeee4a28e38f27, type: 3}
   bullettrans: {fileID: 4453497320977137279}
-  startTimeBTW: 1.5
+  startTimeBTW: 3
 --- !u!1 &8458593791883582815
 GameObject:
   m_ObjectHideFlags: 0
