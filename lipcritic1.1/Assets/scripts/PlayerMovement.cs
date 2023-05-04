@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject heart;
     private Image HEART;
+    public Transform groundDetection;
 
     private float HitTimer;
 
@@ -56,7 +57,11 @@ public class PlayerMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { 
+        int layer_mask = LayerMask.GetMask("Obsticle");
+        RaycastHit2D playercast = Physics2D.Raycast(groundDetection.position, Vector2.down, .3f, layer_mask);
+        if (playercast == true)
+            animator.SetBool("isJumping", false);
 
         if (HitTimer > 0)
             HitTimer -= 1;
@@ -143,11 +148,6 @@ public class PlayerMovement : MonoBehaviour
 
             timedtakehit();
         }
-    }
-
-    public void OnLanding()
-    {
-        animator.SetBool("isJumping", false);
     }
 
     void Shoot()
