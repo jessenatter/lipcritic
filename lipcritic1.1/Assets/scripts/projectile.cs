@@ -15,6 +15,8 @@ public class projectile : MonoBehaviour
     public GameObject explodeO;
     public GameObject timer;
     private TimerScr TimerScr;
+    public GameObject flash;
+    private LipCriticFLASH LCF;
 
     public bool groundHit;
     public bool topHit;
@@ -32,6 +34,7 @@ public class projectile : MonoBehaviour
     {
         Ccollider = GetComponent<CircleCollider2D>();
         PlayerMovement = player.GetComponent<PlayerMovement>();
+        LCF = flash.GetComponent<LipCriticFLASH>();
         TimerScr = timer.GetComponent<TimerScr>();
         state = State.normal;
     }
@@ -148,6 +151,7 @@ public class projectile : MonoBehaviour
     }
     private void Deactivate()
     {
+        LCF.stop();
         Ccollider.enabled = false;
         gameObject.SetActive(false);
         PlayerMovement.playerControl();
@@ -175,12 +179,14 @@ public class projectile : MonoBehaviour
         {
             state = State.speed;
             TimerScr.SpeedTimer();
+            LCF.color();
         }
 
         else if (state == State.speed)
         {
             explode();
             TimerScr.TimerDoneByWall();
+            LCF.stop();
         }
     }
 }
