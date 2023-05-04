@@ -60,7 +60,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (HitTimer > 0)
             HitTimer -= 1;
-        
 
         if (Input.GetButtonDown("Fire1"))
             Shoot();
