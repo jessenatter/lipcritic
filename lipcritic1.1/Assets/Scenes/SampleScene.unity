@@ -833,6 +833,8 @@ MonoBehaviour:
   controller: {fileID: 627749858}
   animator: {fileID: 627749863}
   spriteR: {fileID: 627749859}
+  rb: {fileID: 0}
+  Bcollider: {fileID: 0}
   runspeed: 25
   deathscreen: {fileID: 1917419648}
   deadbody: {fileID: 8309552861487824779, guid: 2c6f0622f378649cb91947695dc44bdc, type: 3}
@@ -19269,7 +19271,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 34
+      m_TileSpriteIndex: 35
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19329,7 +19331,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 33
+      m_TileSpriteIndex: 34
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -36468,12 +36470,12 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 3085177530238656330, guid: 19064c9d482030647875ef987618dd67, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 4404441326979926851, guid: 19064c9d482030647875ef987618dd67, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -7743366164683516723, guid: 19064c9d482030647875ef987618dd67, type: 3}
   - m_RefCount: 1
@@ -38056,7 +38058,7 @@ GameObject:
   - component: {fileID: 1506957694}
   m_Layer: 0
   m_Name: Patrol NME
-  m_TagString: Untagged
+  m_TagString: NMEpatrol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

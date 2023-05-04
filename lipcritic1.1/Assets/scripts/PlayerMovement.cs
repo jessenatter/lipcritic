@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
     public Animator animator;
     public SpriteRenderer spriteR;
+    public Rigidbody2D rb;
+    public BoxCollider2D Bcollider;
 
     public float runspeed = 40f;
 
@@ -32,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject heart;
     private Image HEART;
 
+    private float HitTimer;
+
     public enum State
     {
         player,
@@ -47,11 +51,17 @@ public class PlayerMovement : MonoBehaviour
         projectileV = balls.GetComponent<projectile>();
         TimerScr = timer.GetComponent<TimerScr>();
         HEART = heart.GetComponent<Image>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (HitTimer > 0)
+            HitTimer -= 1;
+        
+
         if (Input.GetButtonDown("Fire1"))
             Shoot();
 
@@ -119,9 +129,23 @@ public class PlayerMovement : MonoBehaviour
             Destroy(collision.gameObject);
             takehit();
         }
-            
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "NMEpatrol")
+        {
+
+            if (collision.gameObject.transform.position.x > transform.position.x)
+                rb.velocity = new Vector2(-10f, 10f);
+            else if (collision.gameObject.transform.position.x < transform.position.x)
+                rb.velocity = new Vector2(10f, 10f);
+
+            timedtakehit();
+        }
+    }
+
     public void OnLanding()
     {
         animator.SetBool("isJumping", false);
@@ -164,5 +188,14 @@ public class PlayerMovement : MonoBehaviour
     private void cantshoot()
     {
         //cant shoot stuff
+    }
+
+    private void timedtakehit()
+    {
+        if (HitTimer == 0)
+        {
+            takehit();
+            HitTimer = 30f;
+        }
     }
 }

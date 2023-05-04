@@ -8,6 +8,7 @@ public class NMEpatrol : MonoBehaviour
     public float speed;
     private bool movingRight = true;
     public Transform groundDetection;
+    private int health = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -35,5 +36,22 @@ public class NMEpatrol : MonoBehaviour
                 movingRight = true;
             }
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+        {
+            Die();
+        }
+
+    }
+
+    void Die()
+    {
+        //Instantiate(healed, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

@@ -95,6 +95,24 @@ public class projectile : MonoBehaviour
          
         }
 
+        NMEpatrol NMEpatrol = hitinfo.GetComponent<NMEpatrol>();
+        if (NMEpatrol != null)
+        {
+
+            if (state == State.speed)
+            {
+                NMEpatrol.TakeDamage(1);
+                hitenemy();
+            }
+            else
+            {
+                Deactivate();
+            }
+
+        }
+
+
+
         NMEprojectile NMEprojectile = hitinfo.GetComponent<NMEprojectile>();
         if (NMEprojectile != null)
         {
