@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     { 
         int layer_mask = LayerMask.GetMask("Obsticle");
-        RaycastHit2D playercast = Physics2D.Raycast(groundDetection.position, Vector2.down, .3f, layer_mask);
+        RaycastHit2D playercast = Physics2D.Raycast(groundDetection.position, Vector2.down, .1f, layer_mask);
         if (playercast == true)
             animator.SetBool("isJumping", false);
 
@@ -165,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
             else if (collision.gameObject.transform.position.x < transform.position.x)
                 rb.velocity = new Vector2(10f, 10f);
 
-            timedtakehit();
+            takehit();
         }
     }
 
@@ -207,14 +207,4 @@ public class PlayerMovement : MonoBehaviour
     {
         //cant shoot stuff
     }
-
-    private void timedtakehit()
-    {
-        if (HitTimer == 0)
-        {
-            takehit();
-            HitTimer = .4f;
-        }
-    }
-
 }

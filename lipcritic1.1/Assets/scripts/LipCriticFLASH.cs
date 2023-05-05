@@ -12,7 +12,7 @@ public class LipCriticFLASH : MonoBehaviour
 
     public void color()
     {
-        SP.color = new Color(1,1,1,1);
+        SP.color = new Color(0f,1f,0,1);
     }
 
     public void stop()
