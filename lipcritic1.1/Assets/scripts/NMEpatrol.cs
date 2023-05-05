@@ -9,6 +9,7 @@ public class NMEpatrol : MonoBehaviour
     private bool movingRight = true;
     public Transform groundDetection;
     private int health = 1;
+    public Transform wallDetection;
 
     // Start is called before the first frame update
     void Start()
@@ -53,5 +54,18 @@ public class NMEpatrol : MonoBehaviour
     {
         //Instantiate(healed, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+    public void wallhit()
+    {
+        if (movingRight)
+        {
+            transform.eulerAngles = new Vector3(0, -180, 0);
+            movingRight = false;
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+            movingRight = true;
+        }
     }
 }
