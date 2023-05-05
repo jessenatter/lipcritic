@@ -65,9 +65,9 @@ public class TimerScr : MonoBehaviour
 
                 canshoot = false;
 
-                ARMtimer.fillAmount = timecountup / 1000f;
+                ARMtimer.fillAmount = timecountup / 35f;
 
-                timecountup = timecountup + 1;
+                timecountup += Time.deltaTime * speed;
 
                 if (ARMtimer.fillAmount == 1f)
                     state = State.frozen;

@@ -37,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
 
     private float HitTimer;
 
+    public bool colorfixed;
+
     public enum State
     {
         player,
@@ -119,6 +121,11 @@ public class PlayerMovement : MonoBehaviour
             die();
 
         HEART.fillAmount = health * 0.33f;
+
+        spriteR.color = new Color(1f, 0f, 0f, 1f);
+        FindObjectOfType<Hitstop>().stop(.3f);
+        colorfixed = false;
+
     }
     private void die()
     {
@@ -196,5 +203,10 @@ public class PlayerMovement : MonoBehaviour
             takehit();
             HitTimer = 30f;
         }
+    }
+    public void colorfix()
+    {
+        spriteR.color = new Color(1f, 1f, 1f, 1f);
+        colorfixed = true;
     }
 }
