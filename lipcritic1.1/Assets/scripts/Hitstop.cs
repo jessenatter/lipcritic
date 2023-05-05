@@ -5,13 +5,6 @@ using UnityEngine;
 public class Hitstop : MonoBehaviour
 {
     private bool waiting;
-    public GameObject player;
-    private PlayerMovement playermovement;
-
-    private void Start()
-    {
-        playermovement = player.GetComponent<PlayerMovement>();
-    }
 
     public void stop(float duration)
     {
@@ -27,8 +20,6 @@ public class Hitstop : MonoBehaviour
         waiting = true;
         yield return new WaitForSecondsRealtime(duration);
         Time.timeScale = 1.0f;
-        if (playermovement.colorfixed == false)
-            playermovement.colorfix();
         waiting = false;
     }
 }

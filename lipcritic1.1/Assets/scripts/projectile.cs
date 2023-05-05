@@ -93,7 +93,7 @@ public class projectile : MonoBehaviour
             }
             else
             {
-                Deactivate();
+                hitenemynospeed();
             }
          
         }
@@ -109,7 +109,7 @@ public class projectile : MonoBehaviour
             }
             else
             {
-                Deactivate();
+                hitenemynospeed();
             }
 
         }
@@ -188,5 +188,10 @@ public class projectile : MonoBehaviour
             TimerScr.TimerDoneByWall();
             LCF.stop();
         }
+    }
+    private void hitenemynospeed()
+    {
+        TimerScr.TimerDoneByWall();
+        Deactivate();
     }
 }

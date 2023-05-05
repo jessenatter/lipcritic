@@ -37,8 +37,6 @@ public class PlayerMovement : MonoBehaviour
 
     private float HitTimer;
 
-    public bool colorfixed;
-
     public enum State
     {
         player,
@@ -55,6 +53,8 @@ public class PlayerMovement : MonoBehaviour
         TimerScr = timer.GetComponent<TimerScr>();
         HEART = heart.GetComponent<Image>();
         rb = GetComponent<Rigidbody2D>();
+
+        animator.SetBool("isdead", false);
     }
 
     // Update is called once per frame
@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isJumping", false);
 
         if (HitTimer > 0)
-            HitTimer -= 1;
+            HitTimer -= Time.deltaTime;
 
         if (Input.GetButtonDown("Fire1"))
             Shoot();
@@ -108,14 +108,24 @@ public class PlayerMovement : MonoBehaviour
             case State.dead:
 
                 controller.Move(0f, false, false);
-                
+                animator.SetBool("isdead", true);
+
                 break;
         }
 
     }
 
+    IEnumerator WaitForSpawn()
+    {
+        while (Time.timeScale != 1.0f)
+            yield return null;
+
+        spriteR.color = new Color(1f, 1f, 1f, 1f);
+    }
+
     public void takehit()
     {
+        Screenshake.Instance.shake(5f, .5f);
         health = health - 1;
         if (health == 0)
             die();
@@ -124,7 +134,9 @@ public class PlayerMovement : MonoBehaviour
 
         spriteR.color = new Color(1f, 0f, 0f, 1f);
         FindObjectOfType<Hitstop>().stop(.3f);
-        colorfixed = false;
+
+        StartCoroutine(WaitForSpawn());
+
 
     }
     private void die()
@@ -201,12 +213,8 @@ public class PlayerMovement : MonoBehaviour
         if (HitTimer == 0)
         {
             takehit();
-            HitTimer = 30f;
+            HitTimer = .4f;
         }
     }
-    public void colorfix()
-    {
-        spriteR.color = new Color(1f, 1f, 1f, 1f);
-        colorfixed = true;
-    }
+
 }
