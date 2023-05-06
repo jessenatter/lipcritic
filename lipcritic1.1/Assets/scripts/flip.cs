@@ -14,7 +14,7 @@ public class flip : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "wall")
+        if (collision.tag != "Player" )
         {
             NMEpatrol.wallhit();
         }
