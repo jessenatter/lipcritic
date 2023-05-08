@@ -167,7 +167,19 @@ public class PlayerMovement : MonoBehaviour
 
             takehit();
         }
+
+        if (collision.gameObject.tag == "enemy")
+        {
+
+            if (collision.gameObject.transform.position.x > transform.position.x)
+                rb.velocity = new Vector2(-10f, 10f);
+            else if (collision.gameObject.transform.position.x < transform.position.x)
+                rb.velocity = new Vector2(10f, 10f);
+
+            takehit();
+        }
     }
+
 
     void Shoot()
     {
