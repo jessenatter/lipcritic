@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -35,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
 
     private float HitTimer;
 
+    public GameObject deathcord;
+
     public enum State
     {
         player,
@@ -56,7 +59,12 @@ public class PlayerMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
+    {
+        if (deathcord.transform.position.y > transform.position.y)
+        {
+            die();
+        }
+
         int layer_mask = LayerMask.GetMask("Obsticle");
         RaycastHit2D playercast = Physics2D.Raycast(groundDetection.position, Vector2.down, .1f, layer_mask);
         if (playercast == true)
@@ -106,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
 
                 controller.Move(0f, false, false);
                 animator.SetBool("isdead", true);
+                Time.timeScale = 0;
 
                 break;
         }
@@ -213,5 +222,11 @@ public class PlayerMovement : MonoBehaviour
     private void cantshoot()
     {
         //cant shoot stuff
+    }
+
+    public void restart()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
