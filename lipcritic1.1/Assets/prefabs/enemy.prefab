@@ -157,7 +157,7 @@ MonoBehaviour:
   health: 1
   healed: {fileID: 6033098205701176576, guid: e3ca0c19d6083c24aa537cd39ebc01f7, type: 3}
   canSeeThePlayer: 0
-  speed: 1
+  speed: 3
   groundDetection: {fileID: 4812372562751871300}
   playerDetection: {fileID: 6483901656354654646}
   aim: {fileID: 6641433128048742200}

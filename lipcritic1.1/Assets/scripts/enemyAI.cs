@@ -65,7 +65,7 @@ public class enemyAI : MonoBehaviour
         if (flipped)
         {
             int layer_mask = LayerMask.GetMask("Player");
-            RaycastHit2D playercast = Physics2D.Raycast(playerDetection.position, Vector2.right, 10000f, layer_mask);
+            RaycastHit2D playercast = Physics2D.Raycast(playerDetection.position, Vector2.right, 5f, layer_mask);
             if (playercast == true)
                 canSeeThePlayer = true;
             else
@@ -76,7 +76,7 @@ public class enemyAI : MonoBehaviour
         else
         {
             int layer_mask = LayerMask.GetMask("Player");
-            RaycastHit2D playercast = Physics2D.Raycast(playerDetection.position, Vector2.left, 10000f, layer_mask);
+            RaycastHit2D playercast = Physics2D.Raycast(playerDetection.position, Vector2.left, 5f, layer_mask);
             if (playercast == true)
                 canSeeThePlayer = true;
             else
@@ -132,13 +132,6 @@ public class enemyAI : MonoBehaviour
                 {
                     transform.position = this.transform.position;
                 }
-                else if (Vector2.Distance(transform.position, player.position) < retreatdistance)
-                {
-                    transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
-                }
-
-                //find reason to switch back to patrol state, maybe timer for cant see player for certian ammount of time?
-                   // state = State.patrol;
 
                 break;
         }

@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
 
-    private int health = 3;
+    public int health = 3;
 
     public GameObject deathscreen;
     public GameObject deadbody;
@@ -31,8 +31,6 @@ public class PlayerMovement : MonoBehaviour
     public GameObject timer;
     private TimerScr TimerScr;
 
-    public GameObject heart;
-    private Image HEART;
     public Transform groundDetection;
 
     private float HitTimer;
@@ -51,7 +49,6 @@ public class PlayerMovement : MonoBehaviour
     {
         projectileV = balls.GetComponent<projectile>();
         TimerScr = timer.GetComponent<TimerScr>();
-        HEART = heart.GetComponent<Image>();
         rb = GetComponent<Rigidbody2D>();
 
         animator.SetBool("isdead", false);
@@ -129,8 +126,6 @@ public class PlayerMovement : MonoBehaviour
         health = health - 1;
         if (health == 0)
             die();
-
-        HEART.fillAmount = health * 0.33f;
 
         spriteR.color = new Color(1f, 0f, 0f, 1f);
         FindObjectOfType<Hitstop>().stop(.3f);
