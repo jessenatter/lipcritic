@@ -8,6 +8,7 @@ public class NMEprojectile : MonoBehaviour
     private Vector3 targetpos;
     private Rigidbody2D rb;
     public float force;
+    private Vector3 direction;
 
     // Start is called before the first frame update
     void Start()
@@ -15,45 +16,45 @@ public class NMEprojectile : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         targetpos = target.transform.position;
-        Vector3 direction = targetpos - transform.position;
+        direction = targetpos - transform.position;
         Vector3 rotation = transform.position - targetpos;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
         float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rot + 90);
+        transform.rotation = Quaternion.Euler(0, 0, rot);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-      
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
-        {
             hitplayer();
-        }
         if (collision.tag == "wall")
-        {
             DestroyProjectile();
-        }
-        
+        if (collision.tag == "explode!")
+            explode();
     }
 
     private void hitplayer()
-    {
+    { 
         
-        DestroyProjectile();
     }
     
    public void DestroyProjectile()
     {
         Destroy(gameObject);
     }
+
     public void explode()
-    {
-        rb.velocity = -rb.velocity;
+    { 
+    
+        rb.velocity = new Vector2(-direction.x, -direction.y).normalized * force;
+
     }
 
 }

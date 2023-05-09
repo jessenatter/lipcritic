@@ -9,6 +9,11 @@ TagManager:
   - wall
   - explode!
   - NMEproj
+  - Logic
+  - grass
+  - NMEpatrol
+  - boost
+  - trigger
   layers:
   - Default
   - TransparentFX
@@ -18,7 +23,7 @@ TagManager:
   - UI
   - Player
   - Obsticle
-  - 
+  - enemy
   - 
   - 
   - 
@@ -45,4 +50,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: pink
+    uniqueID: 1865813851
+    locked: 0
+  - name: backround
+    uniqueID: 4277955595
+    locked: 0
+  - name: Game
+    uniqueID: 1875686087
+    locked: 0
+  - name: player
+    uniqueID: 1255604729
+    locked: 0
+  - name: blocks
+    uniqueID: 2983124829
+    locked: 0
+  - name: UI
+    uniqueID: 3172202887
     locked: 0

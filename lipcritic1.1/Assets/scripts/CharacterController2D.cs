@@ -43,6 +43,8 @@ public class CharacterController2D : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+
+		
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
 
@@ -55,7 +57,9 @@ public class CharacterController2D : MonoBehaviour
 			{
 				m_Grounded = true;
 				if (!wasGrounded)
+				{ 
 					OnLandEvent.Invoke();
+				}
 			}
 		}
 	}

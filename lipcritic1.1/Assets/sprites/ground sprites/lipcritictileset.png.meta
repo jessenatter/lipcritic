@@ -306,7 +306,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 8}
+        - {x: -9, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: 71f67de0222d159b0800000000000000
@@ -327,7 +331,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 8}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: 5d3917313d5835970800000000000000
@@ -348,7 +356,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 8}
+        - {x: -16, y: 8}
+        - {x: -16, y: -16}
+        - {x: 9, y: -16}
+        - {x: 9, y: 2}
+        - {x: 9, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: dc04695ee9203fb00800000000000000
@@ -361,7 +375,7 @@ TextureImporter:
       name: lipcritictileset_3
       rect:
         serializedVersion: 2
-        x: 128
+        x: 96
         y: 256
         width: 32
         height: 32
@@ -369,7 +383,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 12, y: -16}
+        - {x: 12, y: -11}
+        - {x: 16, y: -11}
+        - {x: 16, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: c73339200072c43a0800000000000000
@@ -382,7 +402,7 @@ TextureImporter:
       name: lipcritictileset_4
       rect:
         serializedVersion: 2
-        x: 160
+        x: 128
         y: 256
         width: 32
         height: 32
@@ -390,7 +410,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -11}
+        - {x: 16, y: -11}
+        - {x: 16, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: 1ca1d79ebbb163570800000000000000
@@ -403,7 +427,7 @@ TextureImporter:
       name: lipcritictileset_5
       rect:
         serializedVersion: 2
-        x: 192
+        x: 160
         y: 256
         width: 32
         height: 32
@@ -411,7 +435,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -11}
+        - {x: -9, y: -11}
+        - {x: -9, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: b7b45445799f993f0800000000000000
@@ -424,7 +454,7 @@ TextureImporter:
       name: lipcritictileset_6
       rect:
         serializedVersion: 2
-        x: 224
+        x: 192
         y: 256
         width: 32
         height: 32
@@ -432,7 +462,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 8}
+        - {x: -10, y: -16}
+        - {x: 11, y: -16}
+        - {x: 11, y: -8}
+        - {x: 16, y: -8}
+        - {x: 16, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: e1a63d3aedf0b0b60800000000000000
@@ -445,7 +481,7 @@ TextureImporter:
       name: lipcritictileset_7
       rect:
         serializedVersion: 2
-        x: 256
+        x: 224
         y: 256
         width: 32
         height: 32
@@ -453,7 +489,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 8}
+        - {x: -16, y: -8}
+        - {x: 16, y: -8}
+        - {x: 16, y: 15}
+        - {x: 16, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: 5008f1ae28b399990800000000000000
@@ -466,15 +507,21 @@ TextureImporter:
       name: lipcritictileset_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 224
+        x: 256
+        y: 256
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 8}
+        - {x: -16, y: -8}
+        - {x: -10, y: -8}
+        - {x: -10, y: -16}
+        - {x: 10, y: -16}
+        - {x: 10, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: 6917355900ea4a490800000000000000
@@ -487,7 +534,7 @@ TextureImporter:
       name: lipcritictileset_9
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 224
         width: 32
         height: 32
@@ -495,7 +542,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 16}
+        - {x: -9, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: 264806b420ea5f150800000000000000
@@ -508,7 +559,7 @@ TextureImporter:
       name: lipcritictileset_10
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 224
         width: 32
         height: 32
@@ -529,7 +580,7 @@ TextureImporter:
       name: lipcritictileset_11
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 224
         width: 32
         height: 32
@@ -537,7 +588,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 9, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 9, y: -16}
+        - {x: 9, y: -15}
+        - {x: 9, y: -13}
+        - {x: 9, y: 12}
       tessellationDetail: 0
       bones: []
       spriteID: e8f6e30dede9f6540800000000000000
@@ -550,7 +608,7 @@ TextureImporter:
       name: lipcritictileset_12
       rect:
         serializedVersion: 2
-        x: 192
+        x: 96
         y: 224
         width: 32
         height: 32
@@ -571,7 +629,7 @@ TextureImporter:
       name: lipcritictileset_13
       rect:
         serializedVersion: 2
-        x: 224
+        x: 160
         y: 224
         width: 32
         height: 32
@@ -579,7 +637,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 16}
+        - {x: -9, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: 6c77f5641a6e968b0800000000000000
@@ -592,7 +654,7 @@ TextureImporter:
       name: lipcritictileset_14
       rect:
         serializedVersion: 2
-        x: 256
+        x: 192
         y: 224
         width: 32
         height: 32
@@ -600,7 +662,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 16}
+        - {x: -9, y: 12}
+        - {x: -9, y: 6}
+        - {x: -9, y: -9}
+        - {x: -9, y: -16}
+        - {x: 10, y: -16}
+        - {x: 10, y: -14}
+        - {x: 10, y: 9}
+        - {x: 10, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: 33f55531d2ace7a20800000000000000
@@ -613,15 +684,19 @@ TextureImporter:
       name: lipcritictileset_15
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
+        x: 256
+        y: 224
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 16}
+        - {x: -9, y: -16}
+        - {x: 10, y: -16}
+        - {x: 10, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: f4873334a73fb70b0800000000000000
@@ -634,7 +709,7 @@ TextureImporter:
       name: lipcritictileset_16
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 192
         width: 32
         height: 32
@@ -642,7 +717,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 16}
+        - {x: -9, y: 3}
+        - {x: -8, y: -9}
+        - {x: 13, y: -9}
+        - {x: 16, y: -9}
+        - {x: 16, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: 47cdaf244bc14dbe0800000000000000
@@ -655,7 +736,7 @@ TextureImporter:
       name: lipcritictileset_17
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 192
         width: 32
         height: 32
@@ -663,7 +744,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -9}
+        - {x: -15, y: -9}
+        - {x: 16, y: -9}
+        - {x: 16, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: e6975d6b916bdf720800000000000000
@@ -676,7 +762,7 @@ TextureImporter:
       name: lipcritictileset_18
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 192
         width: 32
         height: 32
@@ -684,7 +770,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -9}
+        - {x: 9, y: -9}
+        - {x: 9, y: 12}
+        - {x: 9, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: 9219341bc9bc0e000800000000000000
@@ -697,7 +788,7 @@ TextureImporter:
       name: lipcritictileset_19
       rect:
         serializedVersion: 2
-        x: 160
+        x: 96
         y: 192
         width: 32
         height: 32
@@ -705,7 +796,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 11, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 10}
+        - {x: 11, y: 10}
       tessellationDetail: 0
       bones: []
       spriteID: 482b2a11ebd4891f0800000000000000
@@ -718,7 +815,7 @@ TextureImporter:
       name: lipcritictileset_20
       rect:
         serializedVersion: 2
-        x: 192
+        x: 128
         y: 192
         width: 32
         height: 32
@@ -726,7 +823,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 10}
+        - {x: -16, y: 10}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 10}
+        - {x: 13, y: 10}
       tessellationDetail: 0
       bones: []
       spriteID: 463e9abaed7af2c30800000000000000
@@ -739,15 +842,21 @@ TextureImporter:
       name: lipcritictileset_21
       rect:
         serializedVersion: 2
-        x: 96
-        y: 160
+        x: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 16}
+        - {x: -8, y: 10}
+        - {x: -16, y: 10}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: 4737856f22d046320800000000000000
@@ -760,15 +869,23 @@ TextureImporter:
       name: lipcritictileset_22
       rect:
         serializedVersion: 2
-        x: 128
-        y: 160
+        x: 192
+        y: 192
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 10, y: 16}
+        - {x: -8, y: 16}
+        - {x: -8, y: 2}
+        - {x: -8, y: -10}
+        - {x: 12, y: -10}
+        - {x: 16, y: -10}
+        - {x: 16, y: 8}
+        - {x: 10, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: bc29457cef9ee4270800000000000000
@@ -781,15 +898,23 @@ TextureImporter:
       name: lipcritictileset_23
       rect:
         serializedVersion: 2
-        x: 160
-        y: 160
+        x: 224
+        y: 192
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 13, y: 8}
+        - {x: -13, y: 8}
+        - {x: -16, y: 8}
+        - {x: -16, y: -8}
+        - {x: -9, y: -8}
+        - {x: 12, y: -8}
+        - {x: 16, y: -8}
+        - {x: 16, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: 8bd7d58adfdd41910800000000000000
@@ -802,15 +927,23 @@ TextureImporter:
       name: lipcritictileset_24
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 256
+        y: 192
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 16}
+        - {x: -9, y: 8}
+        - {x: -16, y: 8}
+        - {x: -16, y: -9}
+        - {x: 8, y: -9}
+        - {x: 11, y: -6}
+        - {x: 11, y: 13}
+        - {x: 11, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: 4c051b29beaf3dfc0800000000000000
@@ -824,14 +957,21 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 128
+        y: 160
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 10}
+        - {x: -9, y: 1}
+        - {x: -10, y: -14}
+        - {x: -10, y: -16}
+        - {x: 9, y: -16}
+        - {x: 9, y: 1}
+        - {x: 8, y: 10}
       tessellationDetail: 0
       bones: []
       spriteID: c5486d1ec771100e0800000000000000
@@ -845,7 +985,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 128
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -866,14 +1006,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 128
+        y: 160
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 8}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: a1850055ed325bd70800000000000000
@@ -887,7 +1031,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 128
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -907,8 +1051,8 @@ TextureImporter:
       name: lipcritictileset_29
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
+        x: 224
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -928,15 +1072,21 @@ TextureImporter:
       name: lipcritictileset_30
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
+        x: 0
+        y: 128
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 8}
+        - {x: -10, y: -2}
+        - {x: -10, y: -9}
+        - {x: 14, y: -9}
+        - {x: 16, y: -9}
+        - {x: 16, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: de7e609a05acb1b60800000000000000
@@ -949,15 +1099,27 @@ TextureImporter:
       name: lipcritictileset_31
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
+        x: 32
+        y: 128
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 16}
+        - {x: -8, y: 10}
+        - {x: -16, y: 10}
+        - {x: -16, y: -9}
+        - {x: -10, y: -9}
+        - {x: -10, y: -16}
+        - {x: 10, y: -16}
+        - {x: 10, y: -10}
+        - {x: 16, y: -10}
+        - {x: 16, y: 9}
+        - {x: 10, y: 9}
+        - {x: 10, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: 8950b24e3b3332070800000000000000
@@ -970,15 +1132,22 @@ TextureImporter:
       name: lipcritictileset_32
       rect:
         serializedVersion: 2
-        x: 128
-        y: 96
+        x: 64
+        y: 128
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 8}
+        - {x: -16, y: 8}
+        - {x: -16, y: -9}
+        - {x: 8, y: -9}
+        - {x: 8, y: -5}
+        - {x: 8, y: 8}
+        - {x: 4, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: a4f54e62e90c0da20800000000000000
@@ -991,15 +1160,19 @@ TextureImporter:
       name: lipcritictileset_33
       rect:
         serializedVersion: 2
-        x: 160
-        y: 96
+        x: 96
+        y: 128
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 16}
+        - {x: -9, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: eda09e0afcf203df0800000000000000
@@ -1012,15 +1185,22 @@ TextureImporter:
       name: lipcritictileset_34
       rect:
         serializedVersion: 2
-        x: 224
-        y: 96
+        x: 160
+        y: 128
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 9, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 9, y: -16}
+        - {x: 9, y: -15}
+        - {x: 9, y: -13}
+        - {x: 9, y: 12}
       tessellationDetail: 0
       bones: []
       spriteID: 9b903cda5a3cd63b0800000000000000
@@ -1033,8 +1213,8 @@ TextureImporter:
       name: lipcritictileset_35
       rect:
         serializedVersion: 2
-        x: 256
-        y: 96
+        x: 192
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -1054,8 +1234,8 @@ TextureImporter:
       name: lipcritictileset_36
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
+        x: 256
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -1075,15 +1255,22 @@ TextureImporter:
       name: lipcritictileset_37
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 32
+        y: 96
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 16}
+        - {x: -9, y: -4}
+        - {x: -9, y: -9}
+        - {x: 10, y: -9}
+        - {x: 10, y: -6}
+        - {x: 10, y: 11}
+        - {x: 10, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: b82a5bccd209172f0800000000000000
@@ -1097,7 +1284,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 64
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -1118,14 +1305,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 64
+        y: 96
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -9}
+        - {x: -15, y: -9}
+        - {x: 16, y: -9}
+        - {x: 16, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: 4fe12eb53f104ca90800000000000000
@@ -1138,8 +1330,8 @@ TextureImporter:
       name: lipcritictileset_40
       rect:
         serializedVersion: 2
-        x: 224
-        y: 64
+        x: 160
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -1159,8 +1351,8 @@ TextureImporter:
       name: lipcritictileset_41
       rect:
         serializedVersion: 2
-        x: 256
-        y: 64
+        x: 224
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -1180,8 +1372,8 @@ TextureImporter:
       name: lipcritictileset_42
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
+        x: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -1201,15 +1393,20 @@ TextureImporter:
       name: lipcritictileset_43
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
+        x: 32
+        y: 64
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -9}
+        - {x: -15, y: -9}
+        - {x: 16, y: -9}
+        - {x: 16, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: 41598e9a3101eff40800000000000000
@@ -1222,8 +1419,8 @@ TextureImporter:
       name: lipcritictileset_44
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
+        x: 64
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -1243,8 +1440,8 @@ TextureImporter:
       name: lipcritictileset_45
       rect:
         serializedVersion: 2
-        x: 128
-        y: 32
+        x: 160
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -1264,7 +1461,7 @@ TextureImporter:
       name: lipcritictileset_46
       rect:
         serializedVersion: 2
-        x: 192
+        x: 0
         y: 32
         width: 32
         height: 32
@@ -1272,7 +1469,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 9, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 9, y: -16}
+        - {x: 9, y: -15}
+        - {x: 9, y: -13}
+        - {x: 9, y: 12}
       tessellationDetail: 0
       bones: []
       spriteID: 06fcb82a4b1131070800000000000000
@@ -1285,7 +1489,7 @@ TextureImporter:
       name: lipcritictileset_47
       rect:
         serializedVersion: 2
-        x: 224
+        x: 64
         y: 32
         width: 32
         height: 32
@@ -1293,7 +1497,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 16}
+        - {x: -9, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: d4053ca0ab2b4c070800000000000000
@@ -1306,7 +1514,7 @@ TextureImporter:
       name: lipcritictileset_48
       rect:
         serializedVersion: 2
-        x: 256
+        x: 96
         y: 32
         width: 32
         height: 32
@@ -1314,7 +1522,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 9, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 9, y: -16}
+        - {x: 9, y: -15}
+        - {x: 9, y: -13}
+        - {x: 9, y: 12}
       tessellationDetail: 0
       bones: []
       spriteID: c7a0eea5706dd1470800000000000000
@@ -1327,15 +1542,19 @@ TextureImporter:
       name: lipcritictileset_49
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 160
+        y: 32
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 16}
+        - {x: -9, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: 3c0ac23ff62251fe0800000000000000
@@ -1348,7 +1567,7 @@ TextureImporter:
       name: lipcritictileset_50
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 0
         width: 32
         height: 32
@@ -1356,7 +1575,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 8}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: dc49244df790a8490800000000000000
@@ -1369,7 +1592,7 @@ TextureImporter:
       name: lipcritictileset_51
       rect:
         serializedVersion: 2
-        x: 96
+        x: 128
         y: 0
         width: 32
         height: 32
@@ -1377,7 +1600,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 8}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: 34b40b81d08bf1d30800000000000000
@@ -1390,69 +1617,6 @@ TextureImporter:
       name: lipcritictileset_52
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f025d2911de2bb40800000000000000
-      internalID: 5454682758432760057
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lipcritictileset_53
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ebce1e178e5c8ef30800000000000000
-      internalID: 4605148221120048318
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lipcritictileset_54
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 528bfce7c50286f90800000000000000
-      internalID: -6960277642464479195
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lipcritictileset_55
-      rect:
-        serializedVersion: 2
         x: 256
         y: 0
         width: 32
@@ -1461,11 +1625,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -9}
+        - {x: -15, y: -9}
+        - {x: 16, y: -9}
+        - {x: 16, y: 16}
       tessellationDetail: 0
       bones: []
-      spriteID: e59903b5b549f6920800000000000000
-      internalID: 2985768198062774622
+      spriteID: 9f025d2911de2bb40800000000000000
+      internalID: 5454682758432760057
       vertices: []
       indices: 
       edges: []
