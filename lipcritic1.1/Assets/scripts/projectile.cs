@@ -121,7 +121,8 @@ public class projectile : MonoBehaviour
         {
             if(state == State.speed)
             {
-                NMEprojectile.explode();
+
+                Deactivate();
             }
         }
         if (hitinfo.tag == "wall")
@@ -146,8 +147,7 @@ public class projectile : MonoBehaviour
 
     public void explode()
     {
-        Instantiate(explodeO, transform.position, Quaternion.identity);
-        Deactivate();
+        hitwall();
     }
     private void Deactivate()
     {

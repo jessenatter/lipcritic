@@ -38,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject deathcord;
 
+    private bool canboost;
+
     public enum State
     {
         player,
@@ -160,9 +162,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.tag == "boost")
         {
-            if (state == State.player)
-                boost();
+            canboost = true;
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        canboost = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -195,14 +201,16 @@ public class PlayerMovement : MonoBehaviour
     {
             if (state == State.player)
             {
-                if (TimerScr.canshoot == true)
-                {
-                    balls.transform.position = firepoint.position;
-                    projectileV.SetDirection(flipped);
-                    state = State.ray;
-                    TimerScr.startTimer();
-                }
-                else
+            if (TimerScr.canshoot == true)
+            {
+                balls.transform.position = firepoint.position;
+                projectileV.SetDirection(flipped);
+                state = State.ray;
+                TimerScr.startTimer();
+            }
+            else if (canboost == true)
+                boost();
+            else
                 cantshoot();
             }
             else
