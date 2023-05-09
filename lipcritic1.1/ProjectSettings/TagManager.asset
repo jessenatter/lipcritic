@@ -46,18 +46,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: UI
-    uniqueID: 3172202887
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: grounf
-    uniqueID: 2907522639
+  - name: pink
+    uniqueID: 1865813851
+    locked: 0
+  - name: backround
+    uniqueID: 4277955595
+    locked: 0
+  - name: Game
+    uniqueID: 1875686087
     locked: 0
   - name: player
     uniqueID: 1255604729
     locked: 0
-  - name: backround
-    uniqueID: 4277955595
+  - name: UI
+    uniqueID: 3172202887
     locked: 0
