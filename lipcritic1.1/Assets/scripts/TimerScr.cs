@@ -95,4 +95,11 @@ public class TimerScr : MonoBehaviour
     {
         state = State.countup;
     }
+    public void boost()
+    {
+        if (state == State.countup)
+        {
+            timecountup += 3f;
+        }
+    }
 }

@@ -12,6 +12,7 @@ TagManager:
   - Logic
   - grass
   - NMEpatrol
+  - boost
   layers:
   - Default
   - TransparentFX

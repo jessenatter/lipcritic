@@ -158,6 +158,11 @@ public class PlayerMovement : MonoBehaviour
             takehit();
         }
 
+        if (collision.tag == "boost")
+        {
+            if (state == State.player)
+                boost();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -228,5 +233,9 @@ public class PlayerMovement : MonoBehaviour
     public void restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    private void boost()
+    {
+        TimerScr.boost();
     }
 }
