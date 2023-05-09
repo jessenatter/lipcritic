@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1.0f;
         projectileV = balls.GetComponent<projectile>();
         TimerScr = timer.GetComponent<TimerScr>();
         rb = GetComponent<Rigidbody2D>();
@@ -226,7 +227,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void restart()
     {
-        Time.timeScale = 1.0f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
