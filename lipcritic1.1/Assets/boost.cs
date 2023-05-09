@@ -3,41 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class boost : MonoBehaviour
-{
-    public GameObject topleft;
-    public GameObject bottomright;
-    private float targetX;
-    private float targetY;
+{  
     private Rigidbody2D rb;
-    private float directionY;
-    private float directionX;
-    private float force = 1f;
+    public GameObject maxX;
+    public GameObject maxY;
+    public GameObject minX;
+    public GameObject minY;
 
     // Update is called once per frame
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        newtarget();
+        newdirection();
     }
 
     void Update()
     {
-        if (transform.position.x == directionX && transform.position.y == directionY)
-            newtarget();
+        if (transform.position.x > maxX.transform.position.x)
+            newdirection();
+        if (transform.position.y > maxY.transform.position.y)
+            newdirection();
+        if (transform.position.x < minX.transform.position.x)
+            newdirection();
+        if (transform.position.x < minY.transform.position.y)
+            newdirection();
     }
 
-    private void newtarget()
+    private void newdirection()
     {
-        targetX = Random.Range(topleft.transform.position.x, bottomright.transform.position.x);
-        targetY = Random.Range(topleft.transform.position.y, bottomright.transform.position.y);
-
-        directionY = targetY - transform.position.y;
-        directionX = targetX - transform.position.x;
-
-        Debug.Log(directionY);
-        Debug.Log(directionX);
-
-        rb.velocity = new Vector2(directionX, directionY).normalized * force;
+        rb.velocity = new Vector2(Random.Range(-100,100), Random.Range(-100, 100)).normalized;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "trigger")
+            newdirection();
     }
 }

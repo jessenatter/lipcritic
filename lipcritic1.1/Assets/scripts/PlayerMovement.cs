@@ -162,7 +162,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.tag == "boost")
         {
-            canboost = true;
+            //canboost = true;
+            boost();
+            Destroy(collision.gameObject);
         }
     }
 

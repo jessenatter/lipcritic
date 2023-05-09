@@ -13,6 +13,7 @@ TagManager:
   - grass
   - NMEpatrol
   - boost
+  - trigger
   layers:
   - Default
   - TransparentFX
