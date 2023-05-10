@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canboost;
 
     public GameObject GotThing;
-    private float waitplease;
+    private goAway goAway;
 
     public enum State
     {
@@ -57,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         projectileV = balls.GetComponent<projectile>();
+        goAway = GotThing.GetComponent<goAway>();
         TimerScr = timer.GetComponent<TimerScr>();
         rb = GetComponent<Rigidbody2D>();
 
@@ -251,5 +252,6 @@ public class PlayerMovement : MonoBehaviour
     {
         TimerScr.boost();
         GotThing.SetActive(true);
+      //  goAway.timecountupstart();
     }
 }
