@@ -5,10 +5,10 @@ using UnityEngine;
 public class boost : MonoBehaviour
 {  
     private Rigidbody2D rb;
-    public GameObject maxX;
-    public GameObject maxY;
-    public GameObject minX;
-    public GameObject minY;
+    private float maxX;
+    private float maxY;
+    private float minX;
+    private float minY;
 
     // Update is called once per frame
 
@@ -16,17 +16,22 @@ public class boost : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         newdirection();
+        maxX = transform.position.x + 5;
+        minX = transform.position.x - 5;
+        maxY = transform.position.y + 5;
+        minY = transform.position.y - 5;
+
     }
 
     void Update()
     {
-        if (transform.position.x > maxX.transform.position.x)
+        if (transform.position.x > maxX)
             newdirection();
-        if (transform.position.y > maxY.transform.position.y)
+        if (transform.position.x < minX)
             newdirection();
-        if (transform.position.x < minX.transform.position.x)
+        if (transform.position.y > maxY)
             newdirection();
-        if (transform.position.x < minY.transform.position.y)
+        if (transform.position.y < minY)
             newdirection();
     }
 

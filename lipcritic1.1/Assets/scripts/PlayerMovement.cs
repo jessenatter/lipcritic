@@ -40,6 +40,9 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canboost;
 
+    public GameObject GotThing;
+    private float waitplease;
+
     public enum State
     {
         player,
@@ -247,5 +250,6 @@ public class PlayerMovement : MonoBehaviour
     private void boost()
     {
         TimerScr.boost();
+        GotThing.SetActive(true);
     }
 }
