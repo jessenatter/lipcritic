@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class poofSCR : MonoBehaviour
 {
-    private int destroy;
+    private float destroy;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        destroy = 0; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        destroy++;
-        if (destroy == 15)
-            Destroy(gameObject);
+        destroy += Time.deltaTime;
+
+        if (destroy == .01f)
+        {
+            gameObject.SetActive(false);
+        }
+            
     }
 }

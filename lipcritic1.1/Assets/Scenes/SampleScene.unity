@@ -2081,6 +2081,7 @@ MonoBehaviour:
   timer: {fileID: 1926849158}
   groundDetection: {fileID: 384726562}
   deathcord: {fileID: 119696483}
+  GotThing: {fileID: 0}
   state: 0
 --- !u!95 &627749863
 Animator:
@@ -10557,7 +10558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1122847664
 RectTransform:
   m_ObjectHideFlags: 0
