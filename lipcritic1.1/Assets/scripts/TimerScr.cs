@@ -99,7 +99,7 @@ public class TimerScr : MonoBehaviour
     {
         if (state == State.countup)
         {
-            timecountup += 3f;
+            timecountup += 6f;
         }
     }
 }

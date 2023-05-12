@@ -17,6 +17,7 @@ public class projectile : MonoBehaviour
     private TimerScr TimerScr;
     public GameObject flash;
     private LipCriticFLASH LCF;
+    public Animator animator;
 
     public bool groundHit;
     public bool topHit;
@@ -37,6 +38,8 @@ public class projectile : MonoBehaviour
         LCF = flash.GetComponent<LipCriticFLASH>();
         TimerScr = timer.GetComponent<TimerScr>();
         state = State.normal;
+        animator = GetComponent<Animator>();
+        animator.SetBool("SPIKEMODE", false);
     }
 
     // Update is called once per frame
@@ -180,6 +183,7 @@ public class projectile : MonoBehaviour
             state = State.speed;
             TimerScr.SpeedTimer();
             LCF.color();
+            animator.SetBool("SPIKEMODE", true);
         }
 
         else if (state == State.speed)
@@ -187,6 +191,7 @@ public class projectile : MonoBehaviour
             explode();
             TimerScr.TimerDoneByWall();
             LCF.stop();
+            animator.SetBool("SPIKEMODE", false);
         }
     }
     private void hitenemynospeed()

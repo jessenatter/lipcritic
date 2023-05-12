@@ -251,7 +251,7 @@ public class PlayerMovement : MonoBehaviour
     private void boost()
     {
         TimerScr.boost();
-        GotThing.SetActive(true);
+        //GotThing.SetActive(true);
       //  goAway.timecountupstart();
     }
 }
