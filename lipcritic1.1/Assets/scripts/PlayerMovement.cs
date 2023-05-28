@@ -166,7 +166,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.tag == "boost")
         {
-            //canboost = true;
             boost();
             Destroy(collision.gameObject);
         }
@@ -251,7 +250,7 @@ public class PlayerMovement : MonoBehaviour
     private void boost()
     {
         TimerScr.boost();
-        GotThing.SetActive(true);
+        //GotThing.SetActive(true);
       //  goAway.timecountupstart();
     }
 }
