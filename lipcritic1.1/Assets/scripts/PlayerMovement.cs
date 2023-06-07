@@ -43,6 +43,12 @@ public class PlayerMovement : MonoBehaviour
     public GameObject GotThing;
     private goAway goAway;
 
+    private bool CanBeHit;
+
+    public HitCooldown HC;
+
+    public float hurt;
+
     public enum State
     {
         player,
@@ -82,6 +88,16 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
             Shoot();
+
+        if (HC.CanBeHit == false)
+        {
+            hurt = 1 - HC.HitTimer;
+            spriteR.color = new Color(1f, hurt, hurt, 1f);
+        }
+        else
+        {
+            spriteR.color = new Color(1f, 1f, 1f, 1f);
+        }
 
         switch (state)
         {
@@ -128,26 +144,23 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    IEnumerator WaitForSpawn()
-    {
-        while (Time.timeScale != 1.0f)
-            yield return null;
-
-        spriteR.color = new Color(1f, 1f, 1f, 1f);
-    }
 
     public void takehit()
     {
-        Screenshake.Instance.shake(5f, .5f);
-        health = health - 1;
-        if (health == 0)
-            die();
+        if (HC.CanBeHit)
+        {
+            HC.HasHit();
+            Screenshake.Instance.shake(5f, .5f);
+            health = health - 1;
+            if (health == 0)
+                die();
 
-        spriteR.color = new Color(1f, 0f, 0f, 1f);
-        FindObjectOfType<Hitstop>().stop(.3f);
-
-        StartCoroutine(WaitForSpawn());
-
+            FindObjectOfType<Hitstop>().stop(.3f);
+        }
+        else
+        {
+       
+        }
 
     }
     private void die()
@@ -188,6 +201,10 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(10f, 10f);
 
             takehit();
+
+            NMEpatrol meem;
+            meem = collision.gameObject.GetComponent<NMEpatrol>();
+            meem.wallhit();
         }
 
         if (collision.gameObject.tag == "enemy")

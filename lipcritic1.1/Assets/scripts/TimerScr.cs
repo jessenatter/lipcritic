@@ -65,6 +65,8 @@ public class TimerScr : MonoBehaviour
 
                 canshoot = false;
 
+                timecountup = ARMtimer.fillAmount;
+
                 ARMtimer.fillAmount = timecountup / 20f;
 
                 timecountup += Time.deltaTime * 2f;
