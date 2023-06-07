@@ -9,6 +9,7 @@ public class TimerScr : MonoBehaviour
     Image ARMtimer;
     public bool canshoot;
     private float speed = 1f;
+
     private enum State
     {
         frozen,
@@ -42,6 +43,15 @@ public class TimerScr : MonoBehaviour
         {
             canshoot = true;
         }
+        else
+        {
+            canshoot = false;
+        }
+
+        if (fillammount <= 0)
+        {
+            ranout();
+        }
 
         switch (state)
         {
@@ -49,17 +59,23 @@ public class TimerScr : MonoBehaviour
 
             case State.countdown:
 
-                if (projectileV.state == projectile.State.normal)
+                if (fillammount > 0)
                 {
-                    speed = 3f;
+                    if (projectileV.state == projectile.State.normal)
+                    {
+                        speed = 3f;
+                    }
+                    else
+                    {
+                        speed = 6f;
+                    }
+
+                    fillammount -= Time.deltaTime * speed;
                 }
                 else
                 {
-                    speed = 6f;
+                    SwitchToCountUp();
                 }
-
-                fillammount -= Time.deltaTime * speed;
-
                 
 
                 break;
@@ -90,5 +106,9 @@ public class TimerScr : MonoBehaviour
     {
         fillammount += 3f;
     }
-
+    public void ranout()
+    {
+        projectileV.timedone();
+        state = State.countup;
+    }
 }
