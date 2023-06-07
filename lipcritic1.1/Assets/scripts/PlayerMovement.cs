@@ -228,7 +228,7 @@ public class PlayerMovement : MonoBehaviour
                 balls.transform.position = firepoint.position;
                 projectileV.SetDirection(flipped);
                 state = State.ray;
-                TimerScr.startTimer();
+                TimerScr.SwitchToCountDown();
             }
             else if (canboost == true)
                 boost();

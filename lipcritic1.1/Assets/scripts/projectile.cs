@@ -22,13 +22,13 @@ public class projectile : MonoBehaviour
     public bool groundHit;
     public bool topHit;
 
-    private enum State
+    public enum State
     {
         normal,
         speed,
     }
 
-    private State state;
+    public State state;
 
     // Start is called before the first frame update
     void Start()
@@ -163,7 +163,7 @@ public class projectile : MonoBehaviour
     private void hitwall()
     {
         PlayerMovement.teleport();
-        TimerScr.TimerDoneByWall();
+        TimerScr.SwitchToCountUp();
         Deactivate();
     }
     private void hitenemy()
@@ -181,7 +181,6 @@ public class projectile : MonoBehaviour
         if (state == State.normal)
         {
             state = State.speed;
-            TimerScr.SpeedTimer();
             LCF.color();
             animator.SetBool("SPIKEMODE", true);
         }
@@ -189,14 +188,14 @@ public class projectile : MonoBehaviour
         else if (state == State.speed)
         {
             explode();
-            TimerScr.TimerDoneByWall();
+            TimerScr.SwitchToCountUp();
             LCF.stop();
             animator.SetBool("SPIKEMODE", false);
         }
     }
     private void hitenemynospeed()
     {
-        TimerScr.TimerDoneByWall();
+        TimerScr.SwitchToCountUp();
         Deactivate();
     }
 }

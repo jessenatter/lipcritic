@@ -7,11 +7,8 @@ public class TimerScr : MonoBehaviour
 {
 
     Image ARMtimer;
-    public float maxTime = 5f;
-    float timeLeft;
-    float speed = 1;
-    float timecountup = 0;
     public bool canshoot;
+    private float speed = 1f;
     private enum State
     {
         frozen,
@@ -24,84 +21,74 @@ public class TimerScr : MonoBehaviour
     public GameObject balls;
     public projectile projectileV;
 
+    public float fillammount;
+
     // Start is called before the first frame update
     void Start()
     {
+        fillammount = 20f;
         ARMtimer = GetComponent<Image>();
-        timeLeft = maxTime;
         projectileV = balls.GetComponent<projectile>();
+        state = State.countup;
     }
 
     // Update is called once per frame
     void Update()
-    {
+    { 
+
+        ARMtimer.fillAmount = fillammount / 20f;
+
+        if (fillammount >= 10f)
+        {
+            canshoot = true;
+        }
+
         switch (state)
         {
             default:
-            case State.frozen:
-
-                canshoot = true;
-                timecountup = 0;
-
-                break;
 
             case State.countdown:
 
-                canshoot = false;
-
-                if (timeLeft > 0)
+                if (projectileV.state == projectile.State.normal)
                 {
-                    timeLeft -= Time.deltaTime * speed;
-                    ARMtimer.fillAmount = timeLeft / maxTime ;
+                    speed = 3f;
                 }
                 else
                 {
-                    timerend();
+                    speed = 6f;
                 }
+
+                fillammount -= Time.deltaTime * speed;
+
+                
 
                 break;
 
             case State.countup:
 
-                canshoot = false;
+                if (fillammount < 20f)
+                {
+                    fillammount += Time.deltaTime * 2f;
+                }
 
-                timecountup = ARMtimer.fillAmount;
-
-                ARMtimer.fillAmount = timecountup / 20f;
-
-                timecountup += Time.deltaTime * 2f;
-
-                if (ARMtimer.fillAmount == 1f)
-                    state = State.frozen;
 
                 break;
         }
     }
 
-    private void timerend()
+    public void SwitchToCountUp()
     {
-        projectileV.timedone();
         state = State.countup;
     }
-    public void startTimer()
+
+    public void SwitchToCountDown()
     {
-        speed = 1;
-        timeLeft = maxTime;
         state = State.countdown;
     }
-    public void SpeedTimer()
-    {
-        speed = 2f;
-    }
-    public void TimerDoneByWall()
-    {
-        state = State.countup;
-    }
+
     public void boost()
     {
-        if (state == State.countup)
-        {
-            timecountup += 6f;
-        }
+        fillammount += 3f;
     }
+
 }
