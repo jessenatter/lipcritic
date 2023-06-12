@@ -22,6 +22,8 @@ public class projectile : MonoBehaviour
     public bool groundHit;
     public bool topHit;
 
+    public GameObject explode;
+
     public enum State
     {
         normal,
@@ -40,6 +42,8 @@ public class projectile : MonoBehaviour
         state = State.normal;
         animator = GetComponent<Animator>();
         animator.SetBool("SPIKEMODE", false);
+
+        explode = Resources.Load("Explode") as GameObject;
     }
 
     // Update is called once per frame
@@ -148,10 +152,6 @@ public class projectile : MonoBehaviour
         transform.localScale = new Vector2(localScaleX, transform.localScale.y);
     }
 
-    public void explode()
-    {
-        hitwall();
-    }
     private void Deactivate()
     {
         LCF.stop();
@@ -164,6 +164,7 @@ public class projectile : MonoBehaviour
     {
         PlayerMovement.teleport();
         TimerScr.SwitchToCountUp();
+        particle();
         Deactivate();
     }
     private void hitenemy()
@@ -173,6 +174,7 @@ public class projectile : MonoBehaviour
     public void timedone()
     {
         PlayerMovement.teleport();
+        particle();
         Deactivate();
     }
 
@@ -187,7 +189,7 @@ public class projectile : MonoBehaviour
 
         else if (state == State.speed)
         {
-            explode();
+            hitwall();
             TimerScr.SwitchToCountUp();
             LCF.stop();
             animator.SetBool("SPIKEMODE", false);
@@ -196,6 +198,12 @@ public class projectile : MonoBehaviour
     private void hitenemynospeed()
     {
         TimerScr.SwitchToCountUp();
+        particle();
         Deactivate();
+
+    }
+    private void particle()
+    {
+        //Instantiate(explode, transform.position,Quaternion.identity);
     }
 }
