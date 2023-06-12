@@ -28,7 +28,7 @@ public class ZoomOut : MonoBehaviour
 
         if(meem == true)
         {
-            if (CM.m_Lens.FieldOfView < 81)
+            if (CM.m_Lens.FieldOfView < 87f)
             {
                 CM.m_Lens.FieldOfView += 16f * Time.deltaTime;
             }
