@@ -36,7 +36,7 @@ public class TimerScr : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-
+        
         ARMtimer.fillAmount = fillammount / 20f;
 
         if (fillammount >= 10f)

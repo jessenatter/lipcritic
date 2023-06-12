@@ -235,6 +235,8 @@ public class PlayerMovement : MonoBehaviour
                     balls.transform.position = firepoint.position;
                     projectileV.SetDirection(flipped);
                     state = State.ray;
+                    animator.SetFloat("speed", 0f);
+                    animator.SetBool("isJumping", false);
                     TimerScr.SwitchToCountDown();
                 }
                 else if (canboost == true)
