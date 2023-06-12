@@ -1299,7 +1299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -14.0000305, y: 0}
+  m_AnchoredPosition: {x: -14, y: 0}
   m_SizeDelta: {x: 234.9873, y: 228.4224}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &446870598
@@ -1686,7 +1686,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.95, y: -1.1068035, z: -10}
+  m_LocalPosition: {x: -33.95, y: -1.1068034, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9463033}
@@ -1990,6 +1990,7 @@ GameObject:
   - component: {fileID: 627749855}
   - component: {fileID: 627749861}
   - component: {fileID: 627749863}
+  - component: {fileID: 627749862}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -2158,8 +2159,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627749854}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.95, y: -0.837, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -33.95, y: -0.8369999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 911181847}
@@ -2196,7 +2197,25 @@ MonoBehaviour:
   groundDetection: {fileID: 384726562}
   deathcord: {fileID: 119696483}
   GotThing: {fileID: 1122847663}
+  HC: {fileID: 627749862}
+  hurt: 0
   state: 0
+  canusehand: 1
+--- !u!114 &627749862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627749854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43383c584c33141b5b9eb08b24615dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanBeHit: 1
+  HitTimer: 0
+  SR: {fileID: 0}
 --- !u!95 &627749863
 Animator:
   serializedVersion: 3
@@ -12015,8 +12034,10 @@ MonoBehaviour:
   explodeO: {fileID: 4778023133494329668, guid: 3fc8b16a64ec63f468e20d08adf8a349, type: 3}
   timer: {fileID: 1926849158}
   flash: {fileID: 9463032}
+  animator: {fileID: 0}
   groundHit: 0
   topHit: 0
+  state: 0
 --- !u!96 &1032447906
 TrailRenderer:
   serializedVersion: 2
@@ -12613,7 +12634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264865559}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.95, y: -1.1068035, z: -10}
+  m_LocalPosition: {x: -33.95, y: -1.1068034, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1071395359}
@@ -14505,10 +14526,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9f24dd5b018914daaec1d5acc8a8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 5
   canshoot: 0
   balls: {fileID: 1032447900}
   projectileV: {fileID: 0}
+  fillammount: 0
 --- !u!114 &1926849161
 MonoBehaviour:
   m_ObjectHideFlags: 0

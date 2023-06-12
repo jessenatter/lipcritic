@@ -58,16 +58,20 @@ public class PlayerMovement : MonoBehaviour
 
     public State state;
 
+    public bool canusehand = true;
+
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1.0f;
         projectileV = balls.GetComponent<projectile>();
         goAway = GotThing.GetComponent<goAway>();
-        TimerScr = timer.GetComponent<TimerScr>();
         rb = GetComponent<Rigidbody2D>();
 
         animator.SetBool("isdead", false);
+
+        if(canusehand == true)
+            TimerScr = timer.GetComponent<TimerScr>();
     }
 
     // Update is called once per frame
@@ -77,11 +81,6 @@ public class PlayerMovement : MonoBehaviour
         {
             die();
         }
-
-        int layer_mask = LayerMask.GetMask("Obsticle");
-        RaycastHit2D playercast = Physics2D.Raycast(groundDetection.position, Vector2.down, .1f, layer_mask);
-        if (playercast == true)
-            animator.SetBool("isJumping", false);
 
         if (HitTimer > 0)
             HitTimer -= Time.deltaTime;
@@ -216,27 +215,34 @@ public class PlayerMovement : MonoBehaviour
 
             takehit();
         }
+        if(collision.gameObject.tag == "wall")
+        {
+            animator.SetBool("isJumping", false);
+        }
     }
 
 
     void Shoot()
     {
+        if (canusehand == true)
+        {
             if (state == State.player)
             {
-            if (TimerScr.canshoot == true)
-            {
-                balls.transform.position = firepoint.position;
-                projectileV.SetDirection(flipped);
-                state = State.ray;
-                TimerScr.SwitchToCountDown();
-            }
-            else if (canboost == true)
-                boost();
-            else
-                cantshoot();
+                if (TimerScr.canshoot == true)
+                {
+                    balls.transform.position = firepoint.position;
+                    projectileV.SetDirection(flipped);
+                    state = State.ray;
+                    TimerScr.SwitchToCountDown();
+                }
+                else if (canboost == true)
+                    boost();
+                else
+                    cantshoot();
             }
             else
                 projectileV.speedSwitch();
+        }
     }
 
     public void playerControl()

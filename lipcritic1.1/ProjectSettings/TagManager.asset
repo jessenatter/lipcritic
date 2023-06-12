@@ -14,6 +14,7 @@ TagManager:
   - NMEpatrol
   - boost
   - trigger
+  - ray
   layers:
   - Default
   - TransparentFX
