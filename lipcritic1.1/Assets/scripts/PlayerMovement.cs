@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+
     public CharacterController2D controller;
     public Animator animator;
     public SpriteRenderer spriteR;
@@ -77,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (deathcord.transform.position.y > transform.position.y)
         {
             die();
