@@ -50,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float hurt;
 
+    public bool meemo;
+
     public enum State
     {
         player,
@@ -107,6 +109,8 @@ public class PlayerMovement : MonoBehaviour
             default:
             case State.player:
 
+    
+
                 //nonsense to see if flipping
                 x = transform.position.x;
                 firex = firepoint.position.x;
@@ -131,6 +135,8 @@ public class PlayerMovement : MonoBehaviour
                 break;
 
             case State.ray:
+
+               
 
                 controller.Move(0f, false, false);
 

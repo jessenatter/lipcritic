@@ -40,6 +40,7 @@ public class Tout2 : MonoBehaviour
 
     void Awake()
     {
+        pm = player.GetComponent<PlayerMovement>();
         StartCoroutine(CheckForControllers());
         alpha = 1f;
         fading = false;
@@ -77,7 +78,7 @@ public class Tout2 : MonoBehaviour
         }
         else
         {
-           text.text = "Use your movement inputs to control the magic orb. Wherever your magic orb hits, you teleport to.";
+           text.text = "Use your movement inputs to control the magic orb.";
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
