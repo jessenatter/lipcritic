@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Tout2 : MonoBehaviour
+public class tout3 : MonoBehaviour
 {
     public Text text;
 
     private bool connected = false;
     private float alpha;
     private bool fading;
-
-    public GameObject tout2;
 
     IEnumerator CheckForControllers()
     {
@@ -51,21 +49,16 @@ public class Tout2 : MonoBehaviour
                 text.color = new Color(1f, 1f, 1f, alpha);
                 alpha -= Time.deltaTime;
             }
-
-            if (alpha <= 0)
-            {
-                tout2.SetActive(true);
-            }
         }
 
         if (connected)
         {
-            text.text = "Use the right trigger to activate your magic orb. Wherever your magic orb hits, you teleport to.";
+            text.text = "Use the left trigger to zoom out.";
 
         }
         if (!connected)
         {
-            text.text = "Use the left mouse button to activate your magic orb. Wherever your magic orb hits, you teleport to.";
+            text.text = "Use the right mouse button to zoom out.";
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
