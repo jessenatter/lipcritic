@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class tutorial : MonoBehaviour
+public class Tout2 : MonoBehaviour
 {
     public Text text;
 
@@ -44,20 +44,21 @@ public class tutorial : MonoBehaviour
         if (fading)
         {
             if (alpha > 0)
-            
+
             {
                 text.color = new Color(1f, 1f, 1f, alpha);
                 alpha -= Time.deltaTime;
             }
         }
 
-        if(connected)
+        if (connected)
         {
-            text.text = "Use the left joystick to move, and X to jump.";
+            text.text = "Use the right trigger to activate your magic orb.";
+
         }
-        if(!connected)
+        if (!connected)
         {
-            text.text = "Use W A S D to move, and space to jump.";
+            text.text = "Use the left mouse button to activate your magic orb.";
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

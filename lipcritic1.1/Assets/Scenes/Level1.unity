@@ -20401,6 +20401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7eacb44defcc9c459b848a316085074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 1127412102}
 --- !u!61 &784125750
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23653,7 +23654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3370873419045611123, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
