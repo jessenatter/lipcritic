@@ -13,6 +13,11 @@ public class Tout2 : MonoBehaviour
 
     public GameObject tout2;
 
+    public GameObject player;
+
+    public PlayerMovement pm;
+
+
     IEnumerator CheckForControllers()
     {
         while (true)
@@ -58,14 +63,21 @@ public class Tout2 : MonoBehaviour
             }
         }
 
-        if (connected)
+        if (pm.state == PlayerMovement.State.player)
         {
-            text.text = "Use the right trigger to activate your magic orb. Wherever your magic orb hits, you teleport to.";
+            if (connected)
+            {
+                text.text = "Use the right trigger to activate your magic orb. Wherever your magic orb hits, you teleport to.";
 
+            }
+            if (!connected)
+            {
+                text.text = "Use the left mouse button to activate your magic orb. Wherever your magic orb hits, you teleport to.";
+            }
         }
-        if (!connected)
+        else
         {
-            text.text = "Use the left mouse button to activate your magic orb. Wherever your magic orb hits, you teleport to.";
+           text.text = "Use your movement inputs to control the magic orb. Wherever your magic orb hits, you teleport to.";
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
