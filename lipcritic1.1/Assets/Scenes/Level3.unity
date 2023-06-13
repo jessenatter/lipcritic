@@ -1316,7 +1316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.95, y: -1.1068035, z: -10}
+  m_LocalPosition: {x: -33.95, y: -4.2698035, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9463033}
@@ -11311,7 +11311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264865559}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.95, y: -1.1068035, z: -10}
+  m_LocalPosition: {x: -33.95, y: -4.2698035, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1071395359}
@@ -12071,7 +12071,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: -1387444657
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &1668516727
 RectTransform:
@@ -13163,6 +13163,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: levelTrigger (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3370873419045611123, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
 --- !u!4 &6083099957518808077
@@ -13299,7 +13303,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6083099958349591025}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.95, y: -0.837, z: 0}
+  m_LocalPosition: {x: -33.95, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6083099958066268728}

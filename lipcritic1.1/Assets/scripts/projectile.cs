@@ -24,6 +24,8 @@ public class projectile : MonoBehaviour
 
     public GameObject explode;
 
+    public TrailRenderer TR;
+
     public enum State
     {
         normal,
@@ -42,6 +44,7 @@ public class projectile : MonoBehaviour
         state = State.normal;
         animator = GetComponent<Animator>();
         animator.SetBool("SPIKEMODE", false);
+        TR = GetComponent<TrailRenderer>();
     }
 
     // Update is called once per frame
@@ -183,6 +186,7 @@ public class projectile : MonoBehaviour
             state = State.speed;
             LCF.color();
             animator.SetBool("SPIKEMODE", true);
+            TR.startWidth = .6f;
         }
 
         else if (state == State.speed)
@@ -191,6 +195,7 @@ public class projectile : MonoBehaviour
             TimerScr.SwitchToCountUp();
             LCF.stop();
             animator.SetBool("SPIKEMODE", false);
+            TR.startWidth = .85f;
         }
     }
     private void hitenemynospeed()
