@@ -26,6 +26,8 @@ public class projectile : MonoBehaviour
 
     public TrailRenderer TR;
 
+    public bool pee = false;
+
     public enum State
     {
         normal,
@@ -45,6 +47,7 @@ public class projectile : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.SetBool("SPIKEMODE", false);
         TR = GetComponent<TrailRenderer>();
+        TR.startWidth = .85f;
     }
 
     // Update is called once per frame
@@ -181,21 +184,24 @@ public class projectile : MonoBehaviour
 
     public void speedSwitch()
     {
-        if (state == State.normal)
+        if (pee == false)
         {
-            state = State.speed;
-            LCF.color();
-            animator.SetBool("SPIKEMODE", true);
-            TR.startWidth = .6f;
-        }
+            if (state == State.normal)
+            {       
+                    state = State.speed;
+                    LCF.color();
+                    animator.SetBool("SPIKEMODE", true);
+                    TR.startWidth = .6f;
+            }
 
-        else if (state == State.speed)
-        {
-            hitwall();
-            TimerScr.SwitchToCountUp();
-            LCF.stop();
-            animator.SetBool("SPIKEMODE", false);
-            TR.startWidth = .85f;
+            else if (state == State.speed)
+            {
+                hitwall();
+                TimerScr.SwitchToCountUp();
+                LCF.stop();
+                animator.SetBool("SPIKEMODE", false);
+                TR.startWidth = .85f;
+            }
         }
     }
     private void hitenemynospeed()

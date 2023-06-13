@@ -247,7 +247,7 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetBool("isJumping", false);
                     TimerScr.SwitchToCountDown();
                 }
-                else if (canboost == true)
+                else if (canboost == true) 
                     boost();
                 else
                     cantshoot();
