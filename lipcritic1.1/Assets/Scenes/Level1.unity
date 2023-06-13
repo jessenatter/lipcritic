@@ -21032,6 +21032,7 @@ MonoBehaviour:
   topHit: 0
   explode: {fileID: 5982750276419411126, guid: 87aa020a03774481395b254ffc718df4, type: 3}
   TR: {fileID: 0}
+  pee: 0
   state: 0
 --- !u!96 &1032447906
 TrailRenderer:
@@ -21435,8 +21436,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107, y: 188}
-  m_SizeDelta: {x: 672.8129, y: 48.3148}
+  m_AnchoredPosition: {x: 91.184, y: 166.7829}
+  m_SizeDelta: {x: 640.03, y: 92.2881}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1127412102
 MonoBehaviour:
