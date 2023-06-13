@@ -74705,6 +74705,7 @@ MonoBehaviour:
   animator: {fileID: 1032447907}
   groundHit: 0
   topHit: 0
+  explode: {fileID: 0}
   state: 0
 --- !u!96 &1032447906
 TrailRenderer:
@@ -74985,6 +74986,63 @@ MonoBehaviour:
   m_AmplitudeGain: 2
   m_FrequencyGain: 1
   mNoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!1001 &1117529231
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3370873419045611118, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370873419045611118, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 97
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370873419045611118, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370873419045611118, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370873419045611118, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370873419045611118, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370873419045611118, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370873419045611118, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370873419045611118, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370873419045611118, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370873419045611118, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370873419045611123, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
+      propertyPath: m_Name
+      value: levelTrigger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
 --- !u!1 &1122847663
 GameObject:
   m_ObjectHideFlags: 0
@@ -77164,6 +77222,7 @@ MonoBehaviour:
   HC: {fileID: 6083099958349590985}
   hurt: 0
   state: 0
+  canusehand: 1
 --- !u!4 &6083099958349590987
 Transform:
   m_ObjectHideFlags: 0

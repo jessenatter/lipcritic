@@ -42,8 +42,6 @@ public class projectile : MonoBehaviour
         state = State.normal;
         animator = GetComponent<Animator>();
         animator.SetBool("SPIKEMODE", false);
-
-        explode = Resources.Load("Explode") as GameObject;
     }
 
     // Update is called once per frame

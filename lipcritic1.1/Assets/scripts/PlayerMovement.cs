@@ -73,7 +73,9 @@ public class PlayerMovement : MonoBehaviour
 
         if(canusehand == true)
             TimerScr = timer.GetComponent<TimerScr>();
-    }
+
+         runspeed = 30f;
+}
 
     // Update is called once per frame
     void Update()
