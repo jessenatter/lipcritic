@@ -68,7 +68,12 @@ public class PlayerMovement : MonoBehaviour
         Ccollider = GetComponent<CircleCollider2D>();
         animator.SetBool("isdead", false);
 
-        if(canusehand == true)
+        deathcord = GameObject.FindGameObjectWithTag("deathcord");
+        deathscreen = GameObject.FindGameObjectWithTag("deathscreen");
+        timer = GameObject.FindGameObjectWithTag("timer");
+        balls = GameObject.FindGameObjectWithTag("ray");
+
+        if (canusehand == true)
             TimerScr = timer.GetComponent<TimerScr>();
 
          runspeed = 30f;

@@ -18,6 +18,7 @@ TagManager:
   - canvas
   - timer
   - heart
+  - flash
   layers:
   - Default
   - TransparentFX

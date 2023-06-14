@@ -12,7 +12,6 @@ public class projectile : MonoBehaviour
     public float horizontalMove = 10f;
     public float verticalMove = 0f;
     public GameObject player;
-    public GameObject explodeO;
     public GameObject timer;
     private TimerScr TimerScr;
     public GameObject flash;
@@ -21,8 +20,6 @@ public class projectile : MonoBehaviour
 
     public bool groundHit;
     public bool topHit;
-
-    public GameObject explode;
 
     public TrailRenderer TR;
 
@@ -48,6 +45,9 @@ public class projectile : MonoBehaviour
         animator.SetBool("SPIKEMODE", false);
         TR = GetComponent<TrailRenderer>();
         TR.startWidth = .85f;
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        flash = GameObject.FindGameObjectWithTag("flash");
     }
 
     // Update is called once per frame
