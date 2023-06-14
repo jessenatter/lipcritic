@@ -27,6 +27,8 @@ public class TimerScr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        balls = GameObject.FindGameObjectWithTag("ray");
+
         fillammount = 20f;
         ARMtimer = GetComponent<Image>();
         projectileV = balls.GetComponent<projectile>();

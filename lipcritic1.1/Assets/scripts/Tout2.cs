@@ -40,11 +40,13 @@ public class Tout2 : MonoBehaviour
 
     void Awake()
     {
-        pm = player.GetComponent<PlayerMovement>();
+       
         StartCoroutine(CheckForControllers());
         alpha = 1f;
         fading = false;
         text.color = new Color(1f, 1f, 1f, 1f);
+        player = GameObject.FindGameObjectWithTag("Player");
+        pm = player.GetComponent<PlayerMovement>();
     }
 
     private void Update()

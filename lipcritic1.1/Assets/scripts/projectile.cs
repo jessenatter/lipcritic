@@ -12,7 +12,9 @@ public class projectile : MonoBehaviour
     public float horizontalMove = 10f;
     public float verticalMove = 0f;
     public GameObject player;
+
     public GameObject timer;
+
     private TimerScr TimerScr;
     public GameObject flash;
     private LipCriticFLASH LCF;
@@ -25,6 +27,8 @@ public class projectile : MonoBehaviour
 
     public bool pee = false;
 
+    public bool canusehand = true;
+
     public enum State
     {
         normal,
@@ -36,23 +40,26 @@ public class projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Ccollider = GetComponent<CircleCollider2D>();
-        PlayerMovement = player.GetComponent<PlayerMovement>();
-        LCF = flash.GetComponent<LipCriticFLASH>();
-        TimerScr = timer.GetComponent<TimerScr>();
-        state = State.normal;
-        animator = GetComponent<Animator>();
-        animator.SetBool("SPIKEMODE", false);
-        TR = GetComponent<TrailRenderer>();
-        TR.startWidth = .85f;
+       
+            Ccollider = GetComponent<CircleCollider2D>();
+            PlayerMovement = player.GetComponent<PlayerMovement>();
+            LCF = flash.GetComponent<LipCriticFLASH>();
+          
+            state = State.normal;
+            animator = GetComponent<Animator>();
+            animator.SetBool("SPIKEMODE", false);
+            TR = GetComponent<TrailRenderer>();
+            TR.startWidth = .85f;
 
-        player = GameObject.FindGameObjectWithTag("Player");
-        flash = GameObject.FindGameObjectWithTag("flash");
+            player = GameObject.FindGameObjectWithTag("Player");
+            flash = GameObject.FindGameObjectWithTag("flash");
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
         //close to ground
 
         int layer_mask = LayerMask.GetMask("Obsticle");
@@ -166,6 +173,8 @@ public class projectile : MonoBehaviour
     }
     private void hitwall()
     {
+        TimerScr = timer.GetComponent<TimerScr>();
+
         PlayerMovement.teleport();
         TimerScr.SwitchToCountUp();
         particle();
@@ -196,6 +205,8 @@ public class projectile : MonoBehaviour
 
             else if (state == State.speed)
             {
+                TimerScr = timer.GetComponent<TimerScr>();
+
                 hitwall();
                 TimerScr.SwitchToCountUp();
                 LCF.stop();

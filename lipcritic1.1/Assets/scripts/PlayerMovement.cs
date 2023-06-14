@@ -61,22 +61,28 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 1.0f;
+        deathcord = GameObject.FindGameObjectWithTag("deathcord");
+        deathscreen = GameObject.FindGameObjectWithTag("deathscreen");
+        deathscreen.SetActive(false);
+        timer = GameObject.FindGameObjectWithTag("timer");
+        balls = GameObject.FindGameObjectWithTag("ray");
+
         projectileV = balls.GetComponent<projectile>();
+
+        balls.SetActive(false);
+        Time.timeScale = 1.0f;
         rb = GetComponent<Rigidbody2D>();
         Bcollider = GetComponent<BoxCollider2D>();
         Ccollider = GetComponent<CircleCollider2D>();
         animator.SetBool("isdead", false);
 
-        deathcord = GameObject.FindGameObjectWithTag("deathcord");
-        deathscreen = GameObject.FindGameObjectWithTag("deathscreen");
-        timer = GameObject.FindGameObjectWithTag("timer");
-        balls = GameObject.FindGameObjectWithTag("ray");
+
 
         if (canusehand == true)
             TimerScr = timer.GetComponent<TimerScr>();
 
          runspeed = 30f;
+         
 }
 
     // Update is called once per frame
@@ -237,6 +243,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (state == State.player)
             {
+                
                 if (TimerScr.canshoot == true)
                 {
                     balls.transform.position = firepoint.position;

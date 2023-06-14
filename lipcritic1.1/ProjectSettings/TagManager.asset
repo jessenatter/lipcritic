@@ -19,6 +19,7 @@ TagManager:
   - timer
   - heart
   - flash
+  - proj
   layers:
   - Default
   - TransparentFX

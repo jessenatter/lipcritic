@@ -10,6 +10,8 @@ public class hjdsghjsg : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+  
+        ray = GameObject.FindGameObjectWithTag("ray");
         poop = ray.GetComponent<projectile>();
         poop.pee = true;
         
