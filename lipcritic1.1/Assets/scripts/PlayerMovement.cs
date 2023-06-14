@@ -41,11 +41,6 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canboost;
 
-    public GameObject GotThing;
-    private goAway goAway;
-
-    private bool CanBeHit;
-
     public HitCooldown HC;
 
     public float hurt;
@@ -68,7 +63,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         projectileV = balls.GetComponent<projectile>();
-        goAway = GotThing.GetComponent<goAway>();
         rb = GetComponent<Rigidbody2D>();
         Bcollider = GetComponent<BoxCollider2D>();
         Ccollider = GetComponent<CircleCollider2D>();
@@ -86,7 +80,8 @@ public class PlayerMovement : MonoBehaviour
         
         if (deathcord.transform.position.y > transform.position.y)
         {
-            die();
+            if (Bcollider.enabled == true)
+             die();
         }
 
         if (HitTimer > 0)
