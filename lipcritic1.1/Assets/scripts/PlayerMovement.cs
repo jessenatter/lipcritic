@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     public HitCooldown HC;
 
     public float hurt;
-
+    private CircleCollider2D Ccollider;
     public bool meemo;
 
     public enum State
@@ -70,7 +70,8 @@ public class PlayerMovement : MonoBehaviour
         projectileV = balls.GetComponent<projectile>();
         goAway = GotThing.GetComponent<goAway>();
         rb = GetComponent<Rigidbody2D>();
-
+        Bcollider = GetComponent<BoxCollider2D>();
+        Ccollider = GetComponent<CircleCollider2D>();
         animator.SetBool("isdead", false);
 
         if(canusehand == true)
@@ -135,8 +136,6 @@ public class PlayerMovement : MonoBehaviour
                 break;
 
             case State.ray:
-
-               
 
                 controller.Move(0f, false, false);
 
@@ -243,6 +242,9 @@ public class PlayerMovement : MonoBehaviour
                     balls.transform.position = firepoint.position;
                     projectileV.SetDirection(flipped);
                     state = State.ray;
+                    Bcollider.enabled = false;
+                    Ccollider.enabled = false;
+                    animator.SetBool("invisible", true);
                     animator.SetFloat("speed", 0f);
                     animator.SetBool("isJumping", false);
                     TimerScr.SwitchToCountDown();
@@ -260,6 +262,9 @@ public class PlayerMovement : MonoBehaviour
     public void playerControl()
     {
         state = State.player;
+        Bcollider.enabled = true;
+        Ccollider.enabled = true;
+        animator.SetBool("invisible", false);
     }
 
     public void teleport()
