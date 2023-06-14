@@ -11,7 +11,7 @@ public class ZoomOut : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        CM.Follow = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
