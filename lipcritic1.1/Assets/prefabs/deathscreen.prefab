@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 3967790826741361394}
   m_Layer: 0
   m_Name: deathscreen
-  m_TagString: Untagged
+  m_TagString: deathscreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

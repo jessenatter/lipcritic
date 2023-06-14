@@ -7,14 +7,17 @@ TagManager:
   - bullet
   - enemy
   - wall
-  - explode!
   - NMEproj
-  - Logic
-  - grass
   - NMEpatrol
   - boost
   - trigger
   - ray
+  - deathcord
+  - deathscreen
+  - hitstop
+  - canvas
+  - timer
+  - heart
   layers:
   - Default
   - TransparentFX
