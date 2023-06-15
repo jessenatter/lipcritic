@@ -10,6 +10,7 @@ public class nextLevel : MonoBehaviour
     public Animator transition;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+       
         if(collision.tag == "Player")
         {
             loadnext();
@@ -25,7 +26,6 @@ public class nextLevel : MonoBehaviour
 
     public void loadnext()
     {
-        
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
@@ -35,6 +35,7 @@ public class nextLevel : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
+     
         SceneManager.LoadScene(levelIndex);
     }
 }
