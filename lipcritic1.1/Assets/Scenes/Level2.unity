@@ -1362,7 +1362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3370873419045611123, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
@@ -2387,6 +2387,7 @@ MonoBehaviour:
   canshoot: 0
   balls: {fileID: 1032447900}
   projectileV: {fileID: 0}
+  ArmCover: {fileID: 0}
   fillammount: 0
 --- !u!114 &649920911
 MonoBehaviour:
@@ -19558,6 +19559,7 @@ MonoBehaviour:
   canshoot: 0
   balls: {fileID: 1032447900}
   projectileV: {fileID: 0}
+  ArmCover: {fileID: 0}
   fillammount: 0
 --- !u!114 &1926849161
 MonoBehaviour:
