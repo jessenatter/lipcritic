@@ -1436,6 +1436,7 @@ MonoBehaviour:
   canshoot: 0
   balls: {fileID: 1032447900}
   projectileV: {fileID: 0}
+  ArmCover: {fileID: 0}
   fillammount: 0
 --- !u!114 &649920911
 MonoBehaviour:
@@ -23246,6 +23247,7 @@ MonoBehaviour:
   canshoot: 0
   balls: {fileID: 1032447900}
   projectileV: {fileID: 0}
+  ArmCover: {fileID: 0}
   fillammount: 0
 --- !u!114 &1926849161
 MonoBehaviour:
@@ -23584,6 +23586,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3370873418050360740, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3370873418050360742, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
       propertyPath: m_Interactable
       value: 0
@@ -23606,19 +23612,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3370873419045611117, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
       propertyPath: m_Size.x
-      value: 42.02185
+      value: 52.795464
       objectReference: {fileID: 0}
     - target: {fileID: 3370873419045611117, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
       propertyPath: m_Size.y
-      value: 34.800953
+      value: 49.307602
       objectReference: {fileID: 0}
     - target: {fileID: 3370873419045611117, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
       propertyPath: m_Offset.x
-      value: 10.915588
+      value: 30.959843
       objectReference: {fileID: 0}
     - target: {fileID: 3370873419045611117, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
       propertyPath: m_Offset.y
-      value: 16.900476
+      value: 9.647153
       objectReference: {fileID: 0}
     - target: {fileID: 3370873419045611118, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
       propertyPath: m_RootOrder

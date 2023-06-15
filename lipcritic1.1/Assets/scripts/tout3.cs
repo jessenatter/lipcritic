@@ -77,6 +77,5 @@ public class tout3 : MonoBehaviour
     public void GARBO()
     {
         text.color = new Color(1f, 1f, 1f, 1f);
-        Debug.Log("sgdjhsgdhj");
     }
 }
