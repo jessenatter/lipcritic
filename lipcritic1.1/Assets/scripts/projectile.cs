@@ -27,7 +27,6 @@ public class projectile : MonoBehaviour
 
     public bool pee = false;
 
-    public bool canusehand = true;
 
     public enum State
     {
@@ -50,9 +49,6 @@ public class projectile : MonoBehaviour
             animator.SetBool("SPIKEMODE", false);
             TR = GetComponent<TrailRenderer>();
             TR.startWidth = .85f;
-
-            player = GameObject.FindGameObjectWithTag("Player");
-            flash = GameObject.FindGameObjectWithTag("flash");
 
     }
 
@@ -154,6 +150,7 @@ public class projectile : MonoBehaviour
     {
         direction = _direction;
         gameObject.SetActive(true);
+        Debug.Log("meem");
         Ccollider.enabled = true;
 
         float localScaleX = transform.localScale.x;

@@ -61,12 +61,6 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        deathcord = GameObject.FindGameObjectWithTag("deathcord");
-        deathscreen = GameObject.FindGameObjectWithTag("deathscreen");
-        deathscreen.SetActive(false);
-        timer = GameObject.FindGameObjectWithTag("timer");
-        balls = GameObject.FindGameObjectWithTag("ray");
-
         projectileV = balls.GetComponent<projectile>();
 
         balls.SetActive(false);
@@ -75,13 +69,8 @@ public class PlayerMovement : MonoBehaviour
         Bcollider = GetComponent<BoxCollider2D>();
         Ccollider = GetComponent<CircleCollider2D>();
         animator.SetBool("isdead", false);
-
-
-
-        if (canusehand == true)
-            TimerScr = timer.GetComponent<TimerScr>();
-
-         runspeed = 30f;
+        TimerScr = timer.GetComponent<TimerScr>();
+        runspeed = 30f;
          
 }
 

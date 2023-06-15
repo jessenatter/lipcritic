@@ -160,8 +160,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6514257678341751885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.02, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -34.85123, y: -7.112932, z: 0.0000000472083}
+  m_LocalScale: {x: -1, y: 1, z: 0}
   m_Children:
   - {fileID: 6514257678552747035}
   - {fileID: 6514257678633113824}
@@ -261,7 +261,6 @@ MonoBehaviour:
   topHit: 0
   TR: {fileID: 0}
   pee: 0
-  canusehand: 1
   state: 0
 --- !u!50 &6514257678341751921
 Rigidbody2D:
