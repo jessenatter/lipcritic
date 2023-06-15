@@ -24,7 +24,7 @@ public class restart : MonoBehaviour
         if (Input.GetButtonDown("Fire2"))
             PM.restart();
 
-        if (Input.GetButtonDown("jump"))
+        if (Input.GetButtonDown("Jump"))
             PM.restart();
     }
 }
