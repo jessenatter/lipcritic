@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using TMPro.EditorUtilities;
-using TMPro.SpriteAssetUtilities;
 
 
 public class TitleRandomizer : MonoBehaviour
@@ -22,7 +20,7 @@ public class TitleRandomizer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.fontSize = 90f + 5f * (SineAmmount());
+        text.fontSize = 80f + 5f * (SineAmmount());
     }
 
     public float SineAmmount()

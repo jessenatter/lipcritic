@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ListeningToInput : MonoBehaviour
 {
+    public Animator transition;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,22 @@ public class ListeningToInput : MonoBehaviour
     void Update()
     {
         if (Input.GetButtonDown("Jump"))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            loadnext();
 
+    }
+
+    public void loadnext()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        transition.SetTrigger("start");
+
+        yield return new WaitForSeconds(1f);
+
+
+        SceneManager.LoadScene(levelIndex);
     }
 }

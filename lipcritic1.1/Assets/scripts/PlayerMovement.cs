@@ -77,7 +77,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown("r"))
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
         if (deathcord.transform.position.y > transform.position.y)
         {
             if (state == State.player)
