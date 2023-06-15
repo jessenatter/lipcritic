@@ -81,7 +81,10 @@ public class PlayerMovement : MonoBehaviour
         if (deathcord.transform.position.y > transform.position.y)
         {
             if (Bcollider.enabled == true)
-             die();
+            {
+                die();
+            }
+             
         }
 
         if (HitTimer > 0)
