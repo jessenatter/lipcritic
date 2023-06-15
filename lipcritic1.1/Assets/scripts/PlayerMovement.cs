@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
         Ccollider = GetComponent<CircleCollider2D>();
         animator.SetBool("isdead", false);
 
-        if(canusehand == true)
+
             TimerScr = timer.GetComponent<TimerScr>();
 
          runspeed = 30f;
@@ -80,8 +80,8 @@ public class PlayerMovement : MonoBehaviour
         
         if (deathcord.transform.position.y > transform.position.y)
         {
-            if (Bcollider.enabled == true)
-            {
+            if (state == State.player)
+            { 
                 die();
             }
              

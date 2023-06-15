@@ -36,7 +36,8 @@ public class tout3 : MonoBehaviour
         StartCoroutine(CheckForControllers());
         alpha = 1f;
         fading = false;
-        text.color = new Color(1f, 1f, 1f, 1f);
+        text.color = new Color(1f, 1f, 1f, 0f);
+       
     }
 
     private void Update()
@@ -63,12 +64,19 @@ public class tout3 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        fadeout();
+            fadeout();
+
     }
 
     private void fadeout()
     {
         text.color = new Color(1f, 1f, 1f, alpha);
         fading = true;
+    }
+
+    public void GARBO()
+    {
+        text.color = new Color(1f, 1f, 1f, 1f);
+        Debug.Log("sgdjhsgdhj");
     }
 }

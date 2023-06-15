@@ -22,6 +22,8 @@ public class TimerScr : MonoBehaviour
     public GameObject balls;
     public projectile projectileV;
 
+    public GameObject ArmCover;
+
     public float fillammount;
 
     // Start is called before the first frame update

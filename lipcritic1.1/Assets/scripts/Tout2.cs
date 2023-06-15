@@ -11,12 +11,11 @@ public class Tout2 : MonoBehaviour
     private float alpha;
     private bool fading;
 
-    public GameObject tout2;
-
     public GameObject player;
 
     public PlayerMovement pm;
 
+    public GameObject glooboo;
 
     IEnumerator CheckForControllers()
     {
@@ -56,11 +55,6 @@ public class Tout2 : MonoBehaviour
             {
                 text.color = new Color(1f, 1f, 1f, alpha);
                 alpha -= Time.deltaTime;
-            }
-
-            if (alpha <= 0)
-            {
-                tout2.SetActive(true);
             }
         }
 
