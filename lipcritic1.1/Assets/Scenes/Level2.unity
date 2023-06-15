@@ -1119,6 +1119,8 @@ MonoBehaviour:
   projectileV: {fileID: 0}
   ArmCover: {fileID: 0}
   fillammount: 0
+  mycolor: {r: 0, g: 0, b: 0, a: 0}
+  mycolor2: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &649920911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15283,6 +15285,8 @@ MonoBehaviour:
   projectileV: {fileID: 0}
   ArmCover: {fileID: 0}
   fillammount: 0
+  mycolor: {r: 0.048839483, g: 0.4245283, b: 0, a: 0}
+  mycolor2: {r: 0, g: 1, b: 0.020182133, a: 0}
 --- !u!114 &1926849161
 MonoBehaviour:
   m_ObjectHideFlags: 0

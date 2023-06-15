@@ -26,6 +26,10 @@ public class TimerScr : MonoBehaviour
 
     public float fillammount;
 
+    //[SerializeField] public Color mycolor;
+
+    //[SerializeField] public Color mycolor2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,14 +44,17 @@ public class TimerScr : MonoBehaviour
     { 
         ARMtimer.fillAmount = fillammount / 20f;
 
-        if (fillammount >= 10f)
-        {
-            canshoot = true;
-        }
-        else
-        {
-            canshoot = false;
-        }
+
+        //if (fillammount >= 10f)
+        //{
+        //    canshoot = true;
+        //    ARMtimer.color = mycolor2;
+        //}
+        //else
+        //{
+        //    canshoot = false;
+        //    ARMtimer.color = mycolor;
+        //}
 
         if (fillammount <= 0)
         {
