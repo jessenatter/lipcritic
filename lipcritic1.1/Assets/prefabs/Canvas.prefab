@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3631438578442207972}
   - component: {fileID: 3631438578442207993}
   - component: {fileID: 3631438578442207974}
-  - component: {fileID: 3631438578442207975}
   m_Layer: 5
   m_Name: timerOutline
   m_TagString: Untagged
@@ -76,22 +75,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3631438578442207975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3631438578442207973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a9f24dd5b018914daaec1d5acc8a8d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canshoot: 0
-  balls: {fileID: 0}
-  projectileV: {fileID: 0}
-  fillammount: 0
 --- !u!1 &3631438578643187501
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf2c6c8798ec84f59a81005daebc029a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 2675139878056548212, guid: ea1045141d56743b1a1e96da7f1c8c3b, type: 3}
   animator: {fileID: 3631438578643187489}
 --- !u!95 &3631438578643187489
 Animator:
@@ -291,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canshoot: 0
-  balls: {fileID: 0}
+  balls: {fileID: 6514257678341751885, guid: 6c394813885d948129b117ca5ec93ba6, type: 3}
   projectileV: {fileID: 0}
   fillammount: 0
 --- !u!1 &3631438579562711066

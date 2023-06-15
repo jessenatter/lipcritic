@@ -240,18 +240,18 @@ MonoBehaviour:
   controller: {fileID: 2675139878056548168}
   animator: {fileID: 2675139878056548173}
   spriteR: {fileID: 2675139878056548169}
-  rb: {fileID: 0}
-  Bcollider: {fileID: 0}
+  rb: {fileID: 2675139878056548171}
+  Bcollider: {fileID: 2675139878056548170}
   runspeed: 25
   health: 3
-  deathscreen: {fileID: 0}
+  deathscreen: {fileID: 3967790826741361395, guid: 6fb7ff75594d94a2f84863bf1d6b703f, type: 3}
   deadbody: {fileID: 8309552861487824779, guid: 2c6f0622f378649cb91947695dc44bdc, type: 3}
   firepoint: {fileID: 2675139878518910239}
-  balls: {fileID: 0}
+  balls: {fileID: 6514257678341751885, guid: 6c394813885d948129b117ca5ec93ba6, type: 3}
   projectileV: {fileID: 0}
   timer: {fileID: 0}
   groundDetection: {fileID: 2675139877847044744}
-  deathcord: {fileID: 0}
+  deathcord: {fileID: 5074314158050575836, guid: ab00dc1465a4247e6945fbb167993acf, type: 3}
   HC: {fileID: 2675139878056548172}
   hurt: 0
   meemo: 0

@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   groundDetection: {fileID: 1414061677196312636}
-  wallDetection: {fileID: 0}
+  wallDetection: {fileID: 4843564271052800969}
 --- !u!95 &1414061675882530212
 Animator:
   serializedVersion: 3

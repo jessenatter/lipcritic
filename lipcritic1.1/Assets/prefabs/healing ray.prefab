@@ -253,7 +253,7 @@ MonoBehaviour:
   myrigidbody: {fileID: 6514257678341751921}
   horizontalMove: 0
   verticalMove: 0
-  player: {fileID: 0}
+  player: {fileID: 2675139878056548212, guid: ea1045141d56743b1a1e96da7f1c8c3b, type: 3}
   timer: {fileID: 0}
   flash: {fileID: 0}
   animator: {fileID: 6514257678341751922}
@@ -261,6 +261,7 @@ MonoBehaviour:
   topHit: 0
   TR: {fileID: 0}
   pee: 0
+  canusehand: 1
   state: 0
 --- !u!50 &6514257678341751921
 Rigidbody2D:
