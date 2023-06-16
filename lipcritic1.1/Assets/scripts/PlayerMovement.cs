@@ -250,6 +250,7 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetFloat("speed", 0f);
                     animator.SetBool("isJumping", false);
                     TimerScr.SwitchToCountDown();
+                    gameObject.SetActive(false);
                 }
                 else if (canboost == true) 
                     boost();
@@ -263,6 +264,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void playerControl()
     {
+        gameObject.SetActive(true);
         state = State.player;
         Bcollider.enabled = true;
         Ccollider.enabled = true;

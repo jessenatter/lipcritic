@@ -37,6 +37,7 @@ public class TimerScr : MonoBehaviour
         ARMtimer = GetComponent<Image>();
         projectileV = balls.GetComponent<projectile>();
         state = State.countup;
+        canshoot = true;
     }
 
     // Update is called once per frame
@@ -56,6 +57,7 @@ public class TimerScr : MonoBehaviour
         //    ARMtimer.color = mycolor;
         //}
 
+       
         if (fillammount <= 0)
         {
             ranout();

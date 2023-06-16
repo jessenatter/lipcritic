@@ -318,7 +318,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &57811286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -672,6 +672,7 @@ GameObject:
   - component: {fileID: 692068397}
   - component: {fileID: 692068399}
   - component: {fileID: 692068398}
+  - component: {fileID: 692068400}
   m_Layer: 6
   m_Name: Image
   m_TagString: Untagged
@@ -695,8 +696,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43.313, y: 39.1506}
-  m_SizeDelta: {x: 1272.9622, y: 780.2512}
+  m_AnchoredPosition: {x: 12.1027, y: -9.5374}
+  m_SizeDelta: {x: 933.4622, y: 540.759}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &692068398
 MonoBehaviour:
@@ -711,14 +712,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.05490196}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 65ecfe19fca3047918f14d141b8c3660, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57db905f6c41448209b60abf968de045, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -736,6 +737,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692068396}
   m_CullTransparentMesh: 1
+--- !u!95 &692068400
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692068396}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e0b9b79cbabe8404fa2cf083cb5b79ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &948657412
 GameObject:
   m_ObjectHideFlags: 0
