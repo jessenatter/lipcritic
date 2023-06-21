@@ -80,7 +80,11 @@ public class projectile : MonoBehaviour
 
             myrigidbody.velocity = new Vector2(direction * speed, (verticalMove * 7.5f));
                 transform.localScale = new Vector3(1, 1, 1);
-            break;
+
+                if (Input.GetButtonDown("Fire1"))
+                    speedSwitch();
+
+                    break;
 
             case State.speed:
 
@@ -211,6 +215,8 @@ public class projectile : MonoBehaviour
         Deactivate();
 
     }
+
+
     private void particle()
     {
         //Instantiate(explode, transform.position,Quaternion.identity);
