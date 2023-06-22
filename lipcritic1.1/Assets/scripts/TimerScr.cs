@@ -46,18 +46,16 @@ public class TimerScr : MonoBehaviour
         ARMtimer.fillAmount = fillammount / 20f;
 
 
-        //if (fillammount >= 10f)
-        //{
-        //    canshoot = true;
-        //    ARMtimer.color = mycolor2;
-        //}
-        //else
-        //{
-        //    canshoot = false;
-        //    ARMtimer.color = mycolor;
-        //}
+        if (fillammount >= 1f)
+        {
+            canshoot = true;
+        }
+        else
+        {
+            canshoot = false;
+        }
 
-       
+
         if (fillammount <= 0)
         {
             ranout();

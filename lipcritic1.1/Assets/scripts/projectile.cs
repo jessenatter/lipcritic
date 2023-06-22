@@ -82,6 +82,7 @@ public class projectile : MonoBehaviour
                 transform.localScale = new Vector3(1, 1, 1);
 
                 if (Input.GetButtonDown("Fire1"))
+                    if(TimerScr.canshoot)
                     speedSwitch();
 
                     break;
