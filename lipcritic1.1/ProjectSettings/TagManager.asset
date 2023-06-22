@@ -4,28 +4,24 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - bullet
   - enemy
   - wall
-  - explode!
   - NMEproj
   - Logic
-  - grass
   - NMEpatrol
-  - boost
   - trigger
   - ray
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - PostProsessing
+  - 
   - Water
   - UI
   - Player
   - Obsticle
-  - enemy
-  - backround
+  - Game
+  - Backround
   - 
   - 
   - 
@@ -55,11 +51,11 @@ TagManager:
   - name: backround
     uniqueID: 4277955595
     locked: 0
-  - name: Game
-    uniqueID: 1875686087
-    locked: 0
   - name: player
     uniqueID: 1255604729
+    locked: 0
+  - name: Game
+    uniqueID: 1875686087
     locked: 0
   - name: UI
     uniqueID: 3172202887

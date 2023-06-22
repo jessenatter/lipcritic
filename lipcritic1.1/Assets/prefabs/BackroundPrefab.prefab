@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1515369150055595960}
   - component: {fileID: 8171562954556835678}
   - component: {fileID: 8562599321284561962}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer3 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 4294967295
+  m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 45e0e063c5cf149a4b8ff887998b6b3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1902335180239117473}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Backround Layer 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 94056682568439787}
   - component: {fileID: 2372778381331522780}
   - component: {fileID: 3820092820492991082}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer3 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 4294967295
+  m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -246,7 +246,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 45e0e063c5cf149a4b8ff887998b6b3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 1846511812103622793}
   - component: {fileID: 3289447321286774930}
   - component: {fileID: 870812360056069545}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer2 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,7 +373,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3d7613ce986ae4cbfb9f7016a0f1594c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 6425959838836982415}
   - component: {fileID: 4368658221493757774}
   - component: {fileID: 2910075724538187661}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +500,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 1000
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 39cc34312909e44f7860bf8ef19f0c79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -562,7 +562,7 @@ GameObject:
   - component: {fileID: 4154567887033996378}
   - component: {fileID: 5299929935948285509}
   - component: {fileID: 5215844356440060252}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer3 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,7 +604,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 4294967295
+  m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -627,7 +627,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 45e0e063c5cf149a4b8ff887998b6b3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -689,7 +689,7 @@ GameObject:
   - component: {fileID: 4749747779299420119}
   - component: {fileID: 3240582937741533378}
   - component: {fileID: 2868020988421645269}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -754,7 +754,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 1000
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 39cc34312909e44f7860bf8ef19f0c79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -816,7 +816,7 @@ GameObject:
   - component: {fileID: 5695005501838269626}
   - component: {fileID: 6766760769289960624}
   - component: {fileID: 6330772791883442370}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -881,7 +881,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 1000
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 39cc34312909e44f7860bf8ef19f0c79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -943,7 +943,7 @@ GameObject:
   - component: {fileID: 4344557483944614499}
   - component: {fileID: 5247666595220202768}
   - component: {fileID: 6965325394104175486}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer2 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1008,7 +1008,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3d7613ce986ae4cbfb9f7016a0f1594c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1070,7 +1070,7 @@ GameObject:
   - component: {fileID: 3733464755599816704}
   - component: {fileID: 1735828602226522084}
   - component: {fileID: 8528870350380610326}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer3 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1112,7 +1112,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 4294967295
+  m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -1135,7 +1135,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 45e0e063c5cf149a4b8ff887998b6b3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1194,7 +1194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8933828894395868280}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1231,7 +1231,7 @@ GameObject:
   - component: {fileID: 9018403730276714381}
   - component: {fileID: 2513450133487936815}
   - component: {fileID: 2063559189253378000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer2 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1296,7 +1296,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3d7613ce986ae4cbfb9f7016a0f1594c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1358,7 +1358,7 @@ GameObject:
   - component: {fileID: 361184438552611616}
   - component: {fileID: 3542569168188010233}
   - component: {fileID: 179303856518713932}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer3 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1400,7 +1400,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 4294967295
+  m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -1423,7 +1423,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 45e0e063c5cf149a4b8ff887998b6b3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1485,7 +1485,7 @@ GameObject:
   - component: {fileID: 3716096020466747385}
   - component: {fileID: 577798403633284492}
   - component: {fileID: 1883846297655434888}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer2 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1550,7 +1550,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3d7613ce986ae4cbfb9f7016a0f1594c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1612,7 +1612,7 @@ GameObject:
   - component: {fileID: 7597594094375482339}
   - component: {fileID: 8133778131428764521}
   - component: {fileID: 4945965890040037017}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1677,7 +1677,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3d7613ce986ae4cbfb9f7016a0f1594c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1739,7 +1739,7 @@ GameObject:
   - component: {fileID: 5749872178169813392}
   - component: {fileID: 1382100699567145259}
   - component: {fileID: 7741636863895191377}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1804,7 +1804,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 39cc34312909e44f7860bf8ef19f0c79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1866,7 +1866,7 @@ GameObject:
   - component: {fileID: 7505784438762009381}
   - component: {fileID: 8588098890065014363}
   - component: {fileID: 8212282217007427434}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer1 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1931,7 +1931,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 1000
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 39cc34312909e44f7860bf8ef19f0c79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1990,7 +1990,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2388520330744246095}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Backround Layer 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2035,7 +2035,7 @@ GameObject:
   - component: {fileID: 4848779135607032990}
   - component: {fileID: 1068876546182026954}
   - component: {fileID: 3071989801508504964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer2 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2100,7 +2100,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3d7613ce986ae4cbfb9f7016a0f1594c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2162,7 +2162,7 @@ GameObject:
   - component: {fileID: 2656728708745799905}
   - component: {fileID: 1488671866516528853}
   - component: {fileID: 1053347810855692370}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2227,7 +2227,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 1000
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 39cc34312909e44f7860bf8ef19f0c79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2289,7 +2289,7 @@ GameObject:
   - component: {fileID: 6629220090139447508}
   - component: {fileID: 6629220090139447511}
   - component: {fileID: 6629220090139447510}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2331,7 +2331,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 4294967295
+  m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -2354,7 +2354,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 45e0e063c5cf149a4b8ff887998b6b3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2414,7 +2414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6629220090154280759}
   - component: {fileID: 6629220090154280758}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Big Pink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2474,7 +2474,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: -32768
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 0, b: 1, a: 1}
   m_FlipX: 0
@@ -2498,7 +2498,7 @@ GameObject:
   - component: {fileID: 6629220090700948203}
   - component: {fileID: 6629220090700948202}
   - component: {fileID: 6629220090700948205}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2563,7 +2563,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 1000
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 39cc34312909e44f7860bf8ef19f0c79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2625,7 +2625,7 @@ GameObject:
   - component: {fileID: 6629220090835164299}
   - component: {fileID: 6629220090835164298}
   - component: {fileID: 6629220090835164301}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2690,7 +2690,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3d7613ce986ae4cbfb9f7016a0f1594c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2752,7 +2752,7 @@ GameObject:
   - component: {fileID: 6629220090903815157}
   - component: {fileID: 6629220090903815156}
   - component: {fileID: 6629220090903815159}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2794,7 +2794,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 4294967295
+  m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -2817,7 +2817,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 45e0e063c5cf149a4b8ff887998b6b3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2879,7 +2879,7 @@ GameObject:
   - component: {fileID: 6629220090997320848}
   - component: {fileID: 6629220090997320851}
   - component: {fileID: 6629220090997320850}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer3 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2921,7 +2921,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 4294967295
+  m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -2944,7 +2944,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 45e0e063c5cf149a4b8ff887998b6b3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3006,7 +3006,7 @@ GameObject:
   - component: {fileID: 6629220091102059696}
   - component: {fileID: 6629220091102059699}
   - component: {fileID: 6629220091102059698}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3071,7 +3071,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3d7613ce986ae4cbfb9f7016a0f1594c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3133,7 +3133,7 @@ GameObject:
   - component: {fileID: 6629220091274633369}
   - component: {fileID: 6629220091274633367}
   - component: {fileID: 6629220091274633366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3198,7 +3198,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 1000
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 39cc34312909e44f7860bf8ef19f0c79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3260,7 +3260,7 @@ GameObject:
   - component: {fileID: 6629220091308069134}
   - component: {fileID: 6629220091308069132}
   - component: {fileID: 6629220091308069135}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3325,7 +3325,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3d7613ce986ae4cbfb9f7016a0f1594c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3387,7 +3387,7 @@ GameObject:
   - component: {fileID: 6629220091706181087}
   - component: {fileID: 6629220091706181085}
   - component: {fileID: 6629220091706181084}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3429,7 +3429,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 4294967295
+  m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -3452,7 +3452,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 45e0e063c5cf149a4b8ff887998b6b3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3514,7 +3514,7 @@ GameObject:
   - component: {fileID: 6629220092024541059}
   - component: {fileID: 6629220092024541058}
   - component: {fileID: 6629220092024541061}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3579,7 +3579,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 1000
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 39cc34312909e44f7860bf8ef19f0c79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3641,7 +3641,7 @@ GameObject:
   - component: {fileID: 6629220092186287326}
   - component: {fileID: 6629220092186287297}
   - component: {fileID: 6629220092186287296}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3706,7 +3706,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 1000
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 39cc34312909e44f7860bf8ef19f0c79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3768,7 +3768,7 @@ GameObject:
   - component: {fileID: 6629220092196711633}
   - component: {fileID: 6629220092196711632}
   - component: {fileID: 6629220092196711635}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3833,7 +3833,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3d7613ce986ae4cbfb9f7016a0f1594c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3895,7 +3895,7 @@ GameObject:
   - component: {fileID: 5881224648243315509}
   - component: {fileID: 2880230195210571619}
   - component: {fileID: 1957286664031587490}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3960,7 +3960,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3d7613ce986ae4cbfb9f7016a0f1594c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4022,7 +4022,7 @@ GameObject:
   - component: {fileID: 5053346307240744368}
   - component: {fileID: 8156621894036591641}
   - component: {fileID: 8064683663887399688}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer3 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4064,7 +4064,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 4294967295
+  m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -4087,7 +4087,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 45e0e063c5cf149a4b8ff887998b6b3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4146,7 +4146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5047108824906878430}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Backround Layer 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4191,7 +4191,7 @@ GameObject:
   - component: {fileID: 5175284685798398831}
   - component: {fileID: 7351718236578181419}
   - component: {fileID: 3023888859916822423}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer1 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4256,7 +4256,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 1000
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 39cc34312909e44f7860bf8ef19f0c79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4318,7 +4318,7 @@ GameObject:
   - component: {fileID: 2865336652153467928}
   - component: {fileID: 1755348759548582773}
   - component: {fileID: 4606475426981887087}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer2 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4383,7 +4383,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3d7613ce986ae4cbfb9f7016a0f1594c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4445,7 +4445,7 @@ GameObject:
   - component: {fileID: 8785426702348913649}
   - component: {fileID: 250483294640859102}
   - component: {fileID: 3319599755112932051}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer3 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4487,7 +4487,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 4294967295
+  m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -4510,7 +4510,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 45e0e063c5cf149a4b8ff887998b6b3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4572,7 +4572,7 @@ GameObject:
   - component: {fileID: 8524840362339509150}
   - component: {fileID: 4208439650616287643}
   - component: {fileID: 2730452388086931595}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer1 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4637,7 +4637,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 1000
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 39cc34312909e44f7860bf8ef19f0c79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4699,7 +4699,7 @@ GameObject:
   - component: {fileID: 7596484925551569498}
   - component: {fileID: 2074834704340630918}
   - component: {fileID: 2815348736753324224}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackroundLayer3 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4741,7 +4741,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 4294967295
+  m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -4764,7 +4764,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -17011701
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 45e0e063c5cf149a4b8ff887998b6b3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

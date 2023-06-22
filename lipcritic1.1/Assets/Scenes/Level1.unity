@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 446870598}
   - component: {fileID: 446870601}
   - component: {fileID: 446870600}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +760,7 @@ GameObject:
   - component: {fileID: 649920912}
   - component: {fileID: 649920911}
   - component: {fileID: 649920910}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: timerOutline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19542,7 +19542,7 @@ GameObject:
   - component: {fileID: 776082086}
   - component: {fileID: 776082088}
   - component: {fileID: 776082087}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20440,7 +20440,7 @@ GameObject:
   - component: {fileID: 1122847666}
   - component: {fileID: 1122847665}
   - component: {fileID: 1122847667}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: gotThing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20528,7 +20528,7 @@ GameObject:
   - component: {fileID: 1127412101}
   - component: {fileID: 1127412103}
   - component: {fileID: 1127412102}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20890,7 +20890,7 @@ GameObject:
   - component: {fileID: 1474181821}
   - component: {fileID: 1474181823}
   - component: {fileID: 1474181822}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20966,7 +20966,7 @@ GameObject:
   - component: {fileID: 1487305601}
   - component: {fileID: 1487305600}
   - component: {fileID: 1487305599}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21066,7 +21066,7 @@ GameObject:
   - component: {fileID: 1668516726}
   - component: {fileID: 1668516725}
   - component: {fileID: 1668516724}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21346,7 +21346,7 @@ GameObject:
   - component: {fileID: 1857349522}
   - component: {fileID: 1857349521}
   - component: {fileID: 1857349520}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21447,7 +21447,7 @@ GameObject:
   - component: {fileID: 1902754253}
   - component: {fileID: 1902754255}
   - component: {fileID: 1902754254}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21558,7 +21558,7 @@ GameObject:
   - component: {fileID: 1926849162}
   - component: {fileID: 1926849161}
   - component: {fileID: 1926849160}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Timer (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21688,7 +21688,7 @@ GameObject:
   - component: {fileID: 1987833819}
   - component: {fileID: 1987833818}
   - component: {fileID: 1987833821}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21866,7 +21866,7 @@ GameObject:
   - component: {fileID: 2055254304}
   - component: {fileID: 2055254306}
   - component: {fileID: 2055254305}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: deathscreenblackoput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21938,6 +21938,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3370873418050360740, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370873418050360740, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -21959,6 +21963,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3370873418050360743, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
       propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370873418199553535, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3370873419045611117, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
@@ -22027,7 +22035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3370873419045611123, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69f4e90ec6b592c4cbf790649830ec5d, type: 3}
@@ -22054,7 +22062,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6083099957518808077}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22084,7 +22092,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6083099958066268728}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22345,7 +22353,7 @@ GameObject:
   - component: {fileID: 6083099958349590986}
   - component: {fileID: 6083099958349590984}
   - component: {fileID: 6083099958349590985}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -22375,7 +22383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6083099958994389914}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
