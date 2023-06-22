@@ -171,7 +171,7 @@ TextureImporter:
       213: 2985768198062774622
     second: lipcritictileset_55
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -188,10 +188,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -230,6 +232,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -241,6 +245,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -253,6 +258,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -265,6 +271,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -277,6 +284,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -289,6 +297,33 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1649,9 +1684,62 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      lipcritictileset_0: -5093058659859599593
+      lipcritictileset_1: 8742478443267068885
+      lipcritictileset_10: 3484773597297419581
+      lipcritictileset_11: 5003392390845591438
+      lipcritictileset_12: 4710664846835940822
+      lipcritictileset_13: -5158338317831407674
+      lipcritictileset_14: 3062107091605217075
+      lipcritictileset_15: -5729718394459817905
+      lipcritictileset_16: -1453505219190399884
+      lipcritictileset_17: 2881659558144866670
+      lipcritictileset_18: 63274268632518953
+      lipcritictileset_19: -1037994235373899132
+      lipcritictileset_2: 861034835237814477
+      lipcritictileset_20: 4336869540985693028
+      lipcritictileset_21: 2550177732811584372
+      lipcritictileset_22: 8236778048982389451
+      lipcritictileset_23: 1807313432003575224
+      lipcritictileset_24: -3471154998087167804
+      lipcritictileset_25: -2305535709104667556
+      lipcritictileset_26: -7649787614971814380
+      lipcritictileset_27: 9058185663341418522
+      lipcritictileset_28: -6026610299217618511
+      lipcritictileset_29: 1480879489742546689
+      lipcritictileset_3: -6679921266300603524
+      lipcritictileset_30: 7717984834211473389
+      lipcritictileset_31: 8080359004152989080
+      lipcritictileset_32: 3085177530238656330
+      lipcritictileset_33: -202609414427309346
+      lipcritictileset_34: -5517538852106729031
+      lipcritictileset_35: 2013511094125927523
+      lipcritictileset_36: -7895828473348131157
+      lipcritictileset_37: -976841117780303221
+      lipcritictileset_38: -6769540393411924445
+      lipcritictileset_39: -7294703351703134476
+      lipcritictileset_4: 8445968645070068417
+      lipcritictileset_40: 8792461014576215526
+      lipcritictileset_41: -5190849822449700554
+      lipcritictileset_42: 2782861148968553156
+      lipcritictileset_43: 5764062249721828628
+      lipcritictileset_44: -84336015670465534
+      lipcritictileset_45: -7257170165713767956
+      lipcritictileset_46: 8075818024324288352
+      lipcritictileset_47: 8125816139797450829
+      lipcritictileset_48: 8367079009802914428
+      lipcritictileset_49: -1219030259917348669
+      lipcritictileset_5: -893408622707127429
+      lipcritictileset_50: -7743366164683516723
+      lipcritictileset_51: 4404441326979926851
+      lipcritictileset_52: 5454682758432760057
+      lipcritictileset_6: 7713276235707804190
+      lipcritictileset_7: -7378801081010126843
+      lipcritictileset_8: -7735866942387162730
+      lipcritictileset_9: 5905817811244057698
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
