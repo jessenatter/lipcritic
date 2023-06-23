@@ -51,6 +51,15 @@ TagManager:
   - name: backround
     uniqueID: 4277955595
     locked: 0
+  - name: backround3
+    uniqueID: 2158206099
+    locked: 0
+  - name: backround2
+    uniqueID: 2728307925
+    locked: 0
+  - name: backround1
+    uniqueID: 410873223
+    locked: 0
   - name: player
     uniqueID: 1255604729
     locked: 0
