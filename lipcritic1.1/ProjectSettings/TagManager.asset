@@ -60,6 +60,9 @@ TagManager:
   - name: backround1
     uniqueID: 410873223
     locked: 0
+  - name: particles
+    uniqueID: 4167103383
+    locked: 0
   - name: player
     uniqueID: 1255604729
     locked: 0
