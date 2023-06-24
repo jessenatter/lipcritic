@@ -998,7 +998,7 @@ Camera:
   far clip plane: 1000
   field of view: 68
   orthographic: 0
-  orthographic size: 8
+  orthographic size: 8.109375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -23610,6 +23610,8 @@ MonoBehaviour:
   HC: {fileID: 6083099958349590985}
   hurt: 0
   meemo: 0
+  heart: {fileID: 446870596}
+  HS: {fileID: 0}
   state: 0
   canusehand: 1
 --- !u!4 &6083099958349590987

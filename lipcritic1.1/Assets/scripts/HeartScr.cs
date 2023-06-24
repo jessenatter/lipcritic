@@ -6,7 +6,6 @@ public class HeartScr : MonoBehaviour
 {
     public GameObject player;
     private PlayerMovement PlayerMovement;
-    private float health;
     public Animator animator;
 
     // Start is called before the first frame update
@@ -16,9 +15,15 @@ public class HeartScr : MonoBehaviour
         animator = animator.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void healthchange()
     {
-        animator.SetFloat("Health", PlayerMovement.health);
+        if (PlayerMovement.health == 0f)
+            animator.SetTrigger("heartEmpty");
+        if (PlayerMovement.health == 1f)
+            animator.SetTrigger("heart1");
+        if (PlayerMovement.health == 2f)
+            animator.SetTrigger("heart2");
+        if (PlayerMovement.health == 3f)
+            animator.SetTrigger("heart3");
     }
 }

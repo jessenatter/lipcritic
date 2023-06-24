@@ -12,40 +12,30 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer spriteR;
     public Rigidbody2D rb;
     public BoxCollider2D Bcollider;
-
     public float runspeed = 40f;
-
     float horizontalMove = 0f;
     bool jump = false;
-
     public int health = 3;
-
     public GameObject deathscreen;
     public GameObject deadbody;
-
     public Transform firepoint;
     public GameObject balls;
     public projectile projectileV;
     private float x;
     private float firex;
     private int flipped;
-
     public GameObject timer;
     private TimerScr TimerScr;
-
     public Transform groundDetection;
-
     private float HitTimer;
-
     public GameObject deathcord;
-
     public HitCooldown HC;
-
     public float hurt;
     private CircleCollider2D Ccollider;
     public bool meemo;
-
     private Vector2 respawnPoint;
+    public GameObject heart;
+    public HeartScr HS;
 
     public enum State
     {
@@ -55,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public State state;
-
     public bool canusehand = true;
 
     // Start is called before the first frame update
@@ -67,13 +56,12 @@ public class PlayerMovement : MonoBehaviour
         Bcollider = GetComponent<BoxCollider2D>();
         Ccollider = GetComponent<CircleCollider2D>();
         animator.SetBool("isdead", false);
-
-
-            TimerScr = timer.GetComponent<TimerScr>();
-
-         runspeed = 30f;
-
+        TimerScr = timer.GetComponent<TimerScr>();
+        runspeed = 30f;
+        HS = heart.GetComponent<HeartScr>();
+        health = 3;
         setrespawnpoint(transform.position);
+        HS.healthchange();
     }
 
     // Update is called once per frame
@@ -165,6 +153,7 @@ public class PlayerMovement : MonoBehaviour
             HC.HasHit();
             Screenshake.Instance.shake(5f, .5f);
             health = health - 1;
+            HS.healthchange();
             if (health == 0)
                 die();
 
@@ -287,18 +276,15 @@ public class PlayerMovement : MonoBehaviour
     private void diebyfall()
     {
         health -= 1;
-        StartCoroutine(routine: Respawn());
+        HS.healthchange();
+        if (health == 0)
+            die();
+        transform.position = respawnPoint;
 
     }
 
     public void setrespawnpoint(Vector2 position)
     {
         respawnPoint = (Vector2)position;
-    }
-
-    private IEnumerator Respawn()
-    {
-        yield return new WaitForSeconds(1f);
-        transform.position = respawnPoint;
     }
 }
