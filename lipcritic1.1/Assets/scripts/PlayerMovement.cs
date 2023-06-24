@@ -39,13 +39,13 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject deathcord;
 
-    private bool canboost;
-
     public HitCooldown HC;
 
     public float hurt;
     private CircleCollider2D Ccollider;
     public bool meemo;
+
+    private Vector2 respawnPoint;
 
     public enum State
     {
@@ -72,7 +72,9 @@ public class PlayerMovement : MonoBehaviour
             TimerScr = timer.GetComponent<TimerScr>();
 
          runspeed = 30f;
-}
+
+        setrespawnpoint(transform.position);
+    }
 
     // Update is called once per frame
     void Update()
@@ -82,11 +84,12 @@ public class PlayerMovement : MonoBehaviour
             SceneManager.LoadScene("Menu");
         }
 
+
         if (deathcord.transform.position.y > transform.position.y)
         {
             if (state == State.player)
-            { 
-                die();
+            {
+                diebyfall();
             }
              
         }
@@ -186,18 +189,8 @@ public class PlayerMovement : MonoBehaviour
             Destroy(collision.gameObject);
             takehit();
         }
-
-        if (collision.tag == "boost")
-        {
-            boost();
-            Destroy(collision.gameObject);
-        }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        canboost = false;
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -229,6 +222,7 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.tag == "wall")
         {
             animator.SetBool("isJumping", false);
+            setrespawnpoint(transform.position);
         }
     }
 
@@ -252,8 +246,6 @@ public class PlayerMovement : MonoBehaviour
                     TimerScr.SwitchToCountDown();
                     gameObject.SetActive(false);
                 }
-                else if (canboost == true) 
-                    boost();
                 else
                     cantshoot();
             }
@@ -291,10 +283,22 @@ public class PlayerMovement : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    private void boost()
+
+    private void diebyfall()
     {
-        TimerScr.boost();
-        //GotThing.SetActive(true);
-      //  goAway.timecountupstart();
+        health -= 1;
+        StartCoroutine(routine: Respawn());
+
+    }
+
+    public void setrespawnpoint(Vector2 position)
+    {
+        respawnPoint = (Vector2)position;
+    }
+
+    private IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(1f);
+        transform.position = respawnPoint;
     }
 }
