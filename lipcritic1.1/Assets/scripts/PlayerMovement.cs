@@ -42,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
         player,
         ray,
         dead,
+        respawning,
     }
 
     public State state;
@@ -141,6 +142,12 @@ public class PlayerMovement : MonoBehaviour
                 Time.timeScale = 0;
 
                 break;
+
+            case State.respawning:
+
+                controller.Move(0f, false, false);
+
+                break;
         }
 
     }
@@ -178,6 +185,10 @@ public class PlayerMovement : MonoBehaviour
             Destroy(collision.gameObject);
             takehit();
         }
+        if(collision.tag =="checkpoint")
+        {
+            setrespawnpoint(transform.position);
+        }
     }
 
 
@@ -211,7 +222,6 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.tag == "wall")
         {
             animator.SetBool("isJumping", false);
-            setrespawnpoint(transform.position);
         }
     }
 
@@ -280,11 +290,21 @@ public class PlayerMovement : MonoBehaviour
         if (health == 0)
             die();
         transform.position = respawnPoint;
+        //visual stuff, wait to play again
+        animator.SetTrigger("respawn");
+        state = State.respawning;
+        StartCoroutine(wait());
 
     }
 
     public void setrespawnpoint(Vector2 position)
     {
         respawnPoint = (Vector2)position;
+    }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSecondsRealtime(1.3f);
+        state = State.player;
     }
 }
