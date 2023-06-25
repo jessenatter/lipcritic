@@ -12,7 +12,6 @@ public class projectile : MonoBehaviour
     public float horizontalMove = 10f;
     public float verticalMove = 0f;
     public GameObject player;
-    public GameObject explodeO;
     public GameObject timer;
     private TimerScr TimerScr;
     public GameObject flash;
@@ -48,6 +47,7 @@ public class projectile : MonoBehaviour
         animator.SetBool("SPIKEMODE", false);
         TR = GetComponent<TrailRenderer>();
         TR.startWidth = .85f;
+        particle();
     }
 
     // Update is called once per frame
@@ -220,6 +220,6 @@ public class projectile : MonoBehaviour
 
     private void particle()
     {
-        //Instantiate(explode, transform.position,Quaternion.identity);
+        Instantiate(explode, transform.position,Quaternion.identity);
     }
 }
