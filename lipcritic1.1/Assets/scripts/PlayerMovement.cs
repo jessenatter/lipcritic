@@ -36,7 +36,6 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 respawnPoint;
     public GameObject heart;
     public HeartScr HS;
-    public Screenshake SS;
 
     public enum State
     {
@@ -161,7 +160,6 @@ public class PlayerMovement : MonoBehaviour
             HC.HasHit();
             //screenshake
             //hitstop
-            SS.shake(1f, .5f);
             health = health - 1;
             HS.healthchange();
             if (health == 0)
@@ -289,7 +287,6 @@ public class PlayerMovement : MonoBehaviour
     {
         //screenshake
         //hitstop
-
         health -= 1;
         HS.healthchange();
         if (health == 0)

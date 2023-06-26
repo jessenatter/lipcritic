@@ -18,6 +18,8 @@ public class projectile : MonoBehaviour
     private LipCriticFLASH LCF;
     public Animator animator;
 
+    public lipcriticvolumeswitcher lcvs;
+    
     public bool groundHit;
     public bool topHit;
 
@@ -45,6 +47,7 @@ public class projectile : MonoBehaviour
         state = State.normal;
         animator = GetComponent<Animator>();
         animator.SetBool("SPIKEMODE", false);
+        lcvs.switchBack();
         TR = GetComponent<TrailRenderer>();
         TR.startWidth = .85f;
     }
@@ -195,6 +198,7 @@ public class projectile : MonoBehaviour
                     state = State.speed;
                     LCF.color();
                     animator.SetBool("SPIKEMODE", true);
+                lcvs.switchw();
                     TR.startWidth = .6f;
                     particle();
             }
@@ -205,6 +209,7 @@ public class projectile : MonoBehaviour
                 TimerScr.SwitchToCountUp();
                 LCF.stop();
                 animator.SetBool("SPIKEMODE", false);
+                lcvs.switchBack();
             }
         }
     }
