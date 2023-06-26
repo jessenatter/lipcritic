@@ -7,11 +7,11 @@
     <key>CFBundleExecutable</key>
     <string>Lip Critic</string>
     <key>CFBundleGetInfoString</key>
-    <string>Unity Player version 2020.3.24f1 (79c78de19888). (c) 2021 Unity Technologies ApS. All rights reserved.</string>
+    <string>Unity Player version 2022.3.3f1 (7cdc2969a641). (c) 2005-2023 Unity Technologies. All rights reserved.</string>
     <key>CFBundleIconFile</key>
     <string>PlayerIcon.icns</string>
     <key>CFBundleIdentifier</key>
-    <string>com.DefaultCompany.LipCritic</string>
+    <string>com.DefaultCompany.Lip-Critic</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
@@ -40,6 +40,6 @@
     <key>NSPrincipalClass</key>
     <string>PlayerApplication</string>
     <key>UnityBuildNumber</key>
-    <string>79c78de19888</string>
+    <string>7cdc2969a641</string>
   </dict>
 </plist>
