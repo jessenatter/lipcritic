@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 respawnPoint;
     public GameObject heart;
     public HeartScr HS;
+    public Screenshake SS;
 
     public enum State
     {
@@ -158,13 +159,13 @@ public class PlayerMovement : MonoBehaviour
         if (HC.CanBeHit)
         {
             HC.HasHit();
-            Screenshake.Instance.shake(5f, .5f);
+            //screenshake
+            //hitstop
+            SS.shake(1f, .5f);
             health = health - 1;
             HS.healthchange();
             if (health == 0)
                 die();
-
-            FindObjectOfType<Hitstop>().stop(.3f);
         }
         else
         {
@@ -236,6 +237,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     balls.transform.position = firepoint.position;
                     projectileV.SetDirection(flipped);
+                    projectileV.activated();
                     state = State.ray;
                     Bcollider.enabled = false;
                     Ccollider.enabled = false;
@@ -285,6 +287,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void diebyfall()
     {
+        //screenshake
+        //hitstop
+
         health -= 1;
         HS.healthchange();
         if (health == 0)

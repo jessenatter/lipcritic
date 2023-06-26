@@ -47,7 +47,6 @@ public class projectile : MonoBehaviour
         animator.SetBool("SPIKEMODE", false);
         TR = GetComponent<TrailRenderer>();
         TR.startWidth = .85f;
-        particle();
     }
 
     // Update is called once per frame
@@ -197,6 +196,7 @@ public class projectile : MonoBehaviour
                     LCF.color();
                     animator.SetBool("SPIKEMODE", true);
                     TR.startWidth = .6f;
+                    particle();
             }
 
             else if (state == State.speed)
@@ -205,7 +205,6 @@ public class projectile : MonoBehaviour
                 TimerScr.SwitchToCountUp();
                 LCF.stop();
                 animator.SetBool("SPIKEMODE", false);
-                TR.startWidth = .85f;
             }
         }
     }
@@ -221,5 +220,11 @@ public class projectile : MonoBehaviour
     private void particle()
     {
         Instantiate(explode, transform.position,Quaternion.identity);
+    }
+
+    public void activated()
+    {
+        TR.startWidth = .85f;
+        particle();
     }
 }

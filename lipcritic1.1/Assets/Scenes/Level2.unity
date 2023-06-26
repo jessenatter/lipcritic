@@ -563,7 +563,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -14.000122, y: 0}
+  m_AnchoredPosition: {x: -14, y: 0}
   m_SizeDelta: {x: 234.9873, y: 228.4224}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &446870598
@@ -811,9 +811,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0008183306
+    x: 0.00081766146
     y: 0.0014409221
-    width: 0.9983634
+    width: 0.997547
     height: 0.9971181
   near clip plane: 0.3
   far clip plane: 1000
@@ -18476,7 +18476,7 @@ MonoBehaviour:
   groundHit: 0
   topHit: 0
   explode: {fileID: 4474431274524341884, guid: 935722ef66d80244498ac6d50d2b0b31, type: 3}
-  TR: {fileID: 0}
+  TR: {fileID: 1032447906}
   pee: 0
   state: 0
 --- !u!96 &1032447906
