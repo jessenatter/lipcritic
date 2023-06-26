@@ -24,6 +24,7 @@ public class projectile : MonoBehaviour
     public bool topHit;
 
     public GameObject explode;
+    public GameObject hit;
 
     public TrailRenderer TR;
 
@@ -170,22 +171,23 @@ public class projectile : MonoBehaviour
         gameObject.SetActive(false);
         PlayerMovement.playerControl();
         state = State.normal;
+        lcvs.switchBack();
     }
     private void hitwall()
     {
         PlayerMovement.teleport();
         TimerScr.SwitchToCountUp();
-        particle();
+        particle2();
         Deactivate();
     }
     private void hitenemy()
     {
-      
+        particle();
     }
     public void timedone()
     {
         PlayerMovement.teleport();
-        particle();
+        particle2();
         Deactivate();
     }
 
@@ -216,7 +218,7 @@ public class projectile : MonoBehaviour
     private void hitenemynospeed()
     {
         TimerScr.SwitchToCountUp();
-        particle();
+        particle2();
         Deactivate();
 
     }
@@ -225,6 +227,11 @@ public class projectile : MonoBehaviour
     private void particle()
     {
         Instantiate(explode, transform.position,Quaternion.identity);
+    }
+
+    private void particle2()
+    {
+        Instantiate(hit, transform.position, Quaternion.identity);
     }
 
     public void activated()
