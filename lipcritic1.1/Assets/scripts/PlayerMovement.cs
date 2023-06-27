@@ -255,6 +255,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void playerControl()
     {
+        projectileV.switchback();
         gameObject.SetActive(true);
         state = State.player;
         Bcollider.enabled = true;
@@ -285,6 +286,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void diebyfall()
     {
+        if(canusehand)
+            projectileV.switchback();
+
         //screenshake
         //hitstop
         health -= 1;

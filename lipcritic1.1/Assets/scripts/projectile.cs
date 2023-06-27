@@ -239,4 +239,9 @@ public class projectile : MonoBehaviour
         TR.startWidth = .85f;
         particle();
     }
+
+    public void switchback()
+    {
+        lcvs.switchBack();
+    }
 }
