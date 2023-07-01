@@ -28,14 +28,14 @@ public class ZoomOut : MonoBehaviour
 
         if(meem == true)
         {
-            if (CM.m_Lens.FieldOfView < 87f)
+            if (CM.m_Lens.FieldOfView < 95f)
             {
                 CM.m_Lens.FieldOfView += 16f * Time.deltaTime;
             }
         }
         else if (CM.m_Lens.FieldOfView >= 68)
         {
-            CM.m_Lens.FieldOfView -= 26f * Time.deltaTime;
+            CM.m_Lens.FieldOfView -= 34f * Time.deltaTime;
         }
 
     }
