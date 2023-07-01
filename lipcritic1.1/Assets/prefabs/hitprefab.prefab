@@ -116,8 +116,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.39
-      minScalar: 0.0001
+      scalar: 0.71
+      minScalar: 0.06
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -169,8 +169,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 4.59
-      minScalar: 3.42
+      scalar: 9.41
+      minScalar: 4.35
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4916,5 +4916,5 @@ Transform:
   m_Children:
   - {fileID: 7936410027698102903}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
