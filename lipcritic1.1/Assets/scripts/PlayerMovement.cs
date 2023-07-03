@@ -37,9 +37,6 @@ public class PlayerMovement : MonoBehaviour
     public GameObject heart;
     public HeartScr HS;
 
-    public Hitstop hss;
-    public shake S;
-
     public enum State
     {
         player,
@@ -123,7 +120,6 @@ public class PlayerMovement : MonoBehaviour
 
                 if (Input.GetButtonDown("Jump"))
                 {
-                    S.StartShake(.2f); //test
                     jump = true;
                     animator.SetBool("isJumping", true);
                 }
@@ -163,8 +159,7 @@ public class PlayerMovement : MonoBehaviour
         {
             HC.HasHit();
             //screenshake
-            S.StartShake(.2f);
-            hss.stop(.2f);
+            //hitstop
             health = health - 1;
             HS.healthchange();
             if (health == 0)
@@ -295,8 +290,7 @@ public class PlayerMovement : MonoBehaviour
             projectileV.switchback();
 
         //screenshake
-        S.StartShake(.2f);
-        hss.stop(.2f);
+        //hitstop
         health -= 1;
         HS.healthchange();
         if (health == 0)

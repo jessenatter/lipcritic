@@ -1064,7 +1064,7 @@ Camera:
   far clip plane: 1000
   field of view: 68
   orthographic: 0
-  orthographic size: 8
+  orthographic size: 8.109375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -20849,8 +20849,6 @@ MonoBehaviour:
   timer: {fileID: 0}
   flash: {fileID: 9463032}
   animator: {fileID: 1032447907}
-  raychild: {fileID: 0}
-  pwork: 0
   lcvs: {fileID: 0}
   groundHit: 0
   topHit: 0
@@ -24319,7 +24317,6 @@ MonoBehaviour:
   meemo: 0
   heart: {fileID: 446870596}
   HS: {fileID: 0}
-  hss: {fileID: 828113818}
   state: 0
   canusehand: 1
 --- !u!4 &6083099958349590987

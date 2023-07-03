@@ -1735,7 +1735,7 @@ Camera:
   far clip plane: 1000
   field of view: 68
   orthographic: 0
-  orthographic size: 8.109375
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -27394,7 +27394,7 @@ GameObject:
   - component: {fileID: 1032447907}
   m_Layer: 0
   m_Name: healing ray
-  m_TagString: ray
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27551,8 +27551,6 @@ MonoBehaviour:
   timer: {fileID: 1926849158}
   flash: {fileID: 9463032}
   animator: {fileID: 1032447907}
-  raychild: {fileID: 832992943119213756, guid: 91a9069a236c2ab47a2859e0602201e8, type: 3}
-  pwork: 0
   lcvs: {fileID: 473434874}
   groundHit: 0
   topHit: 0
@@ -28306,7 +28304,6 @@ GameObject:
   - component: {fileID: 1264865560}
   - component: {fileID: 1264865562}
   - component: {fileID: 1264865563}
-  - component: {fileID: 1264865564}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -28395,19 +28392,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CM: {fileID: 1264865560}
---- !u!114 &1264865564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264865559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b68976d805c3c8149bfe796347bb92ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 1
 --- !u!1 &1359151013
 GameObject:
   m_ObjectHideFlags: 0
@@ -30641,8 +30625,6 @@ MonoBehaviour:
   meemo: 0
   heart: {fileID: 446870596}
   HS: {fileID: 0}
-  hss: {fileID: 828113818}
-  S: {fileID: 1264865564}
   state: 0
   canusehand: 1
 --- !u!4 &6083099958349590987
