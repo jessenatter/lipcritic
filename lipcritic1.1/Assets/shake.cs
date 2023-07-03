@@ -22,7 +22,7 @@ public class shake : MonoBehaviour
         CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin =
             cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 
-        cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 10f; //change this number for intennsity
+        cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 1f; //change this number for intennsity
         duration = time;
 
         StartCoroutine(Shaking());
@@ -33,16 +33,17 @@ public class shake : MonoBehaviour
 
         while (elapsedTime < duration)
         {
-            Debug.Log("shaking");
             elapsedTime += Time.deltaTime;
+
+            CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin =
+            cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+
+            cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 0;
+
             yield return null;
 
         }
 
-        CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin =
-        cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-
-        cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 0;
     }
 
 

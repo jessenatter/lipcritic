@@ -38,6 +38,4 @@ public class Screenshake : MonoBehaviour
             cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 0;
         }
     }
-
-
 }

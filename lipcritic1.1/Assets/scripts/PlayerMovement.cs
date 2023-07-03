@@ -123,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
 
                 if (Input.GetButtonDown("Jump"))
                 {
-                 //   S.StartShake(.2f); //test
+                    S.StartShake(.2f); //test
                     jump = true;
                     animator.SetBool("isJumping", true);
                 }
@@ -163,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
         {
             HC.HasHit();
             //screenshake
-           // S.StartShake(.2f);
+            S.StartShake(.2f);
             hss.stop(.2f);
             health = health - 1;
             HS.healthchange();
@@ -295,7 +295,7 @@ public class PlayerMovement : MonoBehaviour
             projectileV.switchback();
 
         //screenshake
-      //  S.StartShake(.2f);
+        S.StartShake(.2f);
         hss.stop(.2f);
         health -= 1;
         HS.healthchange();
