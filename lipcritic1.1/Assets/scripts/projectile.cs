@@ -17,6 +17,8 @@ public class projectile : MonoBehaviour
     public GameObject flash;
     private LipCriticFLASH LCF;
     public Animator animator;
+    public GameObject raychild;
+    public bool pwork;
 
     public lipcriticvolumeswitcher lcvs;
     
@@ -172,6 +174,7 @@ public class projectile : MonoBehaviour
         PlayerMovement.playerControl();
         state = State.normal;
         lcvs.switchBack();
+        pwork = false;
     }
     private void hitwall()
     {
@@ -234,10 +237,17 @@ public class projectile : MonoBehaviour
         Instantiate(hit, transform.position, Quaternion.identity);
     }
 
+    private void particle3()
+    {
+        Instantiate(raychild, transform.position, Quaternion.identity);
+        pwork = true;
+    }
+
     public void activated()
     {
         TR.startWidth = .85f;
         particle();
+        particle3();
     }
 
     public void switchback()
