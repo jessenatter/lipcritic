@@ -743,7 +743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &245824872
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1615,9 +1615,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.0022050717
+    width: 2
+    height: 2.0837927
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 68
@@ -28015,7 +28015,6 @@ GameObject:
   - component: {fileID: 1238850598}
   - component: {fileID: 1238850601}
   - component: {fileID: 1238850600}
-  - component: {fileID: 1238850599}
   m_Layer: 5
   m_Name: timerOutline
   m_TagString: Untagged
@@ -28043,23 +28042,6 @@ RectTransform:
   m_AnchoredPosition: {x: 7, y: 0}
   m_SizeDelta: {x: 451.1393, y: 209.2804}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1238850599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1238850597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a9f24dd5b018914daaec1d5acc8a8d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canshoot: 0
-  balls: {fileID: 0}
-  projectileV: {fileID: 0}
-  ArmCover: {fileID: 0}
-  fillammount: 0
 --- !u!114 &1238850600
 MonoBehaviour:
   m_ObjectHideFlags: 0
