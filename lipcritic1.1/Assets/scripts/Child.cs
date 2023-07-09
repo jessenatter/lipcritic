@@ -24,6 +24,10 @@ public class Child : MonoBehaviour
         {
             var main = PS.main;
             main.loop = false;
+
+            //stop emmiting i guess?
+            var main2 = PS.emission;
+            main2.rateOverTime = 0f;
         }
 
         var newpos = Parent.transform.TransformPoint(pos);
