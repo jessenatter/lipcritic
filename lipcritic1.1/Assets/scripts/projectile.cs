@@ -186,6 +186,7 @@ public class projectile : MonoBehaviour
     private void hitenemy()
     {
         particle();
+        timerefill();
     }
     public void timedone()
     {
@@ -253,5 +254,12 @@ public class projectile : MonoBehaviour
     public void switchback()
     {
         lcvs.switchBack();
+    }
+
+    private void timerefill()
+    {
+        TimerScr.fillammount = 20f;
+        //some visual feeback for this
+
     }
 }
