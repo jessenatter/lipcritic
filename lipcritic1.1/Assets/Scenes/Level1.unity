@@ -1058,8 +1058,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2.6627736
-    height: 1.487476
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 68
@@ -21416,8 +21416,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1264865561}
   - component: {fileID: 1264865560}
-  - component: {fileID: 1264865563}
   - component: {fileID: 1264865564}
+  - component: {fileID: 1264865565}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -21480,19 +21480,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1264865563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264865559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ca2975b0c82c1944b1961e6fa7466a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 1264865560}
 --- !u!114 &1264865564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21506,6 +21493,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shakeTimer: 0
+--- !u!114 &1264865565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264865559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 067ee622867c843fd896cebc155d10ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CM: {fileID: 1264865560}
+  player: {fileID: 0}
+  pm: {fileID: 0}
 --- !u!1001 &1303790300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24305,6 +24307,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   Bcollider: {fileID: 0}
   runspeed: 25
+  horizontalMove: 0
   health: 3
   deathscreen: {fileID: 1917419648}
   deadbody: {fileID: 8309552861487824779, guid: 2c6f0622f378649cb91947695dc44bdc, type: 3}

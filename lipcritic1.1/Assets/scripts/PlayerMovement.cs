@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public BoxCollider2D Bcollider;
     public float runspeed = 40f;
-    float horizontalMove = 0f;
+    public float horizontalMove = 0f;
     bool jump = false;
     public int health = 3;
     public GameObject deathscreen;
